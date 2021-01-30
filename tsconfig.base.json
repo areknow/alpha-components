@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@very-good-components/react/button": ["libs/react/button/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

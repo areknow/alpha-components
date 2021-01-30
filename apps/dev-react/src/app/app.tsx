@@ -1,3 +1,4 @@
+import { Button } from '@very-good-components/react/button';
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import styles from './app.module.scss';
@@ -11,29 +12,12 @@ export function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/page-2">Page 2</Link>
+            <Link to="/button">Button</Link>
           </li>
         </ul>
       </div>
-      <Route
-        path="/"
-        exact
-        render={() => (
-          <div>
-            This is the generated root route.{' '}
-            <Link to="/page-2">Click here for page 2.</Link>
-          </div>
-        )}
-      />
-      <Route
-        path="/page-2"
-        exact
-        render={() => (
-          <div>
-            <Link to="/">Click here to go back to root page.</Link>
-          </div>
-        )}
-      />
+      <Route path="/" exact render={() => <div>home</div>} />
+      <Route path="/button" exact render={() => <Button>button</Button>} />
     </div>
   );
 }
