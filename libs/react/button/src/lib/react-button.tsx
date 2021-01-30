@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import './react-button.module.scss';
 
-export interface ButtonProps {
+export interface VgButtonProps {
   children: ReactNode;
 }
 
-export function Button(props: ButtonProps) {
+export function VgButton(props: VgButtonProps) {
   return <button>{props.children}</button>;
 }
 
-export default Button;
+export default VgButton;

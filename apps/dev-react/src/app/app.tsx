@@ -1,4 +1,4 @@
-import { Button } from '@very-good-components/react/button';
+import { VgButton } from '@very-good-components/react/button';
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import styles from './app.module.scss';
@@ -17,7 +17,7 @@ export function App() {
         </ul>
       </div>
       <Route path="/" exact render={() => <div>home</div>} />
-      <Route path="/button" exact render={() => <Button>button</Button>} />
+      <Route path="/button" exact render={() => <VgButton>button</VgButton>} />
     </div>
   );
 }
