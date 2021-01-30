@@ -9,18 +9,88 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/react/button/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["libs/react/button/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react/button"
-          ],
+          "outputs": ["coverage/libs/react/button"],
           "options": {
             "jestConfig": "libs/react/button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "dev-react": {
+      "root": "apps/dev-react",
+      "sourceRoot": "apps/dev-react/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/dev-react",
+            "index": "apps/dev-react/src/index.html",
+            "main": "apps/dev-react/src/main.tsx",
+            "polyfills": "apps/dev-react/src/polyfills.ts",
+            "tsConfig": "apps/dev-react/tsconfig.app.json",
+            "assets": [
+              "apps/dev-react/src/favicon.ico",
+              "apps/dev-react/src/assets"
+            ],
+            "styles": ["apps/dev-react/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dev-react/src/environments/environment.ts",
+                  "with": "apps/dev-react/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "dev-react:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "dev-react:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/dev-react/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/dev-react"],
+          "options": {
+            "jestConfig": "apps/dev-react/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -28,6 +98,23 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "dev-react"
 }

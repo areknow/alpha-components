@@ -2,14 +2,12 @@ import React from 'react';
 import './react-button.module.scss';
 
 /* eslint-disable-next-line */
-export interface ReactButtonProps {}
-
-export function ReactButton(props: ReactButtonProps) {
-  return (
-    <div>
-      <h1>Welcome to react-button!</h1>
-    </div>
-  );
+export interface ButtonProps {
+  children: any;
 }
 
-export default ReactButton;
+export function Button(props: ButtonProps) {
+  return <button>{props.children}</button>;
+}
+
+export default Button;

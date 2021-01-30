@@ -15,5 +15,8 @@
       "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": { "react-button": { "tags": ["target:react"] } }
+  "projects": {
+    "react-button": { "tags": ["target:react"] },
+    "dev-react": { "tags": ["target:react"] }
+  }
 }

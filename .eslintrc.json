@@ -12,7 +12,11 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
-              { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
+              { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] },
+              {
+                "sourceTag": "type:react",
+                "onlyDependOnLibsWithTags": ["type:react"]
+              }
             ]
           }
         ]
