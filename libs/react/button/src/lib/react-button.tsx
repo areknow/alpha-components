@@ -1,7 +1,6 @@
 import React from 'react';
 import './react-button.module.scss';
 
-/* eslint-disable-next-line */
 export interface ButtonProps {
   children: any;
 }
