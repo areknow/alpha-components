@@ -16,7 +16,6 @@
     }
   },
   "projects": {
-    "react-button": { "tags": ["target:react"] },
     "dev-react": { "tags": ["target:react"] }
   }
 }

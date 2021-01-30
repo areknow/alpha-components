@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/libs/react/button', '<rootDir>/apps/dev-react'],
+  projects: ['<rootDir>/apps/dev-react'],
 };

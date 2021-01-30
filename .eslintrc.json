@@ -14,8 +14,20 @@
             "depConstraints": [
               { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] },
               {
-                "sourceTag": "type:react",
-                "onlyDependOnLibsWithTags": ["type:react"]
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:ui"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui"]
+              },
+              {
+                "sourceTag": "target:angular",
+                "onlyDependOnLibsWithTags": ["target:angular"]
+              },
+              {
+                "sourceTag": "target:react",
+                "onlyDependOnLibsWithTags": ["target:react"]
               }
             ]
           }
