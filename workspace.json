@@ -1,9 +1,32 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
+  "projects": {
+    "react-button": {
+      "root": "libs/react/button",
+      "sourceRoot": "libs/react/button/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react/button/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react/button"
+          ],
+          "options": {
+            "jestConfig": "libs/react/button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }
