@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/apps/dev-react'],
+  projects: ['<rootDir>/apps/dev-react', '<rootDir>/apps/dev-angular'],
 };

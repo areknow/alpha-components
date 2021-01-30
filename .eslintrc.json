@@ -15,11 +15,11 @@
               { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] },
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:ui"]
+                "onlyDependOnLibsWithTags": ["type:component"]
               },
               {
-                "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": ["type:ui"]
+                "sourceTag": "type:component",
+                "onlyDependOnLibsWithTags": ["type:component"]
               },
               {
                 "sourceTag": "target:angular",

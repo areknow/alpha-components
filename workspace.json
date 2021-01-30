@@ -74,6 +74,94 @@
           }
         }
       }
+    },
+    "dev-angular": {
+      "projectType": "application",
+      "root": "apps/dev-angular",
+      "sourceRoot": "apps/dev-angular/src",
+      "prefix": "very-good-components",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/dev-angular",
+            "index": "apps/dev-angular/src/index.html",
+            "main": "apps/dev-angular/src/main.ts",
+            "polyfills": "apps/dev-angular/src/polyfills.ts",
+            "tsConfig": "apps/dev-angular/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/dev-angular/src/favicon.ico",
+              "apps/dev-angular/src/assets"
+            ],
+            "styles": ["apps/dev-angular/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dev-angular/src/environments/environment.ts",
+                  "with": "apps/dev-angular/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "dev-angular:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dev-angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "dev-angular:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/dev-angular/src/**/*.ts",
+              "apps/dev-angular/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/dev-angular"],
+          "options": {
+            "jestConfig": "apps/dev-angular/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -93,6 +181,20 @@
         "style": "scss",
         "linter": "eslint"
       }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "dev-react"
