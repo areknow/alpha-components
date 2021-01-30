@@ -224,6 +224,45 @@
           }
         }
       }
+    },
+    "angular-button": {
+      "projectType": "library",
+      "root": "libs/angular/button",
+      "sourceRoot": "libs/angular/button/src",
+      "prefix": "very-good-components",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/angular/button/tsconfig.lib.json",
+            "project": "libs/angular/button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/angular/button/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/angular/button/src/**/*.ts",
+              "libs/angular/button/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/angular/button"
+          ],
+          "options": {
+            "jestConfig": "libs/angular/button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

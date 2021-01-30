@@ -18,6 +18,7 @@
   "projects": {
     "dev-react": { "tags": ["type:app", "target:react"] },
     "dev-angular": { "tags": ["type:app", "target:angular"] },
-    "react-button": { "tags": ["type:component", "target:react"] }
+    "react-button": { "tags": ["type:component", "target:react"] },
+    "angular-button": { "tags": ["type:component", "target:angular"] }
   }
 }
