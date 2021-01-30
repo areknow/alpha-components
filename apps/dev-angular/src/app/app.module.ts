@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { AngularButtonModule } from '@very-good-components/angular/button';
+import { VgButtonModule } from '@very-good-components/angular/button';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    AngularButtonModule,
+    VgButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

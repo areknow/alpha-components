@@ -7,4 +7,4 @@ import { AngularButtonComponent } from './angular-button.component';
   imports: [CommonModule],
   exports: [AngularButtonComponent],
 })
-export class AngularButtonModule {}
+export class VgButtonModule {}
