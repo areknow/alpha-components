@@ -2,15 +2,18 @@ import { AlphaButton } from '@alpha-components/react/button';
 import React from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';
+import { COMPONENTS } from './component';
 
 export const App = () => {
   return (
     <div className={styles.app}>
       <nav role="navigation">
         <ul>
-          <li>
-            <Link to="/button">Button</Link>
-          </li>
+          {COMPONENTS.map((component) => (
+            <li>
+              <Link to={`/${component}`}>{component}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <div className={styles.content}>
