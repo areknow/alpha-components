@@ -1,4 +1,4 @@
-import { VgButton } from '@very-good-components/react/button';
+import { VgButton } from '@alpha-components/react/button';
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import styles from './app.module.scss';

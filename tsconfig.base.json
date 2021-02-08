@@ -15,10 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@very-good-components/react/button": ["libs/react/button/src/index.ts"],
-      "@very-good-components/angular/button": [
-        "libs/angular/button/src/index.ts"
-      ]
+      "@alpha-components/react/button": ["libs/react/button/src/index.ts"],
+      "@alpha-components/angular/button": ["libs/angular/button/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

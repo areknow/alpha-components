@@ -37,3 +37,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# publish
+/publish/angular/*
+!publish/angular/package.json
+/publish/react/*
+!publish/react/package.json

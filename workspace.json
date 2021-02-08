@@ -8,9 +8,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/dev-react",
             "index": "apps/dev-react/src/index.html",
@@ -21,9 +19,7 @@
               "apps/dev-react/src/favicon.ico",
               "apps/dev-react/src/assets"
             ],
-            "styles": [
-              "apps/dev-react/src/styles.scss"
-            ],
+            "styles": ["apps/dev-react/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -66,16 +62,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/dev-react/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/dev-react/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/dev-react"
-          ],
+          "outputs": ["coverage/apps/dev-react"],
           "options": {
             "jestConfig": "apps/dev-react/jest.config.js",
             "passWithNoTests": true
@@ -87,7 +79,7 @@
       "projectType": "application",
       "root": "apps/dev-angular",
       "sourceRoot": "apps/dev-angular/src",
-      "prefix": "very-good-components",
+      "prefix": "alpha-components",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
@@ -102,9 +94,7 @@
               "apps/dev-angular/src/favicon.ico",
               "apps/dev-angular/src/assets"
             ],
-            "styles": [
-              "apps/dev-angular/src/styles.scss"
-            ],
+            "styles": ["apps/dev-angular/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -165,9 +155,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/dev-angular"
-          ],
+          "outputs": ["coverage/apps/dev-angular"],
           "options": {
             "jestConfig": "apps/dev-angular/jest.config.js",
             "passWithNoTests": true
@@ -183,25 +171,18 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/react/button/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["libs/react/button/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/react/button",
             "tsConfig": "libs/react/button/tsconfig.lib.json",
             "project": "libs/react/button/package.json",
             "entryFile": "libs/react/button/src/index.ts",
-            "external": [
-              "react",
-              "react-dom"
-            ],
+            "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -215,9 +196,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react/button"
-          ],
+          "outputs": ["coverage/libs/react/button"],
           "options": {
             "jestConfig": "libs/react/button/jest.config.js",
             "passWithNoTests": true
@@ -229,7 +208,7 @@
       "projectType": "library",
       "root": "libs/angular/button",
       "sourceRoot": "libs/angular/button/src",
-      "prefix": "very-good-components",
+      "prefix": "alpha-components",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:package",
@@ -254,9 +233,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/angular/button"
-          ],
+          "outputs": ["coverage/libs/angular/button"],
           "options": {
             "jestConfig": "libs/angular/button/jest.config.js",
             "passWithNoTests": true

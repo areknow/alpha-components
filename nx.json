@@ -1,5 +1,5 @@
 {
-  "npmScope": "very-good-components",
+  "npmScope": "alpha-components",
   "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",

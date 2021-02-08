@@ -1,5 +1,5 @@
 {
-  "name": "very-good-components",
+  "name": "alpha-components",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,13 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "build-all": "nx run-many --target=build --all",
+    "pre-publish": "node tools/pre-publish",
+    "pub-react": "npm publish ./publish/react --access public",
+    "pub-angular": "npm publish ./publish/angular --access public",
+    "pub-all": "npm run pub-react && npm run pub-angular",
+    "pub": "npm run build-all && npm run pre-publish && npm run pub-all"
   },
   "private": true,
   "dependencies": {
@@ -81,6 +87,7 @@
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
+    "fs-extra": "^7.0.1",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.2",
     "ng-packagr": "^11.0.0",

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'vg-button',
+  selector: 'alpha-button',
   template: `
     <button>
       <ng-content></ng-content>
