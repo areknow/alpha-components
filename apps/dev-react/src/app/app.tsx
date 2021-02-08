@@ -1,25 +1,30 @@
-import { VgButton } from '@alpha-components/react/button';
+import { AlphaButton } from '@alpha-components/react/button';
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';
 
-export function App() {
+export const App = () => {
   return (
     <div className={styles.app}>
-      <div role="navigation">
+      <nav role="navigation">
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/button">Button</Link>
           </li>
         </ul>
+      </nav>
+      <div className={styles.content}>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/button" />
+          </Route>
+          <Route path="/button" exact>
+            <AlphaButton>button</AlphaButton>
+          </Route>
+        </Switch>
       </div>
-      <Route path="/" exact render={() => <div>home</div>} />
-      <Route path="/button" exact render={() => <VgButton>button</VgButton>} />
     </div>
   );
-}
+};
 
 export default App;

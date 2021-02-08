@@ -1,0 +1,1 @@
+nx g @nrwl/angular:lib button --directory=angular --tags=type:component,target:angular --publishable --importPath="@alpha-components/angular/button"
