@@ -1,0 +1,28 @@
+nav {
+  background: #000;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 40px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .brand {
+    display: flex;
+    align-items: center;
+    svg:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .links {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      li:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+}
