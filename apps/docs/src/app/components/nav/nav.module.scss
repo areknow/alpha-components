@@ -14,8 +14,8 @@ nav {
     .logo svg g {
       fill: var(--primary-theme-color);
     }
-    div:not(:last-child) {
-      margin-right: 20px;
+    div:not(:first-child) {
+      margin-left: 20px;
     }
   }
   .links {
@@ -55,14 +55,15 @@ nav {
     }
   }
   &.expanded {
-    left: 20px;
+    height: 70px;
     right: 20px;
     top: 20px;
-    height: unset;
-    width: calc(100% - 40px);
+    width: auto;
     padding: 20px 40px;
-    justify-content: space-between;
-    .brand .title,
+    justify-content: flex-end;
+    .brand {
+      display: none;
+    }
     .links {
       display: flex;
     }

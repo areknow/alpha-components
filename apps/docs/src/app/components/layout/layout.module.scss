@@ -9,12 +9,9 @@
     .content {
       width: calc(100vw - 250px);
       margin-left: 60px;
+      .children {
+        max-width: 900px;
+      }
     }
-  }
-}
-
-.page {
-  p {
-    width: 50%;
   }
 }

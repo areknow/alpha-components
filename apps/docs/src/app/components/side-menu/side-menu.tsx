@@ -10,8 +10,8 @@ export const SideMenu = () => {
   return (
     <div className={styles.sideMenu}>
       <ul className={styles.primaryLevel}>
-        {MENU.map((item) => (
-          <li>
+        {MENU.map((item, key) => (
+          <li key={key}>
             <NavLink
               exact
               to={item.location}
@@ -21,8 +21,8 @@ export const SideMenu = () => {
             </NavLink>
             {item.children && (
               <ul className={styles.secondaryLevel}>
-                {item.children.map((child) => (
-                  <li>
+                {item.children.map((child, key) => (
+                  <li key={key}>
                     <NavHashLink
                       smooth
                       to={child.location}

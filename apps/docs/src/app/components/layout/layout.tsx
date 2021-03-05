@@ -11,7 +11,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <div className={styles.sideMenu}>
           <SideMenu />
         </div>
-        <div className={styles.content}>{children}</div>
+        <div className={styles.content}>
+          <div className={styles.children}>{children}</div>
+        </div>
       </div>
     </div>
   );
