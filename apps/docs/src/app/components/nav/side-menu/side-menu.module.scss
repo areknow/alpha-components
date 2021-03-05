@@ -3,27 +3,36 @@
   border-radius: 30px;
   padding: 20px 0;
   overflow: hidden;
+  position: sticky;
+  top: 20px;
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     font-size: 22px;
     font-weight: 600;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
   ul.primaryLevel {
     li {
       position: relative;
-      div {
+      a {
         padding: 10px 42px;
         position: relative;
+        display: block;
       }
     }
   }
   ul.secondaryLevel {
     li {
       position: relative;
-      padding: 10px 62px;
       color: rgba(255, 255, 255, 0.2);
+      a {
+        padding: 10px 62px;
+      }
     }
   }
 }
