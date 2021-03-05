@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { MENU } from './menu';
@@ -6,6 +6,20 @@ import styles from './side-menu.module.scss';
 
 export const SideMenu = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    // let observer = undefined;
+    // const options = {
+    //   root: null,
+    //   rootMargin: '0px',
+    // };
+    // function handleIntersect(entries, observer) {
+    //   console.log(entries);
+    // }
+    // observer = new IntersectionObserver(handleIntersect, options);
+    // const boxElement = document.querySelector('body');
+    // observer.observe(boxElement);
+  }, []);
 
   return (
     <div className={styles.sideMenu}>

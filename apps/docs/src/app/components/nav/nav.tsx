@@ -18,7 +18,7 @@ export const Nav = () => {
     };
     window.addEventListener('scroll', onScroll, true);
     return () => window.removeEventListener('scroll', onScroll, true);
-  });
+  }, []);
 
   return (
     <nav

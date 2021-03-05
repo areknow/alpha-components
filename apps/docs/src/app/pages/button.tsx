@@ -1,9 +1,10 @@
 import React from 'react';
+import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
 
 export const ButtonPage = () => {
   return (
-    <div className="page">
+    <Page>
       <Panel>
         <h1>Button</h1>
         <p>
@@ -16,7 +17,6 @@ export const ButtonPage = () => {
           another view.
         </p>
       </Panel>
-
       <Panel>
         <h2 id="primary">Primary</h2>
         <p>
@@ -36,7 +36,6 @@ export const ButtonPage = () => {
           aliquip magna.
         </p>
       </Panel>
-
       <Panel>
         <h2 id="secondary">Secondary</h2>
         <p>
@@ -51,7 +50,6 @@ export const ButtonPage = () => {
           voluptate proident sit. Amet enim aliquip fugiat ea.
         </p>
       </Panel>
-
       <Panel>
         <h2 id="disabled">Disabled</h2>
         <p>
@@ -71,7 +69,6 @@ export const ButtonPage = () => {
           fugiat ea duis sint.
         </p>
       </Panel>
-
       <Panel>
         <h2 id="selected">Selected</h2>
         <p>
@@ -88,7 +85,7 @@ export const ButtonPage = () => {
           cupidatat quis dolore enim.
         </p>
       </Panel>
-    </div>
+    </Page>
   );
 };
 
