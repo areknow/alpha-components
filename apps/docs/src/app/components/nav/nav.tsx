@@ -26,34 +26,33 @@ export const Nav = () => {
       onMouseEnter={() => toggleExpandNav(true)}
       onMouseLeave={() => toggleExpandNav(false)}
     >
-      <div className={styles.brand}>
-        <div className={styles.logo}>
-          <Logo />
+      <div className={styles.content}>
+        <div className={styles.brand}>
+          <div className={styles.logo}>
+            <Logo />
+          </div>
+          <div className={styles.title}>
+            <Title />
+          </div>
         </div>
-        <div className={styles.title}>
-          <Title />
+        <div className={styles.links}>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/areknow/alpha-components"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>Theme</li>
+            <li>
+              <a href="">FAQ</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div className={styles.links}>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/areknow/alpha-components"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>Theme</li>
-          <li>
-            <a href="">FAQ</a>
-          </li>
-        </ul>
-      </div>
-      {/* <div className={styles.mobileTrigger}>
-        <Logo />
-      </div> */}
     </nav>
   );
 };

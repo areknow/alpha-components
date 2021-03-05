@@ -1,74 +1,76 @@
 nav {
-  background: #000;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 20px 40px;
-  border-radius: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   cursor: default;
-  .brand {
+  display: flex;
+  flex-grow: 1;
+  pointer-events: none;
+  .content {
+    pointer-events: all;
+    width: 100%;
+    height: 70px;
+    background: #000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 35px;
     display: flex;
     align-items: center;
-    .logo svg g {
-      fill: var(--primary-theme-color);
-    }
-    div:not(:first-child) {
-      margin-left: 20px;
-    }
-  }
-  .links {
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    justify-content: space-between;
+    .brand {
       display: flex;
-      li:not(:last-child) {
-        margin-right: 60px;
+      align-items: center;
+      .logo svg g {
+        fill: var(--primary-theme-color);
       }
-      a {
-        color: inherit;
-        text-decoration: none;
+      div:not(:first-child) {
+        margin-left: 20px;
       }
     }
-  }
-  .mobileTrigger {
-    display: none;
-    i {
-      font-size: 30px;
+    .links {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li:not(:last-child) {
+          margin-right: 60px;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
     }
   }
   &.scrolled {
-    position: fixed;
-    right: 20px;
+    position: sticky;
     top: 20px;
-    height: 70px;
-    width: 70px;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
-    .brand .title,
-    .links {
-      display: none;
+    justify-content: flex-end;
+    transition: all 0.4s ease;
+    .content {
+      width: 70px;
+      padding: 0;
+      justify-content: center;
+      .brand .title,
+      .links {
+        display: none;
+      }
     }
   }
   &.expanded {
-    height: 70px;
     right: 20px;
     top: 20px;
-    width: auto;
-    padding: 20px 40px;
-    justify-content: flex-end;
-    .brand {
-      display: none;
-    }
-    .links {
-      display: flex;
-    }
-    .mobileTrigger {
-      display: none;
+    transition: all 0.4s ease;
+    .content {
+      width: auto;
+      padding: 20px 40px;
+      justify-content: flex-end;
+      .brand {
+        display: none;
+      }
+      .links {
+        display: flex;
+      }
     }
   }
 }
