@@ -47,8 +47,8 @@
     bottom: 0;
     height: 36px;
     margin: auto;
-    background: rgb(0, 247, 255);
+    background: var(--primary-theme-color);
     width: 3px;
-    box-shadow: 0 0 70px 30px rgba(0, 255, 255, 0.233);
+    box-shadow: 0 0 70px 30px rgba(var(--primary-theme-color-rgb), 0.3);
   }
 }

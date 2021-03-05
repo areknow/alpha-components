@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
+import { MENU } from './menu';
 import styles from './side-menu.module.scss';
 
 export const SideMenu = () => {
@@ -9,73 +10,32 @@ export const SideMenu = () => {
   return (
     <div className={styles.sideMenu}>
       <ul className={styles.primaryLevel}>
-        <li>
-          <NavLink
-            exact
-            to="/button"
-            activeClassName={!location.hash ? styles.active : null}
-          >
-            Button
-          </NavLink>
-          <ul className={styles.secondaryLevel}>
-            <li>
-              <NavHashLink
-                smooth
-                to="/button#primary"
-                activeClassName={styles.active}
-              >
-                Primary
-              </NavHashLink>
-            </li>
-            <li>
-              <NavHashLink
-                smooth
-                to="/button#secondary"
-                activeClassName={styles.active}
-              >
-                Secondary
-              </NavHashLink>
-            </li>
-            <li>
-              <NavHashLink
-                smooth
-                to="/button#disabled"
-                activeClassName={styles.active}
-              >
-                Disabled
-              </NavHashLink>
-            </li>
-            <li>
-              <NavHashLink
-                smooth
-                to="/button#selected"
-                activeClassName={styles.active}
-              >
-                Selected
-              </NavHashLink>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <NavLink exact activeClassName={styles.active} to="/radio">
-            Radio
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact activeClassName={styles.active} to="checkbox">
-            Checkbox
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact activeClassName={styles.active} to="select">
-            Select
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact activeClassName={styles.active} to="input">
-            Input
-          </NavLink>
-        </li>
+        {MENU.map((item) => (
+          <li>
+            <NavLink
+              exact
+              to={item.location}
+              activeClassName={!location.hash ? styles.active : null}
+            >
+              {item.label}
+            </NavLink>
+            {item.children && (
+              <ul className={styles.secondaryLevel}>
+                {item.children.map((child) => (
+                  <li>
+                    <NavHashLink
+                      smooth
+                      to={child.location}
+                      activeClassName={styles.active}
+                    >
+                      {child.label}
+                    </NavHashLink>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );

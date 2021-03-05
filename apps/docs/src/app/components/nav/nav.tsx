@@ -6,17 +6,18 @@ import styles from './nav.module.scss';
 export const Nav = () => {
   const [scrolledNav, toggleScrolledNav] = useState(false);
   const [expandNav, toggleExpandNav] = useState(false);
+
   const navClasses = [
     scrolledNav ? styles.scrolled : null,
     scrolledNav && expandNav ? styles.expanded : null,
   ].join(' ');
 
   useEffect(() => {
-    const fireOnScroll = () => {
+    const onScroll = () => {
       toggleScrolledNav(window.scrollY > 90);
     };
-    window.addEventListener('scroll', fireOnScroll, true);
-    return () => window.removeEventListener('scroll', fireOnScroll, true);
+    window.addEventListener('scroll', onScroll, true);
+    return () => window.removeEventListener('scroll', onScroll, true);
   });
 
   return (
@@ -26,19 +27,33 @@ export const Nav = () => {
       onMouseLeave={() => toggleExpandNav(false)}
     >
       <div className={styles.brand}>
-        <Logo />
-        <Title />
+        <div className={styles.logo}>
+          <Logo />
+        </div>
+        <div className={styles.title}>
+          <Title />
+        </div>
       </div>
       <div className={styles.links}>
         <ul>
-          <li>GitHub</li>
+          <li>
+            <a
+              href="https://github.com/areknow/alpha-components"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
           <li>Theme</li>
-          <li>FAQ</li>
+          <li>
+            <a href="">FAQ</a>
+          </li>
         </ul>
       </div>
-      <div className={styles.mobileTrigger}>
+      {/* <div className={styles.mobileTrigger}>
         <Logo />
-      </div>
+      </div> */}
     </nav>
   );
 };

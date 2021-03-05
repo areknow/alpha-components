@@ -1,4 +1,13 @@
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+$primary-color: #00e9ff;
+
 :root {
   --background: #0d0d0d;
   --text: #ffffff;
+
+  --primary-theme-color: #{$primary-color};
+  --primary-theme-color-rgb: #{hexToRGB($primary-color)};
 }

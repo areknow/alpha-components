@@ -11,7 +11,10 @@ nav {
   .brand {
     display: flex;
     align-items: center;
-    svg:not(:last-child) {
+    .logo svg g {
+      fill: var(--primary-theme-color);
+    }
+    div:not(:last-child) {
       margin-right: 20px;
     }
   }
@@ -23,6 +26,10 @@ nav {
       display: flex;
       li:not(:last-child) {
         margin-right: 60px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
       }
     }
   }
@@ -42,12 +49,9 @@ nav {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    .brand,
+    .brand .title,
     .links {
       display: none;
-    }
-    .mobileTrigger {
-      display: block;
     }
   }
   &.expanded {
@@ -58,7 +62,7 @@ nav {
     width: calc(100% - 40px);
     padding: 20px 40px;
     justify-content: space-between;
-    .brand,
+    .brand .title,
     .links {
       display: flex;
     }
