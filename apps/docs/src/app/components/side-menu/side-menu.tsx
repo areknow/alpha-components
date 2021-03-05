@@ -4,6 +4,13 @@ import { NavHashLink } from 'react-router-hash-link';
 import { MENU } from './menu';
 import styles from './side-menu.module.scss';
 
+const scrollOffset = -60;
+
+const scrollWithOffset = (element: HTMLElement) => {
+  const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset;
+  window.scrollTo({ top: yCoordinate + scrollOffset, behavior: 'smooth' });
+};
+
 export const SideMenu = () => {
   const location = useLocation();
 
@@ -41,6 +48,9 @@ export const SideMenu = () => {
                       smooth
                       to={child.location}
                       activeClassName={styles.active}
+                      scroll={(element: HTMLElement) =>
+                        scrollWithOffset(element)
+                      }
                     >
                       {child.label}
                     </NavHashLink>
