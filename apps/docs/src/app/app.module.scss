@@ -1,0 +1,14 @@
+.app {
+  .page {
+    display: flex;
+    margin-top: 20px;
+    .sideMenu {
+      width: 250px;
+      flex-shrink: 0;
+    }
+    .content {
+      width: calc(100vw - 250px);
+      margin-left: 60px;
+    }
+  }
+}

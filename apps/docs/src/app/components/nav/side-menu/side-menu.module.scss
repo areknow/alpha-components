@@ -1,0 +1,45 @@
+.sideMenu {
+  background: #000;
+  border-radius: 30px;
+  padding: 20px 0;
+  overflow: hidden;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  ul.primaryLevel {
+    li {
+      position: relative;
+      div {
+        padding: 10px 42px;
+        position: relative;
+      }
+    }
+  }
+  ul.secondaryLevel {
+    li {
+      position: relative;
+      padding: 10px 62px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.active {
+  color: white !important;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 36px;
+    margin: auto;
+    background: rgb(0, 247, 255);
+    width: 3px;
+    box-shadow: 0 0 70px 30px rgba(0, 255, 255, 0.233);
+  }
+}
