@@ -1,5 +1,6 @@
 module.exports = {
   projects: [
+    '<rootDir>/apps/docs',
     '<rootDir>/apps/dev-react',
     '<rootDir>/apps/dev-angular',
     '<rootDir>/libs/react/button',
