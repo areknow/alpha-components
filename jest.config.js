@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/apps/dev-angular',
     '<rootDir>/libs/react/button',
     '<rootDir>/libs/angular/button',
+    '<rootDir>/libs/react/select',
   ],
 };

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styles from './react-button.module.scss';
 
-export interface AlphaButtonProps {
+export interface ButtonProps {
   negative?: boolean;
   disabled?: boolean;
   type: 'secondary' | 'primary';
@@ -9,7 +9,7 @@ export interface AlphaButtonProps {
   onChange?: () => void;
 }
 
-export const AlphaButton = (props: AlphaButtonProps) => {
+export const Button = (props: ButtonProps) => {
   const classes = [
     styles.button,
     props.type ? styles[props.type] : undefined,
@@ -28,4 +28,4 @@ export const AlphaButton = (props: AlphaButtonProps) => {
   );
 };
 
-export default AlphaButton;
+export default Button;

@@ -1,4 +1,4 @@
-import { AlphaButton } from '@alpha-components/react/button';
+import { Button } from '@alpha-components/react/button';
 import React, { useState } from 'react';
 import styles from './button-demo.module.scss';
 
@@ -9,28 +9,28 @@ export const ButtonDemo = () => {
     <div className={styles.demo}>
       <div className="primary">
         <p>Positive</p>
-        <AlphaButton type="primary">primary</AlphaButton>
-        <AlphaButton type="secondary">secondary</AlphaButton>
+        <Button type="primary">primary</Button>
+        <Button type="secondary">secondary</Button>
       </div>
       <div className="secondary">
         <p>Negative</p>
-        <AlphaButton type="primary" negative>
+        <Button type="primary" negative>
           primary
-        </AlphaButton>
-        <AlphaButton type="secondary" negative>
+        </Button>
+        <Button type="secondary" negative>
           secondary
-        </AlphaButton>
+        </Button>
       </div>
       <div className="callBack">
         <p>Callback</p>
-        <AlphaButton
+        <Button
           type="primary"
           onChange={() => {
             setValue(value + 1);
           }}
         >
           clicked: {JSON.stringify(value)}
-        </AlphaButton>
+        </Button>
       </div>
     </div>
   );

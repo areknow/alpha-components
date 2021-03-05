@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@alpha-components/react/button": ["libs/react/button/src/index.ts"],
-      "@alpha-components/angular/button": ["libs/angular/button/src/index.ts"]
+      "@alpha-components/angular/button": ["libs/angular/button/src/index.ts"],
+      "@miniml/alpha-components-react/select": [
+        "libs/react/select/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
