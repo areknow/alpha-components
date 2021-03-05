@@ -17,8 +17,8 @@ export const ButtonPage = () => {
           another view.
         </p>
       </Panel>
-      <Panel>
-        <h2 id="primary">Primary</h2>
+      <Panel id="primary">
+        <h2>Primary</h2>
         <p>
           Dolore occaecat sunt ipsum adipisicing fugiat minim dolore aliqua
           nostrud. Magna est ea eiusmod labore Lorem deserunt fugiat nulla ut
@@ -36,8 +36,8 @@ export const ButtonPage = () => {
           aliquip magna.
         </p>
       </Panel>
-      <Panel>
-        <h2 id="secondary">Secondary</h2>
+      <Panel id="secondary">
+        <h2>Secondary</h2>
         <p>
           Dolor qui consectetur do velit adipisicing laboris magna ipsum aliqua.
           Do officia sint quis laboris ad irure eiusmod id eiusmod officia dolor
@@ -50,8 +50,8 @@ export const ButtonPage = () => {
           voluptate proident sit. Amet enim aliquip fugiat ea.
         </p>
       </Panel>
-      <Panel>
-        <h2 id="disabled">Disabled</h2>
+      <Panel id="disabled">
+        <h2>Disabled</h2>
         <p>
           Nulla ea nisi sint non commodo tempor cupidatat quis elit Lorem est
           laboris ipsum anim. Elit officia ullamco ex adipisicing qui laboris ut
@@ -69,8 +69,8 @@ export const ButtonPage = () => {
           fugiat ea duis sint.
         </p>
       </Panel>
-      <Panel>
-        <h2 id="selected">Selected</h2>
+      <Panel id="selected">
+        <h2>Selected</h2>
         <p>
           Excepteur duis tempor in tempor nisi ad in aliqua et est ipsum aliqua.
           Exercitation aute ad qui sunt cupidatat proident esse cupidatat sunt

@@ -1,6 +1,6 @@
 .sideMenu {
   background: #000;
-  border-radius: 30px;
+  border-radius: 35px;
   padding: 20px 0;
   overflow: hidden;
   position: sticky;
@@ -32,6 +32,9 @@
       color: rgba(255, 255, 255, 0.2);
       a {
         padding: 10px 62px;
+      }
+      &:hover {
+        color: #fff;
       }
     }
   }

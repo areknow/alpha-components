@@ -15,17 +15,24 @@ export const SideMenu = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // let observer = undefined;
-    // const options = {
-    //   root: null,
-    //   rootMargin: '0px',
-    // };
-    // function handleIntersect(entries, observer) {
-    //   console.log(entries);
-    // }
-    // observer = new IntersectionObserver(handleIntersect, options);
-    // const boxElement = document.querySelector('body');
-    // observer.observe(boxElement);
+    const panels = document.querySelectorAll('.panel');
+    const root = document.querySelector('document');
+    const options = {
+      root,
+      rootMargin: '20px',
+      threshold: 1,
+    };
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      for (const entry of entries) {
+        if (entry.intersectionRatio === 1) {
+          window.location.hash = entry.target.id;
+        }
+      }
+    };
+    const observer = new IntersectionObserver(callback, options);
+    for (const element of Array.from(panels)) {
+      observer.observe(element);
+    }
   }, []);
 
   return (
