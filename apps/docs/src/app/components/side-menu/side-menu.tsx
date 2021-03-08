@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
-import { Context } from '../../context';
 import { MENU } from './menu';
 import styles from './side-menu.module.scss';
 
@@ -13,14 +12,8 @@ const scrollWithOffset = (element: HTMLElement) => {
 };
 
 export const SideMenu = () => {
-  const { context } = useContext(Context);
-  const sideMenuClasses = [
-    styles.sideMenu,
-    context.scrollNav ? styles.scrolled : null,
-  ].join(' ');
-
   return (
-    <div className={sideMenuClasses}>
+    <div className={styles.sideMenu}>
       <ul className={styles.primaryLevel}>
         {MENU.map((item, key) => (
           <li key={key}>

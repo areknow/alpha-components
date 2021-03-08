@@ -10,6 +10,4 @@ $primary-color: #00e9ff;
 
   --primary-theme-color: #{$primary-color};
   --primary-theme-color-rgb: #{hexToRGB($primary-color)};
-
-  --nav-anim-duration: 0.3s;
 }

@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ReactComponent as Logo } from '../../../assets/logo.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
-import { Context } from '../../context';
 import styles from './nav.module.scss';
 
 export const Nav = () => {
   const [scrolledNav, toggleScrolledNav] = useState(false);
   const [expandNav, toggleExpandNav] = useState(false);
-  const { updateContext } = useContext(Context);
 
   const navClasses = [
     scrolledNav ? styles.scrolled : null,
@@ -16,13 +14,11 @@ export const Nav = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      const scrolled = window.scrollY > 90;
-      toggleScrolledNav(scrolled);
-      updateContext({ scrollNav: scrolled });
+      toggleScrolledNav(window.scrollY > 90);
     };
     window.addEventListener('scroll', onScroll, true);
     return () => window.removeEventListener('scroll', onScroll, true);
-  }, [updateContext]);
+  }, []);
 
   return (
     <nav
