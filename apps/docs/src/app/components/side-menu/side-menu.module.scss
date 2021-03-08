@@ -1,10 +1,11 @@
 .sideMenu {
   background: #000;
   border-radius: 35px;
-  padding: 20px 0;
+  padding: 30px 0;
   overflow: hidden;
   position: sticky;
-  top: 20px;
+  top: 110px;
+  transition: top var(--nav-anim-duration) ease-in;
   ul {
     list-style-type: none;
     margin: 0;
@@ -29,7 +30,7 @@
   ul.secondaryLevel {
     li {
       position: relative;
-      color: rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.5);
       a {
         padding: 10px 62px;
       }
@@ -37,6 +38,9 @@
         color: #fff;
       }
     }
+  }
+  &.scrolled {
+    top: 20px;
   }
 }
 

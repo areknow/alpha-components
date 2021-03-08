@@ -5,9 +5,11 @@
 $primary-color: #00e9ff;
 
 :root {
-  --background: #0d0d0d;
+  --background: #131313;
   --text: #ffffff;
 
   --primary-theme-color: #{$primary-color};
   --primary-theme-color-rgb: #{hexToRGB($primary-color)};
+
+  --nav-anim-duration: 0.3s;
 }

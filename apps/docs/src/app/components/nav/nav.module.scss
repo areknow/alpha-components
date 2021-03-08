@@ -3,7 +3,16 @@ nav {
   display: flex;
   flex-grow: 1;
   pointer-events: none;
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+  justify-content: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
   .content {
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all var(--nav-anim-duration) ease-in;
     pointer-events: all;
     width: 100%;
     height: 70px;
@@ -18,14 +27,25 @@ nav {
     .brand {
       display: flex;
       align-items: center;
+      opacity: 1;
+      width: auto;
+      transition: opacity var(--nav-anim-duration) ease-in;
       .logo svg g {
         fill: var(--primary-theme-color);
       }
-      div:not(:first-child) {
+      .title {
         margin-left: 20px;
+        opacity: 1;
+        width: auto;
+        transition: opacity var(--nav-anim-duration) ease-in;
       }
     }
     .links {
+      overflow: hidden;
+      white-space: nowrap;
+      opacity: 1;
+      width: auto;
+      transition: opacity var(--nav-anim-duration) ease-in;
       ul {
         list-style: none;
         margin: 0;
@@ -41,35 +61,29 @@ nav {
       }
     }
   }
+
   &.scrolled {
-    position: sticky;
-    top: 20px;
-    z-index: 1;
-    justify-content: flex-end;
-    transition: all 0.4s ease;
     .content {
       width: 70px;
-      padding: 0;
-      justify-content: center;
+      padding: 0 0 0 20px;
       .brand .title,
       .links {
-        display: none;
+        opacity: 0;
+        width: 0;
       }
     }
   }
   &.expanded {
-    right: 20px;
-    top: 20px;
-    transition: all 0.4s ease;
     .content {
-      width: auto;
+      width: 331px;
       padding: 20px 40px;
-      justify-content: flex-end;
       .brand {
-        display: none;
+        opacity: 0;
+        width: 0;
       }
       .links {
-        display: flex;
+        opacity: 1;
+        width: auto;
       }
     }
   }
