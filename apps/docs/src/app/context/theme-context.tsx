@@ -2,9 +2,11 @@ import React, { createContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
 import { getLocalDarkScheme, setLocalDarkScheme } from '../storage/scheme';
 import { DEFAULT_STATE } from './constants';
+import styles from './theme-context.module.scss';
 
 export interface ThemeContextModel {
   darkScheme: boolean;
+  activeTheme: 'magnetar' | 'ressonance';
 }
 
 type ThemeContextType = {
@@ -42,11 +44,14 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     });
   }
 
+  const themeClasses = [
+    styles.appTheme,
+    themeContext.darkScheme ? styles.darkTheme : styles.lightTheme,
+  ].join(' ');
+
   return (
     <ThemeContext.Provider value={{ themeContext, updateThemeContext }}>
-      <div className={!themeContext.darkScheme ? 'light-theme' : 'dark-theme'}>
-        {children}
-      </div>
+      <div className={themeClasses}>{children}</div>
     </ThemeContext.Provider>
   );
 };

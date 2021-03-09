@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { ReactComponent as Logo } from '../../../assets/logo.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
+import { ThemeSelector } from '../theme-selector/theme-selector';
 import styles from './nav.module.scss';
 
 export const Nav = () => {
   const [scrolledNav, toggleScrolledNav] = useState(false);
   const [expandNav, toggleExpandNav] = useState(false);
+  const [themeSelector, toggleThemeSelector] = useState(false);
 
   const navClasses = [
     scrolledNav ? styles.scrolled : null,
@@ -46,7 +48,17 @@ export const Nav = () => {
                 GitHub
               </a>
             </li>
-            <li>Theme</li>
+            <li
+              onMouseEnter={() => toggleThemeSelector(true)}
+              onMouseLeave={() => toggleThemeSelector(false)}
+            >
+              <div>Theme</div>
+              {themeSelector && (
+                <div className={styles.themeSelectorContainer}>
+                  <ThemeSelector />
+                </div>
+              )}
+            </li>
             <li>
               <a href="">FAQ</a>
             </li>
