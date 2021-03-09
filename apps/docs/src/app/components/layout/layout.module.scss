@@ -1,17 +1,27 @@
 .layout {
+  padding: 20px;
   .page {
     display: flex;
     margin-top: 20px;
-    .sideMenu {
+    .sideMenuColumn {
       width: 250px;
       flex-shrink: 0;
+      .sideMenuContainer {
+        position: sticky;
+        top: 20px;
+      }
     }
-    .content {
+    .contentColumn {
       width: calc(100vw - 250px);
       margin-left: 60px;
       .children {
         max-width: 900px;
       }
     }
+  }
+  .schemeToggleContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
   }
 }

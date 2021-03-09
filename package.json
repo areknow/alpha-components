@@ -50,6 +50,7 @@
     "react-router-hash-link": "^2.4.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
+    "use-color-scheme": "^1.1.1",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
