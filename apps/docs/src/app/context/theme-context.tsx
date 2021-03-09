@@ -26,6 +26,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   );
   const { scheme } = useColorScheme();
 
+  // Set dark scheme value from local on init
   useEffect(() => {
     const localScheme = getLocalDarkScheme();
     if (localScheme !== null) {
@@ -35,9 +36,22 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [scheme]);
 
+  // Set dark scheme context on change
   useEffect(() => {
     setLocalDarkScheme(themeContext.darkScheme);
   }, [themeContext.darkScheme]);
+
+  // Set active theme custom properties on change
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--primary-theme-color',
+      `var(--${themeContext.activeTheme})`
+    );
+    document.documentElement.style.setProperty(
+      '--primary-theme-color-rgb',
+      `var(--${themeContext.activeTheme}-rgb)`
+    );
+  }, [themeContext.activeTheme]);
 
   function updateThemeContext(updateData: Partial<ThemeContextModel>) {
     setThemeContext((context) => {

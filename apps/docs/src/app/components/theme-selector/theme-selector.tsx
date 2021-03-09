@@ -5,7 +5,7 @@ import styles from './theme-selector.module.scss';
 import { listItems } from './themes';
 
 export const ThemeSelector = () => {
-  const { themeContext } = useContext(ThemeContext);
+  const { themeContext, updateThemeContext } = useContext(ThemeContext);
 
   const classes = (theme: Theme) => {
     return [
@@ -18,7 +18,11 @@ export const ThemeSelector = () => {
     <div className={styles.themeSelector}>
       <ul>
         {listItems.map((item, key) => (
-          <li key={key} className={classes(item.theme)}>
+          <li
+            key={key}
+            className={classes(item.theme)}
+            onClick={() => updateThemeContext({ activeTheme: item.theme })}
+          >
             {item.label}
           </li>
         ))}
@@ -26,3 +30,5 @@ export const ThemeSelector = () => {
     </div>
   );
 };
+
+export default ThemeSelector;

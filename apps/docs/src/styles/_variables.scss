@@ -13,8 +13,10 @@ $neutrino: #ff0055;
   --eventHorizon: #{$eventHorizon};
   --neutrino: #{$neutrino};
 
-  --primary-theme-color: #{$ressonance};
-  --primary-theme-color-rgb: #{hexToRGB($ressonance)};
+  --magnetar-rgb: #{hexToRGB($magnetar)};
+  --ressonance-rgb: #{hexToRGB($ressonance)};
+  --eventHorizon-rgb: #{hexToRGB($eventHorizon)};
+  --neutrino-rgb: #{hexToRGB($neutrino)};
 
   --text-color-dark: #ffffff;
   --text-color-light: #000000;
