@@ -1,6 +1,6 @@
 import { Theme } from '../../types';
 
-export const listItems = [
+export const THEME_OPTIONS = [
   {
     label: 'Magnetar',
     theme: Theme.MAGNETAR,

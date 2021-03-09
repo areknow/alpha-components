@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../context';
 import { Theme } from '../../types';
 import styles from './theme-selector.module.scss';
-import { listItems } from './themes';
+import { THEME_OPTIONS } from './themes';
 
 export const ThemeSelector = () => {
   const { themeContext, updateThemeContext } = useContext(ThemeContext);
@@ -17,7 +17,7 @@ export const ThemeSelector = () => {
   return (
     <div className={styles.themeSelector}>
       <ul>
-        {listItems.map((item, key) => (
+        {THEME_OPTIONS.map((item, key) => (
           <li
             key={key}
             className={classes(item.theme)}
