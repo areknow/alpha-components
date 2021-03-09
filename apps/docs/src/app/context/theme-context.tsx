@@ -1,12 +1,13 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
 import { getLocalDarkScheme, setLocalDarkScheme } from '../storage/scheme';
+import { Theme } from '../types';
 import { DEFAULT_STATE } from './constants';
 import styles from './theme-context.module.scss';
 
 export interface ThemeContextModel {
   darkScheme: boolean;
-  activeTheme: 'magnetar' | 'ressonance';
+  activeTheme: Theme;
 }
 
 type ThemeContextType = {
