@@ -20,8 +20,8 @@ export const App = () => {
           <Route path="/" exact>
             <Redirect to="/button" />
           </Route>
-          {COMPONENTS.map((component) => (
-            <Route path={`/${component.key}`} exact>
+          {COMPONENTS.map((component, key) => (
+            <Route key={key} path={`/${component.key}`} exact>
               {component.demo}
             </Route>
           ))}
