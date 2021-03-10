@@ -1,15 +1,11 @@
 $size-small: 600px;
 $size-medium: 1000px;
-:root {
-  --theme-blue: #206af6;
-  --theme-blue-hover: #1d5fd8;
-}
 
 .button {
   border-radius: 4px;
-  background-color: var(--theme-blue);
+  background-color: var(--primary-theme-color);
   padding: 14px 65px;
-  border: 2px solid var(--theme-blue);
+  border: 2px solid var(--primary-theme-color);
   font-size: 24px;
   font-weight: 700;
   color: #fff;
@@ -20,37 +16,26 @@ $size-medium: 1000px;
   font-family: 'IBM Plex Sans', sans-serif;
   cursor: pointer;
   &:hover {
-    background-color: var(--theme-blue-hover);
-    border-color: var(--theme-blue-hover);
+    background-color: var(--primary-theme-hover-color);
+    border-color: var(--primary-theme-hover-color);
   }
   &:focus {
     outline: 0;
   }
 }
 .button.secondary {
-  color: var(--theme-blue);
+  color: var(--primary-theme-color);
   background-color: transparent;
   &:hover {
-    border-color: var(--theme-blue-hover);
+    border-color: var(--primary-theme-hover-color);
   }
-}
-.button.negative {
-  color: #000;
-  border-color: #fff;
-  background-color: #fff;
-  &:hover {
-    border-color: #fff;
-  }
-}
-.button.negative.secondary {
-  background-color: transparent;
-  color: #fff;
 }
 .button:disabled {
   opacity: 0.4;
   background-color: grey;
   border-color: grey;
   pointer-events: none;
+  color: white;
 }
 
 @media (max-width: $size-small) {

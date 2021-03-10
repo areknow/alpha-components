@@ -1,3 +1,4 @@
+import { Button } from '@alpha-components/react/button';
 import React from 'react';
 import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
@@ -7,6 +8,7 @@ export const ButtonPage = () => {
     <Page>
       <Panel>
         <h1>Button</h1>
+        <Button type="primary">Foo</Button>
         <p>
           Native button and a elements are always used in order to provide the
           most straightforward and accessible experience for users. A button

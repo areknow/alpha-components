@@ -3,6 +3,7 @@ import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';
 import { COMPONENTS } from './component';
 import { ButtonDemo } from './demos/button/button-demo';
+import { SelectDemo } from './demos/select/select-demo';
 
 export const App = () => {
   return (
@@ -23,6 +24,9 @@ export const App = () => {
           </Route>
           <Route path="/button" exact>
             <ButtonDemo></ButtonDemo>
+          </Route>
+          <Route path="/select" exact>
+            <SelectDemo></SelectDemo>
           </Route>
         </Switch>
       </div>

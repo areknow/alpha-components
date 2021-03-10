@@ -10,15 +10,15 @@ export const ButtonDemo = () => {
       <div className="primary">
         <p>Positive</p>
         <Button type="primary">primary</Button>
-        <Button type="secondary">secondary</Button>
+        <Button type="primary" disabled>
+          disabled
+        </Button>
       </div>
       <div className="secondary">
-        <p>Negative</p>
-        <Button type="primary" negative>
-          primary
-        </Button>
-        <Button type="secondary" negative>
-          secondary
+        <p>Secondary</p>
+        <Button type="secondary">secondary</Button>
+        <Button type="secondary" disabled>
+          disabled
         </Button>
       </div>
       <div className="callBack">
