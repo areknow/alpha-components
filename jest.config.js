@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/angular/button',
     '<rootDir>/libs/react/select',
     '<rootDir>/libs/react/radio',
+    '<rootDir>/libs/react/checkbox',
   ],
 };

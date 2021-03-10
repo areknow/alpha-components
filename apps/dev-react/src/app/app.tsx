@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';
-import { COMPONENTS } from './component';
+import { COMPONENTS } from './components';
 import { ButtonDemo } from './demos/button/button-demo';
+import { CheckboxDemo } from './demos/checkbox/checkbox-demo';
 import { RadioDemo } from './demos/radio/radio-demo';
 import { SelectDemo } from './demos/select/select-demo';
 
@@ -31,6 +32,9 @@ export const App = () => {
           </Route>
           <Route path="/radio" exact>
             <RadioDemo></RadioDemo>
+          </Route>
+          <Route path="/checkbox" exact>
+            <CheckboxDemo></CheckboxDemo>
           </Route>
         </Switch>
       </div>

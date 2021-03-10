@@ -444,6 +444,56 @@
           }
         }
       }
+    },
+    "react-checkbox": {
+      "root": "libs/react/checkbox",
+      "sourceRoot": "libs/react/checkbox/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react/checkbox/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/react/checkbox",
+            "tsConfig": "libs/react/checkbox/tsconfig.lib.json",
+            "project": "libs/react/checkbox/package.json",
+            "entryFile": "libs/react/checkbox/src/index.ts",
+            "external": [
+              "react",
+              "react-dom"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react/checkbox"
+          ],
+          "options": {
+            "jestConfig": "libs/react/checkbox/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

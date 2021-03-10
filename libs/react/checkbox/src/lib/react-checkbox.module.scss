@@ -1,6 +1,6 @@
-.radioContainer {
+.checkboxContainer {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
@@ -16,44 +16,56 @@ input {
   cursor: pointer;
 }
 .label {
-  font-size: 22px;
   line-height: 1.36;
   letter-spacing: 0.21px;
-  max-width: 640px;
+  font-size: 22px;
   color: #666;
+  max-width: 640px;
 }
-.radio {
+.checkbox {
   box-sizing: border-box;
-  position: relative;
-  height: 24px;
-  width: 24px;
+  height: 18px;
+  width: 18px;
   background-color: transparent;
   border: 2px solid #626262;
-  border-radius: 50%;
+  border-radius: 2px;
   margin-right: 46px;
+  position: relative;
 }
 input:checked ~ .label {
   color: #000;
 }
-input:checked ~ .radio {
+input:checked ~ .checkbox {
   border-color: var(--primary-theme-color);
 }
-.radio:after {
+.checkbox:before,
+.checkbox:after {
   content: '';
   position: absolute;
   display: none;
 }
-input:checked ~ .radio:after {
+input:checked ~ .checkbox:before,
+input:checked ~ .checkbox:after {
   display: block;
 }
-.radio:after {
+.checkbox:before {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
   background: var(--primary-theme-color);
+}
+.checkbox:after {
+  top: -11px;
+  bottom: 0;
+  right: 0;
+  left: -6px;
+  margin: auto;
+  width: 10px;
+  height: 5px;
+  border: solid 2px #fff;
+  border-right: none;
+  border-top: none;
+  transform: translate(3px, 4px) rotate(-45deg);
 }

@@ -18,7 +18,8 @@
       "@alpha-components/angular/button": ["libs/angular/button/src/index.ts"],
       "@alpha-components/react/button": ["libs/react/button/src/index.ts"],
       "@alpha-components/react/select": ["libs/react/select/src/index.ts"],
-      "@alpha-components/react/radio": ["libs/react/radio/src/index.ts"]
+      "@alpha-components/react/radio": ["libs/react/radio/src/index.ts"],
+      "@alpha-components/react/checkbox": ["libs/react/checkbox/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
