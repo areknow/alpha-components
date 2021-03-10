@@ -544,6 +544,56 @@
           }
         }
       }
+    },
+    "react-textarea": {
+      "root": "libs/react/textarea",
+      "sourceRoot": "libs/react/textarea/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react/textarea/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/react/textarea",
+            "tsConfig": "libs/react/textarea/tsconfig.lib.json",
+            "project": "libs/react/textarea/package.json",
+            "entryFile": "libs/react/textarea/src/index.ts",
+            "external": [
+              "react",
+              "react-dom"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react/textarea"
+          ],
+          "options": {
+            "jestConfig": "libs/react/textarea/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

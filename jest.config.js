@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/libs/react/radio',
     '<rootDir>/libs/react/checkbox',
     '<rootDir>/libs/react/input',
+    '<rootDir>/libs/react/textarea',
   ],
 };
