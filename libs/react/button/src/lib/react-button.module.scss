@@ -2,6 +2,7 @@ $size-small: 600px;
 $size-medium: 1000px;
 
 .button {
+  box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--primary-theme-color);
   padding: 14px 65px;

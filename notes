@@ -1,1 +1,1 @@
-nx g @nrwl/react:lib select --directory=react --tags=type:component,target:react --publishable --importPath="@miniml/alpha-components-react/select"
+nx g @nrwl/react:lib radio --directory=react --tags=type:component,target:react --publishable --importPath="@alpha-components/react/radio"

@@ -3,6 +3,7 @@ import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';
 import { COMPONENTS } from './component';
 import { ButtonDemo } from './demos/button/button-demo';
+import { RadioDemo } from './demos/radio/radio-demo';
 import { SelectDemo } from './demos/select/select-demo';
 
 export const App = () => {
@@ -27,6 +28,9 @@ export const App = () => {
           </Route>
           <Route path="/select" exact>
             <SelectDemo></SelectDemo>
+          </Route>
+          <Route path="/radio" exact>
+            <RadioDemo></RadioDemo>
           </Route>
         </Switch>
       </div>

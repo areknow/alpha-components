@@ -21,6 +21,7 @@
     "dev-angular": { "tags": ["type:app", "target:angular"] },
     "react-button": { "tags": ["type:component", "target:react"] },
     "angular-button": { "tags": ["type:component", "target:angular"] },
-    "react-select": { "tags": ["type:component", "target:react"] }
+    "react-select": { "tags": ["type:component", "target:react"] },
+    "react-radio": { "tags": ["type:component", "target:react"] }
   }
 }
