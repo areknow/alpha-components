@@ -4,6 +4,7 @@ import styles from './app.module.scss';
 import { COMPONENTS } from './components';
 import { ButtonDemo } from './demos/button/button-demo';
 import { CheckboxDemo } from './demos/checkbox/checkbox-demo';
+import { InputDemo } from './demos/input/input-demo';
 import { RadioDemo } from './demos/radio/radio-demo';
 import { SelectDemo } from './demos/select/select-demo';
 
@@ -35,6 +36,9 @@ export const App = () => {
           </Route>
           <Route path="/checkbox" exact>
             <CheckboxDemo></CheckboxDemo>
+          </Route>
+          <Route path="/input" exact>
+            <InputDemo></InputDemo>
           </Route>
         </Switch>
       </div>

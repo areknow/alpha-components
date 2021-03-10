@@ -23,6 +23,7 @@
     "angular-button": { "tags": ["type:component", "target:angular"] },
     "react-select": { "tags": ["type:component", "target:react"] },
     "react-radio": { "tags": ["type:component", "target:react"] },
-    "react-checkbox": { "tags": ["type:component", "target:react"] }
+    "react-checkbox": { "tags": ["type:component", "target:react"] },
+    "react-input": { "tags": ["type:component", "target:react"] }
   }
 }

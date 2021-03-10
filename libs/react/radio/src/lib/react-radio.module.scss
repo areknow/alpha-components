@@ -7,53 +7,53 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-input {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-.label {
-  font-size: 22px;
-  line-height: 1.36;
-  letter-spacing: 0.21px;
-  max-width: 640px;
-  color: #666;
-}
-.radio {
-  box-sizing: border-box;
-  position: relative;
-  height: 24px;
-  width: 24px;
-  background-color: transparent;
-  border: 2px solid #626262;
-  border-radius: 50%;
-  margin-right: 46px;
-}
-input:checked ~ .label {
-  color: #000;
-}
-input:checked ~ .radio {
-  border-color: var(--primary-theme-color);
-}
-.radio:after {
-  content: '';
-  position: absolute;
-  display: none;
-}
-input:checked ~ .radio:after {
-  display: block;
-}
-.radio:after {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--primary-theme-color);
+  input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  .label {
+    font-size: 22px;
+    line-height: 1.36;
+    letter-spacing: 0.21px;
+    max-width: 640px;
+    color: #666;
+  }
+  .radio {
+    box-sizing: border-box;
+    position: relative;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 2px solid #626262;
+    border-radius: 50%;
+    margin-right: 46px;
+  }
+  input:checked ~ .label {
+    color: #000;
+  }
+  input:checked ~ .radio {
+    border-color: var(--primary-theme-color);
+  }
+  .radio:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  input:checked ~ .radio:after {
+    display: block;
+  }
+  .radio:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary-theme-color);
+  }
 }

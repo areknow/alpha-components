@@ -7,65 +7,65 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-input {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-.label {
-  line-height: 1.36;
-  letter-spacing: 0.21px;
-  font-size: 22px;
-  color: #666;
-  max-width: 640px;
-}
-.checkbox {
-  box-sizing: border-box;
-  height: 18px;
-  width: 18px;
-  background-color: transparent;
-  border: 2px solid #626262;
-  border-radius: 2px;
-  margin-right: 46px;
-  position: relative;
-}
-input:checked ~ .label {
-  color: #000;
-}
-input:checked ~ .checkbox {
-  border-color: var(--primary-theme-color);
-}
-.checkbox:before,
-.checkbox:after {
-  content: '';
-  position: absolute;
-  display: none;
-}
-input:checked ~ .checkbox:before,
-input:checked ~ .checkbox:after {
-  display: block;
-}
-.checkbox:before {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background: var(--primary-theme-color);
-}
-.checkbox:after {
-  top: -11px;
-  bottom: 0;
-  right: 0;
-  left: -6px;
-  margin: auto;
-  width: 10px;
-  height: 5px;
-  border: solid 2px #fff;
-  border-right: none;
-  border-top: none;
-  transform: translate(3px, 4px) rotate(-45deg);
+  input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  .label {
+    line-height: 1.36;
+    letter-spacing: 0.21px;
+    font-size: 22px;
+    color: #666;
+    max-width: 640px;
+  }
+  .checkbox {
+    box-sizing: border-box;
+    height: 18px;
+    width: 18px;
+    background-color: transparent;
+    border: 2px solid #626262;
+    border-radius: 2px;
+    margin-right: 46px;
+    position: relative;
+  }
+  input:checked ~ .label {
+    color: #000;
+  }
+  input:checked ~ .checkbox {
+    border-color: var(--primary-theme-color);
+  }
+  .checkbox:before,
+  .checkbox:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  input:checked ~ .checkbox:before,
+  input:checked ~ .checkbox:after {
+    display: block;
+  }
+  .checkbox:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: var(--primary-theme-color);
+  }
+  .checkbox:after {
+    top: -11px;
+    bottom: 0;
+    right: 0;
+    left: -6px;
+    margin: auto;
+    width: 10px;
+    height: 5px;
+    border: solid 2px #fff;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+  }
 }

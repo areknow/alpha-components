@@ -1,1 +1,1 @@
-export const COMPONENTS = ['button', 'select', 'radio', 'checkbox'];
+export const COMPONENTS = ['button', 'select', 'radio', 'checkbox', 'input'];

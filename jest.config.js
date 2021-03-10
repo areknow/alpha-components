@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/react/select',
     '<rootDir>/libs/react/radio',
     '<rootDir>/libs/react/checkbox',
+    '<rootDir>/libs/react/input',
   ],
 };
