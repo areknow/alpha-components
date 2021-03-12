@@ -1,29 +1,4 @@
-@function hexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
-
-$magnetar: #7b00ff;
-$ressonance: #00e9ff;
-$eventHorizon: #ffab00;
-$neutrino: #ff0055;
-
 :root {
-  --magnetar: #{$magnetar};
-  --ressonance: #{$ressonance};
-  --eventHorizon: #{$eventHorizon};
-  --neutrino: #{$neutrino};
-
-  --magnetar-rgb: #{hexToRGB($magnetar)};
-  --ressonance-rgb: #{hexToRGB($ressonance)};
-  --eventHorizon-rgb: #{hexToRGB($eventHorizon)};
-  --neutrino-rgb: #{hexToRGB($neutrino)};
-
-  --text-color-dark: #ffffff;
-  --text-color-light: #000000;
-
-  --background-color-dark: #0d0d0d;
-  --background-color-light: #f7f7f7;
-
   --nav-color-dark: #000000;
   --nav-color-light: #e8e8e8;
 

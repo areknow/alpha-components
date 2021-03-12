@@ -48,18 +48,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [themeContext.darkScheme]);
 
-  // Set active theme custom properties on change
-  useEffect(() => {
-    document.documentElement.style.setProperty(
-      '--primary-theme-color',
-      `var(--${themeContext.activeTheme})`
-    );
-    document.documentElement.style.setProperty(
-      '--primary-theme-color-rgb',
-      `var(--${themeContext.activeTheme}-rgb)`
-    );
-  }, [themeContext.activeTheme]);
-
   function updateThemeContext(updateData: Partial<ThemeContextModel>) {
     setThemeContext((context) => {
       return { ...context, ...updateData };
