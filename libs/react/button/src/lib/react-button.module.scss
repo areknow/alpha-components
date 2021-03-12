@@ -20,6 +20,10 @@ $size-medium: 1000px;
     background-color: var(--primary-theme-hover-color);
     border-color: var(--primary-theme-hover-color);
   }
+  &:active {
+    background-color: var(--primary-theme-clicked-color);
+    border-color: var(--primary-theme-clicked-color);
+  }
   &:focus {
     outline: 0;
   }
@@ -29,6 +33,10 @@ $size-medium: 1000px;
   background-color: transparent;
   &:hover {
     border-color: var(--primary-theme-hover-color);
+    color: var(--primary-theme-hover-color);
+  }
+  &:active {
+    border-color: var(--primary-theme-clicked-color);
   }
 }
 .button:disabled {

@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/react/checkbox',
     '<rootDir>/libs/react/input',
     '<rootDir>/libs/react/textarea',
+    '<rootDir>/libs/react/root',
   ],
 };

@@ -1,0 +1,76 @@
+$magnetar: #7b00ff;
+$ressonance: #00e9ff;
+$eventHorizon: #ffab00;
+$neutrino: #ff0055;
+
+$light-neutral-1: #e5e7ea;
+$light-neutral-2: #6d7488;
+$light-neutral-3: #30333c;
+$light-contrast: #15171b;
+$light-base: #fafbfb;
+
+$dark-neutral-1: #21242a;
+$dark-neutral-2: #757c91;
+$dark-neutral-3: #ced1d8;
+$dark-contrast: #fafbfb;
+$dark-base: #15171b;
+
+/**
+ * Light/dark logic
+ */
+
+@mixin light {
+  --primary-text-color: #{$light-contrast};
+  --secondary-text-color: #{$light-neutral-3};
+  --disabled-text-color: #{$light-neutral-2};
+  --primary-background-color: #{$light-base};
+}
+@mixin dark {
+  --primary-text-color: #{$dark-contrast};
+  --secondary-text-color: #{$dark-neutral-3};
+  --disabled-text-color: #{$dark-neutral-2};
+  --primary-background-color: #{$dark-base};
+}
+
+.root {
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
+  @include light;
+  @media (prefers-color-scheme: dark) {
+    @include dark;
+  }
+}
+.lightMode {
+  @include light;
+}
+.darkMode {
+  @include dark;
+}
+
+/**
+ * Theme logic
+ */
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin theme($color) {
+  --primary-theme-color: #{$color};
+  --primary-theme-color-rgb: #{hexToRGB($color)};
+  --primary-theme-hover-color: #{darken($color, 10%)};
+  --primary-theme-clicked-color: #{darken($color, 20%)};
+}
+
+.magnetar {
+  @include theme($magnetar);
+}
+.ressonance {
+  @include theme($ressonance);
+}
+.eventHorizon {
+  @include theme($eventHorizon);
+}
+.neutrino {
+  @include theme($neutrino);
+}

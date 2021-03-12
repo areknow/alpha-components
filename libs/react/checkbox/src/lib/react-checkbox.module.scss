@@ -18,7 +18,7 @@
     line-height: 1.36;
     letter-spacing: 0.21px;
     font-size: 22px;
-    color: #666;
+    color: var(--secondary-text-color);
     max-width: 640px;
   }
   .checkbox {
@@ -26,13 +26,13 @@
     height: 18px;
     width: 18px;
     background-color: transparent;
-    border: 2px solid #626262;
+    border: 2px solid var(--secondary-text-color);
     border-radius: 2px;
     margin-right: 46px;
     position: relative;
   }
   input:checked ~ .label {
-    color: #000;
+    color: var(--primary-text-color);
   }
   input:checked ~ .checkbox {
     border-color: var(--primary-theme-color);
