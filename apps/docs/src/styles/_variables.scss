@@ -1,4 +1,14 @@
+$magnetar: #7b00ff; // find a way to make this workspace wide
+$ressonance: #00e9ff;
+$eventHorizon: #ffab00;
+$neutrino: #ff0055;
+
 :root {
+  --magnetar: #{$magnetar};
+  --ressonance: #{$ressonance};
+  --eventHorizon: #{$eventHorizon};
+  --neutrino: #{$neutrino};
+
   --nav-color-dark: #000000;
   --nav-color-light: #e8e8e8;
 

@@ -1,34 +1,44 @@
-$magnetar: #7b00ff;
+$magnetar: #7b00ff; // move variables to ws lib
 $ressonance: #00e9ff;
 $eventHorizon: #ffab00;
 $neutrino: #ff0055;
 
-$light-neutral-1: #e5e7ea;
-$light-neutral-2: #6d7488;
+$light-neutral-0: #fff;
+$light-neutral-1: #989a9b;
+$light-neutral-2: #626364;
 $light-neutral-3: #30333c;
-$light-contrast: #15171b;
-$light-base: #fafbfb;
+$light-contrast: #000000;
+$light-base: #f7f7f7;
 
-$dark-neutral-1: #21242a;
-$dark-neutral-2: #757c91;
-$dark-neutral-3: #ced1d8;
-$dark-contrast: #fafbfb;
-$dark-base: #15171b;
+$dark-neutral-0: #000;
+$dark-neutral-1: #30333c;
+$dark-neutral-2: #626364;
+$dark-neutral-3: #989a9b;
+$dark-contrast: #ffffff;
+$dark-base: #0d0d0d;
+
+:root {
+  --white: #fff;
+}
 
 /**
  * Light/dark logic
  */
 
 @mixin light {
+  --neutral-0: #{$light-neutral-0};
+  --neutral-1: #{$light-neutral-1};
+  --neutral-2: #{$light-neutral-2};
+  --neutral-3: #{$light-neutral-3};
   --primary-text-color: #{$light-contrast};
-  --secondary-text-color: #{$light-neutral-3};
-  --disabled-text-color: #{$light-neutral-2};
   --primary-background-color: #{$light-base};
 }
 @mixin dark {
+  --neutral-0: #{$dark-neutral-0};
+  --neutral-1: #{$dark-neutral-1};
+  --neutral-2: #{$dark-neutral-2};
+  --neutral-3: #{$dark-neutral-3};
   --primary-text-color: #{$dark-contrast};
-  --secondary-text-color: #{$dark-neutral-3};
-  --disabled-text-color: #{$dark-neutral-2};
   --primary-background-color: #{$dark-base};
 }
 

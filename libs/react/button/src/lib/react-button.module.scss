@@ -9,12 +9,12 @@ $size-medium: 1000px;
   border: 2px solid var(--primary-theme-color);
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   display: inline-block;
   letter-spacing: normal;
   -webkit-appearance: none;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif; // font?
   cursor: pointer;
   &:hover {
     background-color: var(--primary-theme-hover-color);
@@ -41,10 +41,10 @@ $size-medium: 1000px;
 }
 .button:disabled {
   opacity: 0.4;
-  background-color: grey;
-  border-color: grey;
+  background-color: var(--neutral-2);
+  border-color: var(--neutral-2);
   pointer-events: none;
-  color: white;
+  color: var(--white);
 }
 
 @media (max-width: $size-small) {
