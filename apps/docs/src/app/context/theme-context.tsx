@@ -3,6 +3,7 @@ import { useColorScheme } from 'use-color-scheme';
 import { getLocalDarkScheme, setLocalDarkScheme } from '../storage';
 import { Theme } from '../types';
 import { DEFAULT_STATE } from './constants';
+import { changeFavicon } from './icon';
 
 export interface ThemeContextModel {
   darkScheme: boolean;
@@ -42,9 +43,11 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     if (themeContext.darkScheme) {
       body.classList.remove('light-scheme');
       body.classList.add('dark-scheme');
+      changeFavicon(true);
     } else {
       body.classList.remove('dark-scheme');
       body.classList.add('light-scheme');
+      changeFavicon(false);
     }
   }, [themeContext.darkScheme]);
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ReactComponent as Logo } from '../../../assets/logo.svg';
+import { ReactComponent as Logo } from '../../../assets/logo-white.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
 import { ThemeSelector } from '../theme-selector/theme-selector';
 import styles from './nav.module.scss';
