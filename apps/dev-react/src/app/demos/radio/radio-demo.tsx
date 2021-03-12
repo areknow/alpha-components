@@ -10,7 +10,7 @@ export const RadioDemo = () => {
           label="Almond milk"
           group="milk"
           selected={true}
-          change={(event) => {
+          onChange={(event) => {
             console.log(event);
           }}
         />
@@ -19,7 +19,7 @@ export const RadioDemo = () => {
         <Radio
           label="Soy milk"
           group="milk"
-          change={(event) => {
+          onChange={(event) => {
             console.log(event);
           }}
         />

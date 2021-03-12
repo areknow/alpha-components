@@ -5,7 +5,7 @@ interface RadioProps {
   label: string;
   group: string;
   selected?: boolean;
-  change: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Radio = (props: RadioProps) => {
@@ -14,7 +14,7 @@ export const Radio = (props: RadioProps) => {
       <input
         type="radio"
         name={props.group}
-        onChange={props.change}
+        onChange={props.onChange}
         defaultChecked={props.selected}
       />
       <span className={styles.radio}></span>

@@ -3,7 +3,6 @@ import { useColorScheme } from 'use-color-scheme';
 import { getLocalDarkScheme, setLocalDarkScheme } from '../storage';
 import { Theme } from '../types';
 import { DEFAULT_STATE } from './constants';
-import styles from './theme-context.module.scss';
 
 export interface ThemeContextModel {
   darkScheme: boolean;
@@ -39,6 +38,14 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   // Set dark scheme context on change
   useEffect(() => {
     setLocalDarkScheme(themeContext.darkScheme);
+    const body = document.querySelector('body');
+    if (themeContext.darkScheme) {
+      body.classList.remove('light-scheme');
+      body.classList.add('dark-scheme');
+    } else {
+      body.classList.remove('dark-scheme');
+      body.classList.add('light-scheme');
+    }
   }, [themeContext.darkScheme]);
 
   // Set active theme custom properties on change
@@ -59,14 +66,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     });
   }
 
-  const themeClasses = [
-    styles.appTheme,
-    themeContext.darkScheme ? styles.darkTheme : styles.lightTheme,
-  ].join(' ');
-
   return (
     <ThemeContext.Provider value={{ themeContext, updateThemeContext }}>
-      <div className={themeClasses}>{children}</div>
+      {children}
     </ThemeContext.Provider>
   );
 };

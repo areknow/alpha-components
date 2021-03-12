@@ -40,3 +40,9 @@ h2 {
 p {
   margin: 0;
 }
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100%;
+}

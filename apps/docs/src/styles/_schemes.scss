@@ -1,9 +1,4 @@
-.appTheme {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.lightTheme {
+.light-scheme {
   --text-color: var(--text-color-light);
   --background-color: var(--background-color-light);
   --nav-color: var(--nav-color-light);
@@ -11,7 +6,7 @@
   --theme-selector-color: var(--theme-selector-color-light);
 }
 
-.darkTheme {
+.dark-scheme {
   --text-color: var(--text-color-dark);
   --background-color: var(--background-color-dark);
   --nav-color: var(--nav-color-dark);
