@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/react/input',
     '<rootDir>/libs/react/textarea',
     '<rootDir>/libs/react/root',
+    '<rootDir>/libs/workspace/colors',
   ],
 };

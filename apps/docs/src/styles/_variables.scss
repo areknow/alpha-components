@@ -1,7 +1,4 @@
-$magnetar: #7b00ff; // find a way to make this workspace wide
-$ressonance: #00e9ff;
-$eventHorizon: #ffab00;
-$neutrino: #ff0055;
+@import '~@alpha-components/workspace/colors';
 
 :root {
   --magnetar: #{$magnetar};

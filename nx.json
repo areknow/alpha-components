@@ -26,6 +26,7 @@
     "react-checkbox": { "tags": ["type:component", "target:react"] },
     "react-input": { "tags": ["type:component", "target:react"] },
     "react-textarea": { "tags": ["type:component", "target:react"] },
-    "react-root": { "tags": ["type:component", "target:react"] }
+    "react-root": { "tags": ["type:component", "target:react"] },
+    "workspace-colors": { "tags": ["type:workspace"] }
   }
 }
