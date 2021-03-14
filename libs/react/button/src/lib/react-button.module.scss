@@ -5,9 +5,7 @@ $size-medium: 1000px;
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--primary-theme-color);
-  padding: 14px 65px;
   border: 2px solid var(--primary-theme-color);
-  font-size: 24px;
   font-weight: 700;
   color: var(--white);
   text-decoration: none;
@@ -16,6 +14,7 @@ $size-medium: 1000px;
   -webkit-appearance: none;
   font-family: 'IBM Plex Sans', sans-serif; // font?
   cursor: pointer;
+  user-select: none;
   &:hover {
     background-color: var(--primary-theme-hover-color);
     border-color: var(--primary-theme-hover-color);
@@ -28,6 +27,8 @@ $size-medium: 1000px;
     outline: 0;
   }
 }
+
+// variants
 .button.secondary {
   color: var(--primary-theme-color);
   background-color: transparent;
@@ -40,11 +41,25 @@ $size-medium: 1000px;
   }
 }
 .button:disabled {
-  opacity: 0.4;
+  opacity: 0.3;
   background-color: var(--neutral-2);
   border-color: var(--neutral-2);
   pointer-events: none;
   color: var(--white);
+}
+
+// sizes
+.button.small {
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.button.medium {
+  padding: 12px 40px;
+  font-size: 18px;
+}
+.button.large {
+  padding: 14px 60px;
+  font-size: 24px;
 }
 
 @media (max-width: $size-small) {

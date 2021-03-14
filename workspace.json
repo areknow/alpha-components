@@ -96,6 +96,7 @@
                   "with": "apps/dev-react/src/environments/environment.prod.ts"
                 }
               ],
+
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -115,7 +116,7 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": { "buildTarget": "dev-react:build" },
+          "options": { "buildTarget": "dev-react:build", "port": 4201 },
           "configurations": {
             "production": { "buildTarget": "dev-react:build:production" }
           }

@@ -4,20 +4,16 @@ export const MENU = [
     location: '/button',
     children: [
       {
-        label: 'Primary',
-        location: '/button#primary',
+        label: 'Types',
+        location: '/button#types',
       },
       {
-        label: 'Secondary',
-        location: '/button#secondary',
+        label: 'Sizes',
+        location: '/button#sizes',
       },
       {
         label: 'Disabled',
         location: '/button#disabled',
-      },
-      {
-        label: 'Selected',
-        location: '/button#selected',
       },
     ],
   },

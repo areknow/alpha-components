@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react';
 import styles from './react-button.module.scss';
 
 export interface ButtonProps {
-  type: 'secondary' | 'primary';
+  type?: 'primary' | 'secondary';
+  size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   children: ReactNode;
   onChange?: () => void;
@@ -11,7 +12,8 @@ export interface ButtonProps {
 export const Button = (props: ButtonProps) => {
   const classes = [
     styles.button,
-    props.type ? styles[props.type] : undefined,
+    props.type ? styles[props.type] : styles.primary,
+    props.size ? styles[props.size] : styles.medium,
   ].join(' ');
 
   return (

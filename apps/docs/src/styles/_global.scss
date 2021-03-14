@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,200;0,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 * {
@@ -32,8 +32,13 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 200;
   margin: 0;
 }
 
@@ -43,4 +48,11 @@ p {
 
 body {
   height: 100%;
+}
+
+.demo {
+  margin-top: 30px; // collapse margin?
+  > *:not(:last-child) {
+    margin-right: 20px;
+  }
 }

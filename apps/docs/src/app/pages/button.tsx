@@ -8,140 +8,68 @@ export const ButtonPage = () => {
     <Page>
       <Panel>
         <h1>Button</h1>
-        <Button type="primary">Foo</Button>
+        <h3>
+          The button component is used for navigating and triggering actions.
+        </h3>
+        <hr />
         <p>
-          Native button and a elements are always used in order to provide the
-          most straightforward and accessible experience for users. A button
-          element should be used whenever some action is performed. An a element
-          should be used whenever the user will navigate to another view. An a
-          element should be used whenever the user will navigate to another
-          view.An a element should be used whenever the user will navigate to
-          another view.
+          The button component enhances the native <pre>{'<button>'}</pre> and{' '}
+          <pre>{'<a>'}</pre> elements. A button holds text, an icon or a
+          combination of both. When using an icon only, it needs to be
+          self-explanatory and must have an aria-label that describes what
+          happens when it is clicked.'
         </p>
+        <p>
+          While a <pre>{'<button>'}</pre> element should be used whenever some
+          action is performed, <pre>{'<a>'}</pre> elements should be wrapped by
+          the Button component when the user will navigate to another view. The
+          button width is based on the text it holds. While being as short as
+          possible, the text should clearly describe a button's action.
+        </p>
+        <div className="demo">
+          <Button>I like to be clicked</Button>
+        </div>
       </Panel>
-      <Panel id="primary">
-        <h2>Primary</h2>
+      <Panel id="types">
+        <h2>Types</h2>
         <p>
-          Dolore occaecat sunt ipsum adipisicing fugiat minim dolore aliqua
-          nostrud. Magna est ea eiusmod labore Lorem deserunt fugiat nulla ut
-          officia labore exercitation tempor. Magna qui ullamco proident anim
-          consequat quis ea nostrud enim. Enim dolor minim ad Lorem pariatur
-          culpa. Eiusmod consequat enim do pariatur eu dolor esse quis nulla id.
+          The Button component has two differently designed types to help the
+          user distinguish between varying levels of importance based on the
+          buttons function; these types are <pre>{'primary'}</pre> and{' '}
+          <pre>{'secondary'}</pre>. By default, if no type property is set, the
+          Button component will use <pre>{'primary'}</pre>.
         </p>
-        <p>
-          Quis laborum sint anim dolore proident minim ea irure esse
-          adipisicing. Reprehenderit aute non adipisicing ipsum ex ad. Minim
-          veniam pariatur cupidatat aliqua enim. Mollit eiusmod est cillum
-          pariatur ea veniam ex ex velit laboris. Cupidatat fugiat irure nulla
-          minim non deserunt aliqua labore ea do eiusmod Lorem. Nisi
-          reprehenderit Lorem in laboris dolore commodo velit irure duis ad
-          aliquip magna.
-        </p>
-        <p>
-          Dolore occaecat sunt ipsum adipisicing fugiat minim dolore aliqua
-          nostrud. Magna est ea eiusmod labore Lorem deserunt fugiat nulla ut
-          officia labore exercitation tempor. Magna qui ullamco proident anim
-          consequat quis ea nostrud enim. Enim dolor minim ad Lorem pariatur
-          culpa. Eiusmod consequat enim do pariatur eu dolor esse quis nulla id.
-        </p>
-        <p>
-          Quis laborum sint anim dolore proident minim ea irure esse
-          adipisicing. Reprehenderit aute non adipisicing ipsum ex ad. Minim
-          veniam pariatur cupidatat aliqua enim. Mollit eiusmod est cillum
-          pariatur ea veniam ex ex velit laboris. Cupidatat fugiat irure nulla
-          minim non deserunt aliqua labore ea do eiusmod Lorem. Nisi
-          reprehenderit Lorem in laboris dolore commodo velit irure duis ad
-          aliquip magna.
-        </p>
+        <div className="demo">
+          <Button>Primary button</Button>
+          <Button type="secondary">Secondary button</Button>
+        </div>
       </Panel>
-      <Panel id="secondary">
-        <h2>Secondary</h2>
+      <Panel id="sizes">
+        <h2>Sizes</h2>
         <p>
-          Dolor qui consectetur do velit adipisicing laboris magna ipsum aliqua.
-          Do officia sint quis laboris ad irure eiusmod id eiusmod officia dolor
-          deserunt sunt qui. Culpa velit fugiat aute mollit excepteur sit enim
-          nisi aute voluptate ullamco elit in officia.
+          The Button component has three different sizes which can help
+          illustrate various emphasis levels in your interface; these sizes are{' '}
+          <pre>{'small'}</pre>, <pre>{'medium'}</pre>, and <pre>{'large'}</pre>.
+          By default, if no size property is set, the Button component will use{' '}
+          <pre>{'medium'}</pre>.
         </p>
-        <p>
-          Laborum ad esse Lorem cillum consectetur ullamco laboris enim veniam
-          ipsum ad in eiusmod. Sunt enim veniam culpa nostrud incididunt aute
-          voluptate proident sit. Amet enim aliquip fugiat ea.
-        </p>
-        <p>
-          Dolor qui consectetur do velit adipisicing laboris magna ipsum aliqua.
-          Do officia sint quis laboris ad irure eiusmod id eiusmod officia dolor
-          deserunt sunt qui. Culpa velit fugiat aute mollit excepteur sit enim
-          nisi aute voluptate ullamco elit in officia.
-        </p>
-        <p>
-          Laborum ad esse Lorem cillum consectetur ullamco laboris enim veniam
-          ipsum ad in eiusmod. Sunt enim veniam culpa nostrud incididunt aute
-          voluptate proident sit. Amet enim aliquip fugiat ea.
-        </p>
+        <div className="demo">
+          <Button size="small">Small button</Button>
+          <Button size="medium">Medium button</Button>
+          <Button size="large">Large button</Button>
+        </div>
       </Panel>
       <Panel id="disabled">
         <h2>Disabled</h2>
         <p>
-          Nulla ea nisi sint non commodo tempor cupidatat quis elit Lorem est
-          laboris ipsum anim. Elit officia ullamco ex adipisicing qui laboris ut
-          eiusmod sit cupidatat enim irure enim. Non sit commodo et id. Laborum
-          non eu exercitation incididunt. Mollit dolore est duis aliquip minim
-          Lorem. Elit mollit proident nisi Lorem occaecat occaecat veniam do.
+          The Button component can be set to <pre>{'disabled'}</pre> to emulate
+          the native disabled state of the <pre>{'<button>'}</pre> element. This
+          will prevent a user from interacting with the Button component until
+          the property is removed or set to false.
         </p>
-        <p>
-          Aliquip ex proident fugiat eu consequat quis est duis dolore aliqua
-          nostrud cillum. Ullamco cupidatat proident non eu nostrud veniam
-          eiusmod. Lorem occaecat cupidatat aliquip commodo ullamco tempor. Ut
-          laboris nostrud deserunt do officia culpa reprehenderit fugiat eu.
-          Irure enim sunt occaecat officia cupidatat ipsum commodo. Consectetur
-          culpa dolore ipsum proident esse ex dolore. Reprehenderit exercitation
-          fugiat ea duis sint.
-        </p>
-        <p>
-          Nulla ea nisi sint non commodo tempor cupidatat quis elit Lorem est
-          laboris ipsum anim. Elit officia ullamco ex adipisicing qui laboris ut
-          eiusmod sit cupidatat enim irure enim. Non sit commodo et id. Laborum
-          non eu exercitation incididunt. Mollit dolore est duis aliquip minim
-          Lorem. Elit mollit proident nisi Lorem occaecat occaecat veniam do.
-        </p>
-        <p>
-          Aliquip ex proident fugiat eu consequat quis est duis dolore aliqua
-          nostrud cillum. Ullamco cupidatat proident non eu nostrud veniam
-          eiusmod. Lorem occaecat cupidatat aliquip commodo ullamco tempor. Ut
-          laboris nostrud deserunt do officia culpa reprehenderit fugiat eu.
-          Irure enim sunt occaecat officia cupidatat ipsum commodo. Consectetur
-          culpa dolore ipsum proident esse ex dolore. Reprehenderit exercitation
-          fugiat ea duis sint.
-        </p>
-      </Panel>
-      <Panel id="selected">
-        <h2>Selected</h2>
-        <p>
-          Excepteur duis tempor in tempor nisi ad in aliqua et est ipsum aliqua.
-          Exercitation aute ad qui sunt cupidatat proident esse cupidatat sunt
-          nulla anim. Cillum occaecat in commodo occaecat duis duis adipisicing
-          sunt tempor. Eu voluptate enim ea nulla in cillum quis ex do. Ut ad
-          sunt commodo sunt.
-        </p>
-        <p>
-          Cupidatat dolor laborum officia non. Ullamco irure cillum consectetur
-          ex proident ipsum voluptate laborum tempor ullamco ipsum ipsum. In
-          proident ullamco id elit amet quis amet culpa nisi. Veniam eu
-          cupidatat quis dolore enim.
-        </p>
-        <p>
-          Excepteur duis tempor in tempor nisi ad in aliqua et est ipsum aliqua.
-          Exercitation aute ad qui sunt cupidatat proident esse cupidatat sunt
-          nulla anim. Cillum occaecat in commodo occaecat duis duis adipisicing
-          sunt tempor. Eu voluptate enim ea nulla in cillum quis ex do. Ut ad
-          sunt commodo sunt.
-        </p>
-        <p>
-          Cupidatat dolor laborum officia non. Ullamco irure cillum consectetur
-          ex proident ipsum voluptate laborum tempor ullamco ipsum ipsum. In
-          proident ullamco id elit amet quis amet culpa nisi. Veniam eu
-          cupidatat quis dolore enim.
-        </p>
+        <div className="demo">
+          <Button disabled>Disabled button</Button>
+        </div>
       </Panel>
     </Page>
   );

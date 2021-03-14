@@ -8,17 +8,23 @@ export const ButtonDemo = () => {
   return (
     <div className={styles.demo}>
       <div className="primary">
-        <p>Positive</p>
-        <Button type="primary">primary</Button>
-        <Button type="primary" disabled>
-          disabled
-        </Button>
+        <p>Sizes</p>
+        <Button size="small">Small</Button>
+        <Button size="medium">Medium</Button>
+        <Button size="large">Large</Button>
+      </div>
+      <div className="primary">
+        <p>Types</p>
+        <Button type="primary">Primary</Button>
+        <Button type="secondary">Secondary</Button>
       </div>
       <div className="secondary">
-        <p>Secondary</p>
-        <Button type="secondary">secondary</Button>
+        <p>Disabled</p>
+        <Button type="primary" disabled>
+          Primary
+        </Button>
         <Button type="secondary" disabled>
-          disabled
+          Secondary
         </Button>
       </div>
       <div className="callBack">
