@@ -1,9 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
-import { getLocalDarkScheme, setLocalDarkScheme } from '../storage';
 import { Theme } from '../types';
 import { DEFAULT_STATE } from './constants';
-import { changeFavicon } from './icon';
+import { toggleScheme } from './scheme';
 
 export interface ThemeContextModel {
   darkScheme: boolean;
@@ -21,34 +20,19 @@ export const ThemeContext = createContext<ThemeContextType>({
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const { scheme } = useColorScheme();
   const [themeContext, setThemeContext] = useState<ThemeContextModel>(
     DEFAULT_STATE
   );
-  const { scheme } = useColorScheme();
 
-  // Set dark scheme value from local on init
+  // Set dark scheme value based on system
   useEffect(() => {
-    const localScheme = getLocalDarkScheme();
-    if (localScheme !== null) {
-      updateThemeContext({ darkScheme: localScheme });
-    } else {
-      updateThemeContext({ darkScheme: scheme === 'dark' });
-    }
+    updateThemeContext({ darkScheme: scheme === 'dark' });
   }, [scheme]);
 
-  // Set dark scheme context on change
+  // Set dark scheme context on context change
   useEffect(() => {
-    setLocalDarkScheme(themeContext.darkScheme);
-    const body = document.querySelector('body');
-    if (themeContext.darkScheme) {
-      body.classList.remove('light-scheme');
-      body.classList.add('dark-scheme');
-      changeFavicon(true);
-    } else {
-      body.classList.remove('dark-scheme');
-      body.classList.add('light-scheme');
-      changeFavicon(false);
-    }
+    toggleScheme(themeContext.darkScheme);
   }, [themeContext.darkScheme]);
 
   function updateThemeContext(updateData: Partial<ThemeContextModel>) {
