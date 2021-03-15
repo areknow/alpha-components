@@ -53,20 +53,10 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
 `;
 
 export function Root({ theme, darkMode, children }: RootProps) {
-  const classes = [
-    styles.root,
-    styles[theme],
-    darkMode !== undefined
-      ? darkMode
-        ? styles.darkMode
-        : styles.lightMode
-      : null,
-  ].join(' ');
-
   return (
     <>
       <GlobalStyles darkMode={darkMode} theme={theme} />
-      <div className={classes}>{children}</div>
+      {children}
     </>
   );
 }
