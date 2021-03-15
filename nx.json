@@ -19,14 +19,14 @@
     "docs": { "tags": ["type:app", "target:react"] },
     "dev-react": { "tags": ["type:app", "target:react"] },
     "dev-angular": { "tags": ["type:app", "target:angular"] },
-    "react-button": { "tags": ["type:component", "target:react"] },
-    "angular-button": { "tags": ["type:component", "target:angular"] },
-    "react-select": { "tags": ["type:component", "target:react"] },
-    "react-radio": { "tags": ["type:component", "target:react"] },
-    "react-checkbox": { "tags": ["type:component", "target:react"] },
-    "react-input": { "tags": ["type:component", "target:react"] },
-    "react-textarea": { "tags": ["type:component", "target:react"] },
-    "react-root": { "tags": ["type:component", "target:react"] },
-    "workspace-colors": { "tags": ["type:workspace"] }
+    "react-button": { "tags": ["type:ui", "target:react"] },
+    "angular-button": { "tags": ["type:ui", "target:angular"] },
+    "react-select": { "tags": ["type:ui", "target:react"] },
+    "react-radio": { "tags": ["type:ui", "target:react"] },
+    "react-checkbox": { "tags": ["type:ui", "target:react"] },
+    "react-input": { "tags": ["type:ui", "target:react"] },
+    "react-textarea": { "tags": ["type:ui", "target:react"] },
+    "react-root": { "tags": ["type:ui", "target:react"] },
+    "workspace-colors": { "tags": ["type:util", "target:workspace"] }
   }
 }

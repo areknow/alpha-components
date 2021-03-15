@@ -17,7 +17,7 @@
     appearance: none;
     position: relative;
     outline: none;
-    font: inherit;
+    font-family: inherit;
     &:focus {
       box-shadow: 0px 0px 0px 1px var(--primary-theme-color);
     }

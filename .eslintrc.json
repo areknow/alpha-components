@@ -14,19 +14,22 @@
             "depConstraints": [
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:component"]
+                "onlyDependOnLibsWithTags": ["*"]
               },
               {
-                "sourceTag": "type:component",
-                "onlyDependOnLibsWithTags": ["type:component"]
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:util"]
               },
               {
                 "sourceTag": "target:angular",
-                "onlyDependOnLibsWithTags": ["target:angular"]
+                "onlyDependOnLibsWithTags": [
+                  "target:angular",
+                  "target:workspace"
+                ]
               },
               {
                 "sourceTag": "target:react",
-                "onlyDependOnLibsWithTags": ["target:react"]
+                "onlyDependOnLibsWithTags": ["target:react", "target:workspace"]
               }
             ]
           }

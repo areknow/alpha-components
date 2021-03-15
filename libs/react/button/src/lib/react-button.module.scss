@@ -6,13 +6,13 @@ $size-medium: 1000px;
   border-radius: 4px;
   background-color: var(--primary-theme-color);
   border: 2px solid var(--primary-theme-color);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--white);
   text-decoration: none;
   display: inline-block;
   letter-spacing: normal;
   -webkit-appearance: none;
-  font-family: 'IBM Plex Sans', sans-serif; // font?
+  font-family: inherit;
   cursor: pointer;
   user-select: none;
   &:hover {

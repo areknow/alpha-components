@@ -1,7 +1,14 @@
-import { COLORS } from '@alpha-components/workspace/colors';
+import {
+  COLORS,
+  DARK_SCHEME,
+  LIGHT_SCHEME,
+} from '@alpha-components/workspace/colors';
 import React, { ReactNode } from 'react';
 import { createGlobalStyle, css } from 'styled-components';
-import { hexToHsl, hexToRgb } from './color-helper';
+import { hexToHsl, hexToRgb } from './hex-helpers';
+
+const HOVER_LIGHTNESS = 0.8;
+const ACTIVE_LIGHTNESS = 0.6;
 
 export interface RootProps {
   theme?: string; // switch to enum
@@ -13,21 +20,10 @@ export interface RootProps {
   children: ReactNode;
 }
 
-const darkStyle = {
-  '--neutral-0': '#000',
-  '--neutral-1': '#30333c',
-  '--neutral-2': '#626364',
-  '--neutral-3': '#989a9b',
-  '--primary-text-color': '#ffffff',
-  '--primary-background-color': '#0d0d0d',
-};
-const lightStyle = {
-  '--neutral-0': '#fff',
-  '--neutral-1': '#989a9b',
-  '--neutral-2': '#626364',
-  '--neutral-3': '#30333c',
-  '--primary-text-color': '#000000',
-  '--primary-background-color': '#f7f7f7',
+const customProps = () => {
+  return Object.entries(COLORS).map(([property, hex]) => ({
+    [`--${property}`]: hex,
+  }));
 };
 
 const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
@@ -35,31 +31,34 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
     --white: #fff;
     --primary-theme-color: ${({ theme }) => COLORS[theme]};
     --primary-theme-color-rgb: ${({ theme }) => hexToRgb(COLORS[theme])};
-    --primary-theme-hover-color: ${({ theme }) => hexToHsl(COLORS[theme], 0.8)};
+    --primary-theme-hover-color: ${({ theme }) =>
+      hexToHsl(COLORS[theme], HOVER_LIGHTNESS)};
     --primary-theme-active-color: ${({ theme }) =>
-      hexToHsl(COLORS[theme], 0.6)};
+      hexToHsl(COLORS[theme], ACTIVE_LIGHTNESS)};
     ${({ darkMode }) =>
       darkMode === undefined
         ? css`
-            ${lightStyle}
+            ${LIGHT_SCHEME}
             @media (prefers-color-scheme: dark) {
-              ${darkStyle}
+              ${DARK_SCHEME}
             }
           `
         : darkMode
-        ? darkStyle
-        : !darkMode && lightStyle}
+        ? DARK_SCHEME
+        : !darkMode && LIGHT_SCHEME}
+    ${customProps()}
     min-height: 100vh;
+    font-family: inherit;
   }
 `;
 
-export function Root({ theme, darkMode, children }: RootProps) {
+export const Root = ({ theme, darkMode, children }: RootProps) => {
   return (
     <>
       <GlobalStyles darkMode={darkMode} theme={theme} />
       {children}
     </>
   );
-}
+};
 
 export default Root;
