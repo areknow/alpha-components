@@ -51,10 +51,3 @@ p {
 body {
   height: 100%;
 }
-
-.demo {
-  margin-top: 30px; // collapse margin?
-  > *:not(:last-child) {
-    margin-right: 20px;
-  }
-}

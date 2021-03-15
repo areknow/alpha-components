@@ -1,0 +1,48 @@
+$radius: 10px;
+
+.demo {
+  margin-top: 40px;
+  .preview {
+    border-radius: $radius;
+    background: rgba(128, 128, 128, 0.1);
+    padding: 50px 30px;
+    > *:not(:last-child) {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  .source {
+    display: none;
+    background: #282a35;
+    padding: 20px;
+    color: white;
+    border-radius: 0 0 $radius $radius;
+    code {
+      white-space: pre-wrap;
+    }
+  }
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    button {
+      all: unset;
+      cursor: pointer;
+      font-size: 12px;
+      opacity: 0.4;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &.show {
+    .preview {
+      border-radius: $radius $radius 0 0;
+    }
+    .source {
+      display: block;
+    }
+  }
+}

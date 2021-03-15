@@ -1,0 +1,102 @@
+import { Button } from '@alpha-components/react/button';
+import React, { useState } from 'react';
+import { Demo } from '../../components/demo/demo';
+import Page from '../../components/page/page';
+import Panel from '../../components/panel/panel';
+
+export const ButtonPage = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <Page>
+      <Panel>
+        <h1>Button</h1>
+        <h3>
+          The button component is used for navigating and triggering actions.
+        </h3>
+        <hr />
+        <p>
+          The button component enhances the native <code>{'<button>'}</code> and{' '}
+          <code>{'<a>'}</code> elements. A button holds text, an icon or a
+          combination of both. When using an icon only, it needs to be
+          self-explanatory and must have an aria-label that describes what
+          happens when it is clicked.'
+        </p>
+        <p>
+          While a <code>{'<button>'}</code> element should be used whenever some
+          action is performed, <code>{'<a>'}</code> elements should be wrapped
+          by the Button component when the user will navigate to another view.
+          The button width is based on the text it holds. While being as short
+          as possible, the text should clearly describe a button's action.
+        </p>
+        <Demo>
+          <Button>I like to be clicked</Button>
+        </Demo>
+      </Panel>
+      <Panel id="types">
+        <h2>Types</h2>
+        <p>
+          The Button component has two differently designed types to help the
+          user distinguish between varying levels of importance based on the
+          buttons function; these types are <code>{'primary'}</code> and{' '}
+          <code>{'secondary'}</code>. By default, if no type property is set,
+          the Button component will use <code>{'primary'}</code>.
+        </p>
+        <Demo>
+          <>
+            <Button>Primary button</Button>
+            <Button type="secondary">Secondary button</Button>
+          </>
+        </Demo>
+      </Panel>
+      <Panel id="sizes">
+        <h2>Sizes</h2>
+        <p>
+          The Button component has three different sizes which can help
+          illustrate various emphasis levels in your interface; these sizes are{' '}
+          <code>{'small'}</code>, <code>{'medium'}</code>, and{' '}
+          <code>{'large'}</code>. By default, if no size property is set, the
+          Button component will use <code>{'medium'}</code>.
+        </p>
+        <Demo>
+          <>
+            <Button size="small">Small button</Button>
+            <Button size="medium">Medium button</Button>
+            <Button size="large">Large button</Button>
+          </>
+        </Demo>
+      </Panel>
+      <Panel id="disabled">
+        <h2>Disabled</h2>
+        <p>
+          The Button component can be set to <code>{'disabled'}</code> to
+          emulate the native disabled state of the <code>{'<button>'}</code>{' '}
+          element. This will prevent a user from interacting with the Button
+          component until the property is removed or set to false.
+        </p>
+        <Demo>
+          <Button disabled>Disabled button</Button>
+        </Demo>
+      </Panel>
+      <Panel id="callback">
+        <h2>Callback</h2>
+        <p>
+          The Button component has a <code>onClick</code> callback that can be
+          used to capture when a user interacts with the element. The callback
+          returns the{' '}
+          <code>{'React.MouseEventHandler<HTMLButtonElement>'}</code> value.
+        </p>
+        <Demo>
+          <Button
+            onClick={() => {
+              setCount(count + 1);
+            }}
+          >
+            clicked: {count}
+          </Button>
+        </Demo>
+      </Panel>
+    </Page>
+  );
+};
+
+export default ButtonPage;

@@ -1,12 +1,13 @@
-import React, { ReactNode } from 'react';
+import React, { AllHTMLAttributes, ReactNode } from 'react';
 import styles from './react-button.module.scss';
 
+type NativeButtonProps = AllHTMLAttributes<HTMLButtonElement>;
 export interface ButtonProps {
   type?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   children: ReactNode;
-  onChange?: () => void;
+  onClick?: NativeButtonProps['onClick'];
 }
 
 export const Button = (props: ButtonProps) => {
@@ -19,7 +20,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       className={classes}
-      onClick={props.onChange}
+      onClick={props.onClick}
       type="button"
       disabled={props.disabled}
     >

@@ -31,7 +31,7 @@ export const ButtonDemo = () => {
         <p>Callback</p>
         <Button
           type="primary"
-          onChange={() => {
+          onClick={() => {
             setValue(value + 1);
           }}
         >
