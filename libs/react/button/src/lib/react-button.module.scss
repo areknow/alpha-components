@@ -20,8 +20,8 @@ $size-medium: 1000px;
     border-color: var(--primary-theme-hover-color);
   }
   &:active {
-    background-color: var(--primary-theme-clicked-color);
-    border-color: var(--primary-theme-clicked-color);
+    background-color: var(--primary-theme-active-color);
+    border-color: var(--primary-theme-active-color);
   }
   &:focus {
     outline: 0;
@@ -37,7 +37,7 @@ $size-medium: 1000px;
     color: var(--primary-theme-hover-color);
   }
   &:active {
-    border-color: var(--primary-theme-clicked-color);
+    border-color: var(--primary-theme-active-color);
   }
 }
 .button:disabled {

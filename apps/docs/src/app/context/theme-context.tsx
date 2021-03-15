@@ -21,16 +21,12 @@ export const ThemeContext = createContext<ThemeContextType>({
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const { scheme } = useColorScheme();
-  const [themeContext, setThemeContext] = useState<ThemeContextModel>(
-    DEFAULT_STATE
-  );
+  const [themeContext, setThemeContext] = useState<ThemeContextModel>({
+    ...DEFAULT_STATE,
+    darkScheme: scheme === 'dark',
+  });
 
-  // Set dark scheme value based on system
-  useEffect(() => {
-    updateThemeContext({ darkScheme: scheme === 'dark' });
-  }, [scheme]);
-
-  // Set dark scheme context on context change
+  // Toggle scheme on context change
   useEffect(() => {
     toggleScheme(themeContext.darkScheme);
   }, [themeContext.darkScheme]);
