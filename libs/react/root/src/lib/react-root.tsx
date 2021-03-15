@@ -50,6 +50,7 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
         ? darkStyle
         : !darkMode && lightStyle}
     min-height: 100vh;
+  }
 `;
 
 export function Root({ theme, darkMode, children }: RootProps) {
