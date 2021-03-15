@@ -47,14 +47,20 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": { "buildTarget": "docs:build" },
+          "options": {
+            "buildTarget": "docs:build"
+          },
           "configurations": {
-            "production": { "buildTarget": "docs:build:production" }
+            "production": {
+              "buildTarget": "docs:build:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/docs/**/*.{ts,tsx,js,jsx}"] }
+          "options": {
+            "lintFilePatterns": ["apps/docs/**/*.{ts,tsx,js,jsx}"]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -96,7 +102,6 @@
                   "with": "apps/dev-react/src/environments/environment.prod.ts"
                 }
               ],
-
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -116,9 +121,14 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": { "buildTarget": "dev-react:build", "port": 4201 },
+          "options": {
+            "buildTarget": "dev-react:build",
+            "port": 4201
+          },
           "configurations": {
-            "production": { "buildTarget": "dev-react:build:production" }
+            "production": {
+              "buildTarget": "dev-react:build:production"
+            }
           }
         },
         "lint": {
@@ -191,14 +201,20 @@
         },
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "dev-angular:build" },
+          "options": {
+            "browserTarget": "dev-angular:build"
+          },
           "configurations": {
-            "production": { "browserTarget": "dev-angular:build:production" }
+            "production": {
+              "browserTarget": "dev-angular:build:production"
+            }
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "dev-angular:build" }
+          "options": {
+            "browserTarget": "dev-angular:build"
+          }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -241,7 +257,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -313,7 +335,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -348,7 +376,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -383,7 +417,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -418,7 +458,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -453,7 +499,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -488,7 +540,13 @@
             "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [{ "glob": "README.md", "input": ".", "output": "." }]
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
           }
         },
         "test": {
@@ -508,7 +566,9 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/workspace/colors/**/*.ts"] }
+          "options": {
+            "lintFilePatterns": ["libs/workspace/colors/**/*.ts"]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -517,16 +577,38 @@
             "jestConfig": "libs/workspace/colors/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/workspace/colors",
+            "tsConfig": "libs/workspace/colors/tsconfig.lib.json",
+            "packageJson": "libs/workspace/colors/package.json",
+            "main": "libs/workspace/colors/src/index.ts",
+            "assets": ["libs/workspace/colors/*.md"]
+          }
         }
       }
     }
   },
-  "cli": { "defaultCollection": "@nrwl/react" },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
   "generators": {
     "@nrwl/react": {
-      "application": { "style": "scss", "linter": "eslint", "babel": true },
-      "component": { "style": "scss" },
-      "library": { "style": "scss", "linter": "eslint" }
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
     },
     "@nrwl/angular:application": {
       "style": "scss",
@@ -539,7 +621,9 @@
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
-    "@nrwl/angular:component": { "style": "scss" }
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
   },
   "defaultProject": "dev-react"
 }

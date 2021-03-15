@@ -23,7 +23,9 @@
       "@alpha-components/react/input": ["libs/react/input/src/index.ts"],
       "@alpha-components/react/textarea": ["libs/react/textarea/src/index.ts"],
       "@alpha-components/react/root": ["libs/react/root/src/index.ts"],
-      "@alpha-components/workspace/colors": ["libs/workspace/colors/src"]
+      "@alpha-components/workspace/colors": [
+        "libs/workspace/colors/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
