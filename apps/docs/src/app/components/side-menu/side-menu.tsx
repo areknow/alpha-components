@@ -4,11 +4,11 @@ import { NavHashLink } from 'react-router-hash-link';
 import { MENU } from './menu';
 import styles from './side-menu.module.scss';
 
-const scrollOffset = -60;
+const SCROLL_OFFSET = -20;
 
 const scrollWithOffset = (element: HTMLElement) => {
   const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset;
-  window.scrollTo({ top: yCoordinate + scrollOffset, behavior: 'smooth' });
+  window.scrollTo({ top: yCoordinate + SCROLL_OFFSET, behavior: 'smooth' });
 };
 
 export const SideMenu = () => {
