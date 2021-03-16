@@ -53,9 +53,11 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
 `;
 
 export const Root = ({ theme, darkMode, children }: RootProps) => {
+  const _theme = theme || 'magnetar';
+
   return (
     <>
-      <GlobalStyles darkMode={darkMode} theme={theme} />
+      <GlobalStyles darkMode={darkMode} theme={_theme} />
       {children}
     </>
   );
