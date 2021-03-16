@@ -4,7 +4,7 @@ $radius: 10px;
   margin-top: 40px;
   .preview {
     border-radius: $radius;
-    background: rgba(128, 128, 128, 0.1);
+    background: rgba(128, 128, 128, 0.08);
     padding: 50px 30px;
     > *:not(:last-child) {
       margin-right: 20px;
@@ -19,6 +19,7 @@ $radius: 10px;
     border-radius: 0 0 $radius $radius;
     code {
       white-space: pre-wrap;
+      font-size: 16px;
     }
   }
   .actions {
@@ -27,6 +28,7 @@ $radius: 10px;
     padding: 10px;
     button {
       all: unset;
+      margin-left: 20px;
       cursor: pointer;
       font-size: 12px;
       opacity: 0.4;
@@ -34,9 +36,12 @@ $radius: 10px;
       &:hover {
         opacity: 0.8;
       }
+      &:disabled {
+        cursor: default;
+        pointer-events: none;
+      }
     }
   }
-
   &.show {
     .preview {
       border-radius: $radius $radius 0 0;

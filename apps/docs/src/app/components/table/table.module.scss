@@ -1,0 +1,26 @@
+.table {
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+  }
+  table {
+    width: 100%;
+    th {
+      border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    }
+    th,
+    td {
+      padding: 15px;
+      opacity: 0.6;
+    }
+    td {
+      font-family: monospace;
+    }
+    tbody tr:nth-child(odd) {
+      background: rgba(128, 128, 128, 0.04);
+    }
+  }
+}

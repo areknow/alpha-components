@@ -9,6 +9,8 @@ require('prismjs/components/prism-typescript.min');
 require('prismjs/components/prism-jsx.min');
 require('prismjs/components/prism-tsx.min');
 
+const COPY_TIMEOUT = 2000;
+
 interface DemoProps {
   children: ReactNode;
   code?: string;
@@ -16,28 +18,36 @@ interface DemoProps {
 
 export const Demo = ({ children }: DemoProps) => {
   const [show, toggleShow] = useState(false);
+  const [copied, toggleCopied] = useState(false);
   const classes = [styles.demo, show ? styles.show : null].join(' ');
+  const code = reactElementToJSXString(children, { showFunctions: true });
 
-  // console.log(
-  //   reactElementToJSXString(children, {
-  //     showFunctions: true,
-  //     maxInlineAttributesLineLength: 10,
-  //   })
-  // );
+  const copyCode = () => {
+    navigator.clipboard.writeText(code);
+    toggleCopied(true);
+    setTimeout(() => {
+      toggleCopied(false);
+    }, COPY_TIMEOUT);
+  };
 
   return (
     <div className={classes}>
       <div className={styles.preview}>{children}</div>
       <div className={styles.source}>
-        <PrismCode className="language-tsx">
-          {reactElementToJSXString(children, { showFunctions: true })}
-        </PrismCode>
+        <PrismCode className="language-tsx">{code}</PrismCode>
       </div>
       <div className={styles.actions}>
         <button onClick={() => toggleShow(!show)}>
           {show ? 'hide' : 'show'} code
         </button>
+        {show && (
+          <button disabled={copied} onClick={() => copyCode()}>
+            {copied ? 'copied' : 'copy'}
+          </button>
+        )}
       </div>
     </div>
   );
 };
+
+export default Demo;

@@ -15,6 +15,10 @@ export const MENU = [
         label: 'Disabled',
         location: '/button#disabled',
       },
+      {
+        label: 'Callback',
+        location: '/button#callback',
+      },
     ],
   },
   {

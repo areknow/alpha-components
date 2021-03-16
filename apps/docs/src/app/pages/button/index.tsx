@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Demo } from '../../components/demo/demo';
 import Page from '../../components/page/page';
 import Panel from '../../components/panel/panel';
+import { Table } from '../../components/table/table';
 
 export const ButtonPage = () => {
   const [count, setCount] = useState(0);
@@ -41,6 +42,16 @@ export const ButtonPage = () => {
           <code>{'secondary'}</code>. By default, if no type property is set,
           the Button component will use <code>{'primary'}</code>.
         </p>
+        <Table
+          rows={[
+            {
+              prop: 'type',
+              value: `"primary" | "secondary"`,
+              default: 'primary',
+              required: false,
+            },
+          ]}
+        ></Table>
         <Demo>
           <>
             <Button>Primary button</Button>
@@ -57,6 +68,16 @@ export const ButtonPage = () => {
           <code>{'large'}</code>. By default, if no size property is set, the
           Button component will use <code>{'medium'}</code>.
         </p>
+        <Table
+          rows={[
+            {
+              prop: 'size',
+              value: `"small" | "medium" | "large"`,
+              default: 'medium',
+              required: false,
+            },
+          ]}
+        ></Table>
         <Demo>
           <>
             <Button size="small">Small button</Button>
@@ -73,6 +94,16 @@ export const ButtonPage = () => {
           element. This will prevent a user from interacting with the Button
           component until the property is removed or set to false.
         </p>
+        <Table
+          rows={[
+            {
+              prop: 'disabled',
+              value: `true | false`,
+              default: 'false',
+              required: false,
+            },
+          ]}
+        ></Table>
         <Demo>
           <Button disabled>Disabled button</Button>
         </Demo>
@@ -82,9 +113,19 @@ export const ButtonPage = () => {
         <p>
           The Button component has a <code>onClick</code> callback that can be
           used to capture when a user interacts with the element. The callback
-          returns the{' '}
-          <code>{'React.MouseEventHandler<HTMLButtonElement>'}</code> value.
+          returns the synthetic <code>{'<HTMLButtonElement>'}</code> event
+          value.
         </p>
+        <Table
+          event
+          rows={[
+            {
+              prop: 'onClick',
+              return: `MouseEventHandler<HTMLButtonElement>`,
+              required: false,
+            },
+          ]}
+        ></Table>
         <Demo>
           <Button
             onClick={() => {

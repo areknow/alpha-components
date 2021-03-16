@@ -16,14 +16,14 @@
   p {
     opacity: 0.6;
     margin-bottom: 20px;
+    line-height: 28px;
   }
   hr {
     margin-bottom: 30px;
     border-color: rgba(128, 128, 128, 0.2);
     border-style: solid;
   }
-  pre {
-    display: inline;
-    white-space: nowrap;
+  code {
+    font-weight: bold;
   }
 }
