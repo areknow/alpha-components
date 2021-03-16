@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
+import { ReactComponent as ToggleIcon } from '../../../assets/scheme-toggle.svg';
 import { ThemeContext } from '../../context';
-import { Scheme } from '../../types';
 import styles from './scheme-toggle.module.scss';
 
 export const SchemeToggle = () => {
@@ -9,11 +9,14 @@ export const SchemeToggle = () => {
     updateThemeContext({ darkScheme: !themeContext.darkScheme });
   };
 
+  const classes = [
+    styles.schemeToggle,
+    themeContext.darkScheme ? styles.light : null,
+  ].join(' ');
+
   return (
-    <div className={styles.schemeToggle} onClick={handleSchemeChange}>
-      <i className="material-icons">
-        {themeContext.darkScheme ? Scheme.LIGHT : Scheme.DARK}
-      </i>
+    <div className={classes} onClick={handleSchemeChange}>
+      <ToggleIcon />
     </div>
   );
 };

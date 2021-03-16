@@ -3,8 +3,9 @@ import {
   DARK_SCHEME,
   LIGHT_SCHEME,
 } from '@alpha-components/workspace/colors';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import { createGlobalStyle, css } from 'styled-components';
+import { addFontToHead } from './font';
 import { hexToHsl, hexToRgb } from './hex-helpers';
 
 const HOVER_LIGHTNESS = 0.8;
@@ -49,11 +50,16 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
     ${customProps()}
     min-height: 100vh;
     font-family: inherit;
+    font-family: 'Jost';
   }
 `;
 
 export const Root = ({ theme, darkMode, children }: RootProps) => {
   const _theme = theme || 'magnetar';
+
+  useEffect(() => {
+    addFontToHead();
+  }, []);
 
   return (
     <>
