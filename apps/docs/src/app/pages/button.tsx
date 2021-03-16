@@ -108,8 +108,8 @@ export const ButtonPage = () => {
           <Button disabled>Disabled button</Button>
         </Demo>
       </Panel>
-      <Panel id="callback">
-        <h2>Callback</h2>
+      <Panel id="event">
+        <h2>Event</h2>
         <p>
           The Button component has a <code>onClick</code> callback that can be
           used to capture when a user interacts with the element. The callback

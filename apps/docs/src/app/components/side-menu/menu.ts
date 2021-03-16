@@ -16,8 +16,8 @@ export const MENU = [
         location: '/button#disabled',
       },
       {
-        label: 'Callback',
-        location: '/button#callback',
+        label: 'Event',
+        location: '/button#event',
       },
     ],
   },
