@@ -37,4 +37,12 @@ export const MENU = [
     label: 'Input',
     location: 'input',
   },
+  {
+    label: 'Textarea',
+    location: 'textarea',
+  },
+  {
+    label: 'Root',
+    location: 'root',
+  },
 ];

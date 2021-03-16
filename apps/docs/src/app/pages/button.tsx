@@ -1,9 +1,9 @@
 import { Button } from '@alpha-components/react/button';
 import React, { useState } from 'react';
-import { Demo } from '../../components/demo/demo';
-import Page from '../../components/page/page';
-import Panel from '../../components/panel/panel';
-import { Table } from '../../components/table/table';
+import Demo from '../components/demo/demo';
+import Page from '../components/page/page';
+import Panel from '../components/panel/panel';
+import Table from '../components/table/table';
 
 export const ButtonPage = () => {
   const [count, setCount] = useState(0);

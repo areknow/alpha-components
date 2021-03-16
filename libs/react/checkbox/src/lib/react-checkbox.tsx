@@ -4,7 +4,7 @@ import styles from './react-checkbox.module.scss';
 interface CheckboxProps {
   label: string;
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Checkbox = (props: CheckboxProps) => {

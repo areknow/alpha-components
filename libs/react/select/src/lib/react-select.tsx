@@ -12,7 +12,7 @@ interface SelectProps {
   defaultValue?: string;
   name: string;
   label: string;
-  change: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  change?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const Select = (props: SelectProps) => {
