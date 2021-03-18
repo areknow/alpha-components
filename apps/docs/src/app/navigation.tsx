@@ -1,7 +1,7 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import ButtonPage from './pages/button';
 import CheckboxPage from './pages/checkbox';
+import { HomePage } from './pages/home';
 import InputPage from './pages/input';
 import RadioPage from './pages/radio';
 import RootPage from './pages/root';
@@ -11,7 +11,7 @@ import TextareaPage from './pages/textarea';
 export const ROUTES = [
   {
     path: '/',
-    component: <Redirect to="/button" />,
+    component: <HomePage />,
   },
   {
     path: '/button',

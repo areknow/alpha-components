@@ -1,13 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import reactElementToJSXString from 'react-element-to-jsx-string';
-import { PrismCode } from 'react-prism';
+import Code from '../code/code';
 import styles from './demo.module.scss';
-
-require('prismjs');
-require('prism-themes/themes/prism-dracula.css');
-require('prismjs/components/prism-typescript.min');
-require('prismjs/components/prism-jsx.min');
-require('prismjs/components/prism-tsx.min');
 
 const COPY_TIMEOUT = 2000;
 
@@ -34,7 +28,7 @@ export const Demo = ({ children }: DemoProps) => {
     <div className={classes}>
       <div className={styles.preview}>{children}</div>
       <div className={styles.source}>
-        <PrismCode className="language-tsx">{code}</PrismCode>
+        <Code>{code}</Code>
       </div>
       <div className={styles.actions}>
         <button onClick={() => toggleShow(!show)}>

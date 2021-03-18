@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../../assets/logo-white.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
 import { ThemeSelector } from '../theme-selector/theme-selector';
@@ -29,14 +30,14 @@ export const Nav = () => {
       onMouseLeave={() => toggleExpandNav(false)}
     >
       <div className={styles.content}>
-        <div className={styles.brand}>
+        <NavLink to="/" className={styles.brand}>
           <div className={styles.logo}>
             <Logo />
           </div>
           <div className={styles.title}>
             <Title />
           </div>
-        </div>
+        </NavLink>
         <div className={styles.links}>
           <ul>
             <li>
