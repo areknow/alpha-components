@@ -3,9 +3,9 @@ import styles from './react-radio.module.scss';
 
 interface RadioProps {
   label: string;
-  group: string;
+  group?: string;
   selected?: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Radio = (props: RadioProps) => {

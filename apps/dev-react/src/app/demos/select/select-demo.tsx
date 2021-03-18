@@ -21,7 +21,7 @@ export const SelectDemo = () => {
         autoComplete="address-level1"
         name="state"
         label="State"
-        change={(event) => {
+        onChange={(event) => {
           console.log(event);
         }}
       ></Select>

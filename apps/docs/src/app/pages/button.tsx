@@ -11,16 +11,11 @@ export const ButtonPage = () => {
     <Page>
       <Panel>
         <h1>Button</h1>
-        <h3>
-          The button component is used for navigating and triggering actions.
-        </h3>
+        <h3>The Button component is used to trigger events or navigate.</h3>
         <hr />
         <p>
-          The button component enhances the native <code>{'<button>'}</code> and{' '}
-          <code>{'<a>'}</code> elements. A button holds text, an icon or a
-          combination of both. When using an icon only, it needs to be
-          self-explanatory and must have an aria-label that describes what
-          happens when it is clicked.'
+          The <code>{'<Button/>'}</code> provides the same functionality as a
+          native <code>{'<button>'}</code> element, enhanced with styling.
         </p>
         <p>
           While a <code>{'<button>'}</code> element should be used whenever some

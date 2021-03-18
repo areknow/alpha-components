@@ -9,8 +9,8 @@ export function App() {
     <ThemeProvider>
       <Layout>
         <Switch>
-          {ROUTES.map((route) => (
-            <Route path={route.path} exact>
+          {ROUTES.map((route, key) => (
+            <Route key={key} path={route.path} exact>
               {route.component}
             </Route>
           ))}

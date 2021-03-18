@@ -12,7 +12,7 @@ interface SelectProps {
   defaultValue?: string;
   name: string;
   label: string;
-  change?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const Select = (props: SelectProps) => {
@@ -32,7 +32,7 @@ export const Select = (props: SelectProps) => {
         name={props.name}
         onChange={(event) => {
           setActive(true);
-          props.change(event);
+          props.onChange && props.onChange(event);
         }}
       >
         <option value="N/A" disabled>

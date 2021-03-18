@@ -28,7 +28,7 @@ export const App = () => {
               name="theme"
               label="Theme"
               defaultValue={THEMES[0].value}
-              change={(event) => {
+              onChange={(event) => {
                 setTheme(Theme[event.target.value]);
               }}
             ></Select>
@@ -36,7 +36,7 @@ export const App = () => {
               options={SCHEMES}
               name="theme"
               label="System preference"
-              change={(event) => {
+              onChange={(event) => {
                 setDarkMode(event.target.value === 'dark');
               }}
             ></Select>
