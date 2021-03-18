@@ -1,5 +1,5 @@
 import { Theme } from '@alpha-components/workspace/types';
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
 import { DEFAULT_STATE } from './constants';
 import { toggleScheme } from './scheme';
@@ -18,6 +18,8 @@ export const ThemeContext = createContext<ThemeContextType>({
   themeContext: DEFAULT_STATE,
   updateThemeContext: () => null,
 });
+
+export const useThemeContext = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const { scheme } = useColorScheme();

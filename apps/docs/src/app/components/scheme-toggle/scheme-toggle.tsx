@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ReactComponent as ToggleIcon } from '../../../assets/scheme-toggle.svg';
-import { ThemeContext } from '../../context';
+import { useThemeContext } from '../../context';
 import styles from './scheme-toggle.module.scss';
 
 export const SchemeToggle = () => {
-  const { themeContext, updateThemeContext } = useContext(ThemeContext);
+  const { themeContext, updateThemeContext } = useThemeContext();
   const handleSchemeChange = () => {
     updateThemeContext({ darkScheme: !themeContext.darkScheme });
   };

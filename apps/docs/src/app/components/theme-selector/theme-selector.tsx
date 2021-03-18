@@ -1,11 +1,11 @@
 import { Theme } from '@alpha-components/workspace/types';
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../context';
+import React from 'react';
+import { useThemeContext } from '../../context';
 import styles from './theme-selector.module.scss';
 import { THEME_OPTIONS } from './themes';
 
 export const ThemeSelector = () => {
-  const { themeContext, updateThemeContext } = useContext(ThemeContext);
+  const { themeContext, updateThemeContext } = useThemeContext();
 
   const classes = (theme: Theme) => {
     return [
