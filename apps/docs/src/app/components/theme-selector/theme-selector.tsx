@@ -1,6 +1,6 @@
+import { Theme } from '@alpha-components/workspace/types';
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../context';
-import { Theme } from '../../types';
 import styles from './theme-selector.module.scss';
 import { THEME_OPTIONS } from './themes';
 

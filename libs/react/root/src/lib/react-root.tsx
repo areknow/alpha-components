@@ -3,6 +3,7 @@ import {
   DARK_SCHEME,
   LIGHT_SCHEME,
 } from '@alpha-components/workspace/colors';
+import { Theme } from '@alpha-components/workspace/types';
 import React, { ReactNode } from 'react';
 import { createGlobalStyle, css } from 'styled-components';
 import { hexToHsl, hexToRgb } from './hex-helpers';
@@ -11,7 +12,7 @@ const HOVER_LIGHTNESS = 0.8;
 const ACTIVE_LIGHTNESS = 0.6;
 
 export interface RootProps {
-  theme?: string; // switch to enum
+  theme?: Theme;
   /**
    * By default the components will react to system color preference change.
    * If user chooses to use darkMode, system color scheme will be ignored.

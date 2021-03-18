@@ -25,7 +25,8 @@
       "@alpha-components/react/root": ["libs/react/root/src/index.ts"],
       "@alpha-components/workspace/colors": [
         "libs/workspace/colors/src/index.ts"
-      ]
+      ],
+      "@alpha-components/workspace/types": ["libs/workspace/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

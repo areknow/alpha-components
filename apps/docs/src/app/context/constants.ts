@@ -1,5 +1,5 @@
+import { Theme } from '@alpha-components/workspace/types';
 import { ThemeContextModel } from '.';
-import { Theme } from '../types';
 
 export const DEFAULT_STATE: ThemeContextModel = {
   darkScheme: undefined,

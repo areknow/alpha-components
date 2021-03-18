@@ -8,15 +8,21 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/docs",
             "index": "apps/docs/src/index.html",
             "main": "apps/docs/src/main.tsx",
             "polyfills": "apps/docs/src/polyfills.ts",
             "tsConfig": "apps/docs/tsconfig.app.json",
-            "assets": ["apps/docs/src/assets"],
-            "styles": ["apps/docs/src/styles/index.scss"],
+            "assets": [
+              "apps/docs/src/assets"
+            ],
+            "styles": [
+              "apps/docs/src/styles/index.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -59,12 +65,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/docs/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/docs/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/docs"],
+          "outputs": [
+            "coverage/apps/docs"
+          ],
           "options": {
             "jestConfig": "apps/docs/jest.config.js",
             "passWithNoTests": true
@@ -79,7 +89,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/dev-react",
             "index": "apps/dev-react/src/index.html",
@@ -90,7 +102,9 @@
               "apps/dev-react/src/favicon.ico",
               "apps/dev-react/src/assets"
             ],
-            "styles": ["apps/dev-react/src/styles.scss"],
+            "styles": [
+              "apps/dev-react/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -134,12 +148,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/dev-react/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/dev-react/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/dev-react"],
+          "outputs": [
+            "coverage/apps/dev-react"
+          ],
           "options": {
             "jestConfig": "apps/dev-react/jest.config.js",
             "passWithNoTests": true
@@ -166,7 +184,9 @@
               "apps/dev-angular/src/favicon.ico",
               "apps/dev-angular/src/assets"
             ],
-            "styles": ["apps/dev-angular/src/styles.scss"],
+            "styles": [
+              "apps/dev-angular/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -227,7 +247,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/dev-angular"],
+          "outputs": [
+            "coverage/apps/dev-angular"
+          ],
           "options": {
             "jestConfig": "apps/dev-angular/jest.config.js",
             "passWithNoTests": true
@@ -243,18 +265,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/button/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/button/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/button",
             "tsConfig": "libs/react/button/tsconfig.lib.json",
             "project": "libs/react/button/package.json",
             "entryFile": "libs/react/button/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -268,7 +297,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/button"],
+          "outputs": [
+            "coverage/libs/react/button"
+          ],
           "options": {
             "jestConfig": "libs/react/button/jest.config.js",
             "passWithNoTests": true
@@ -305,7 +336,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/angular/button"],
+          "outputs": [
+            "coverage/libs/angular/button"
+          ],
           "options": {
             "jestConfig": "libs/angular/button/jest.config.js",
             "passWithNoTests": true
@@ -321,18 +354,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/select/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/select/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/select",
             "tsConfig": "libs/react/select/tsconfig.lib.json",
             "project": "libs/react/select/package.json",
             "entryFile": "libs/react/select/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -346,7 +386,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/select"],
+          "outputs": [
+            "coverage/libs/react/select"
+          ],
           "options": {
             "jestConfig": "libs/react/select/jest.config.js",
             "passWithNoTests": true
@@ -362,18 +404,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/radio/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/radio/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/radio",
             "tsConfig": "libs/react/radio/tsconfig.lib.json",
             "project": "libs/react/radio/package.json",
             "entryFile": "libs/react/radio/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -387,7 +436,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/radio"],
+          "outputs": [
+            "coverage/libs/react/radio"
+          ],
           "options": {
             "jestConfig": "libs/react/radio/jest.config.js",
             "passWithNoTests": true
@@ -403,18 +454,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/checkbox/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/checkbox/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/checkbox",
             "tsConfig": "libs/react/checkbox/tsconfig.lib.json",
             "project": "libs/react/checkbox/package.json",
             "entryFile": "libs/react/checkbox/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -428,7 +486,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/checkbox"],
+          "outputs": [
+            "coverage/libs/react/checkbox"
+          ],
           "options": {
             "jestConfig": "libs/react/checkbox/jest.config.js",
             "passWithNoTests": true
@@ -444,18 +504,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/input/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/input/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/input",
             "tsConfig": "libs/react/input/tsconfig.lib.json",
             "project": "libs/react/input/package.json",
             "entryFile": "libs/react/input/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -469,7 +536,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/input"],
+          "outputs": [
+            "coverage/libs/react/input"
+          ],
           "options": {
             "jestConfig": "libs/react/input/jest.config.js",
             "passWithNoTests": true
@@ -485,18 +554,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/textarea/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/textarea/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/textarea",
             "tsConfig": "libs/react/textarea/tsconfig.lib.json",
             "project": "libs/react/textarea/package.json",
             "entryFile": "libs/react/textarea/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -510,7 +586,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/textarea"],
+          "outputs": [
+            "coverage/libs/react/textarea"
+          ],
           "options": {
             "jestConfig": "libs/react/textarea/jest.config.js",
             "passWithNoTests": true
@@ -526,18 +604,25 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react/root/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react/root/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/react/root",
             "tsConfig": "libs/react/root/tsconfig.lib.json",
             "project": "libs/react/root/package.json",
             "entryFile": "libs/react/root/src/index.ts",
-            "external": ["react", "react-dom"],
+            "external": [
+              "react",
+              "react-dom"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -551,7 +636,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/react/root"],
+          "outputs": [
+            "coverage/libs/react/root"
+          ],
           "options": {
             "jestConfig": "libs/react/root/jest.config.js",
             "passWithNoTests": true
@@ -567,12 +654,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/workspace/colors/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/workspace/colors/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/workspace/colors"],
+          "outputs": [
+            "coverage/libs/workspace/colors"
+          ],
           "options": {
             "jestConfig": "libs/workspace/colors/jest.config.js",
             "passWithNoTests": true
@@ -580,13 +671,57 @@
         },
         "build": {
           "executor": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/workspace/colors",
             "tsConfig": "libs/workspace/colors/tsconfig.lib.json",
             "packageJson": "libs/workspace/colors/package.json",
             "main": "libs/workspace/colors/src/index.ts",
-            "assets": ["libs/workspace/colors/*.md"]
+            "assets": [
+              "libs/workspace/colors/*.md"
+            ]
+          }
+        }
+      }
+    },
+    "workspace-types": {
+      "root": "libs/workspace/types",
+      "sourceRoot": "libs/workspace/types/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/workspace/types/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/workspace/types"
+          ],
+          "options": {
+            "jestConfig": "libs/workspace/types/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/workspace/types",
+            "tsConfig": "libs/workspace/types/tsconfig.lib.json",
+            "packageJson": "libs/workspace/types/package.json",
+            "main": "libs/workspace/types/src/index.ts",
+            "assets": [
+              "libs/workspace/types/*.md"
+            ]
           }
         }
       }

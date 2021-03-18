@@ -1,6 +1,6 @@
+import { Theme } from '@alpha-components/workspace/types';
 import React, { createContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
-import { Theme } from '../types';
 import { DEFAULT_STATE } from './constants';
 import { toggleScheme } from './scheme';
 

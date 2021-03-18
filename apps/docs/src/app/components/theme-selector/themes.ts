@@ -1,4 +1,4 @@
-import { Theme } from '../../types';
+import { Theme } from '@alpha-components/workspace/types';
 
 export const THEME_OPTIONS = [
   {
