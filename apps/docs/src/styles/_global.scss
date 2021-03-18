@@ -1,3 +1,5 @@
+@import url('https://indestructibletype.com/fonts/Jost.css');
+
 * {
   box-sizing: border-box;
 }
@@ -14,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: 16px;
+  font-family: 'Jost';
   font-weight: normal;
   background: var(--primary-background-color);
   color: var(--primary-text-color);
