@@ -1,19 +1,21 @@
+import { Theme } from '@alpha-components/workspace/types';
+
 export const THEMES = [
   {
     label: 'Magnetar',
-    value: 'magnetar',
+    value: Theme.MAGNETAR,
   },
   {
     label: 'Ressonance',
-    value: 'ressonance',
+    value: Theme.RESSONANCE,
   },
   {
     label: 'Event Horizon',
-    value: 'eventHorizon',
+    value: Theme.EVENT_HORIZON,
   },
   {
     label: 'Neutrino',
-    value: 'neutrino',
+    value: Theme.NEUTRINO,
   },
 ];
 

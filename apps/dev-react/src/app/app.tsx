@@ -1,5 +1,6 @@
 import { Root } from '@alpha-components/react/root';
 import { Select } from '@alpha-components/react/select';
+import { Theme } from '@alpha-components/workspace/types';
 import React, { useState } from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';
@@ -28,7 +29,7 @@ export const App = () => {
               label="Theme"
               defaultValue={THEMES[0].value}
               change={(event) => {
-                setTheme(event.target.value);
+                setTheme(Theme[event.target.value]);
               }}
             ></Select>
             <Select
