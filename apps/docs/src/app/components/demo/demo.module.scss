@@ -13,13 +13,17 @@ $radius: 10px;
   }
   .source {
     display: none;
-    background: #282a35;
-    padding: 20px;
     color: white;
     border-radius: 0 0 $radius $radius;
+    overflow: hidden;
     code {
       white-space: pre-wrap;
+      width: 100%;
+      display: block;
+      padding: 20px !important;
+      border-radius: 0 !important;
       font-size: 16px;
+      background: var(--code-background-color);
     }
   }
   .actions {

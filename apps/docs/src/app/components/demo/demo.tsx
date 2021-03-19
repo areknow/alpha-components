@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { memo, ReactNode, useState } from 'react';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import Code from '../code/code';
 import styles from './demo.module.scss';
@@ -10,7 +10,7 @@ interface DemoProps {
   code?: string;
 }
 
-export const Demo = ({ children }: DemoProps) => {
+export const Demo = memo(({ children }: DemoProps) => {
   const [show, toggleShow] = useState(false);
   const [copied, toggleCopied] = useState(false);
   const classes = [styles.demo, show ? styles.show : null].join(' ');
@@ -28,7 +28,7 @@ export const Demo = ({ children }: DemoProps) => {
     <div className={classes}>
       <div className={styles.preview}>{children}</div>
       <div className={styles.source}>
-        <Code>{code}</Code>
+        <Code language="language-tsx">{code}</Code>
       </div>
       <div className={styles.actions}>
         <button onClick={() => toggleShow(!show)}>
@@ -42,6 +42,6 @@ export const Demo = ({ children }: DemoProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default Demo;
