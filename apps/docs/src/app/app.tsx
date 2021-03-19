@@ -10,7 +10,7 @@ export function App() {
       <Layout>
         <Switch>
           {ROUTES.map((route, key) => (
-            <Route key={key} path={route.path} exact>
+            <Route key={key} path={route.location} exact>
               {route.component}
             </Route>
           ))}

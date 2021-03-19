@@ -10,43 +10,15 @@ import TextareaPage from './pages/textarea';
 
 export const ROUTES = [
   {
-    path: '/',
+    location: '/',
+    sideMenu: false,
     component: <HomePage />,
   },
   {
-    path: '/button',
-    component: <ButtonPage />,
-  },
-  {
-    path: '/radio',
-    component: <RadioPage />,
-  },
-  {
-    path: '/checkbox',
-    component: <CheckboxPage />,
-  },
-  {
-    path: '/select',
-    component: <SelectPage />,
-  },
-  {
-    path: '/input',
-    component: <InputPage />,
-  },
-  {
-    path: '/textarea',
-    component: <TextareaPage />,
-  },
-  {
-    path: '/root',
-    component: <RootPage />,
-  },
-];
-
-export const MENU = [
-  {
-    label: 'Button',
     location: '/button',
+    label: 'Button',
+    sideMenu: true,
+    component: <ButtonPage />,
     children: [
       {
         label: 'Types',
@@ -67,27 +39,39 @@ export const MENU = [
     ],
   },
   {
-    label: 'Radio',
     location: 'radio',
+    label: 'Radio',
+    sideMenu: true,
+    component: <RadioPage />,
   },
   {
-    label: 'Checkbox',
     location: 'checkbox',
+    label: 'Checkbox',
+    sideMenu: true,
+    component: <CheckboxPage />,
   },
   {
-    label: 'Select',
     location: 'select',
+    label: 'Select',
+    sideMenu: true,
+    component: <SelectPage />,
   },
   {
-    label: 'Input',
     location: 'input',
+    label: 'Input',
+    sideMenu: true,
+    component: <InputPage />,
   },
   {
-    label: 'Textarea',
     location: 'textarea',
+    label: 'Textarea',
+    sideMenu: true,
+    component: <TextareaPage />,
   },
   {
-    label: 'Root',
     location: 'root',
+    label: 'Root',
+    sideMenu: true,
+    component: <RootPage />,
   },
 ];
