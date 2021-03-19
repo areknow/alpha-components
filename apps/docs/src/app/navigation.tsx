@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonPage from './pages/button';
 import CheckboxPage from './pages/checkbox';
-import { HomePage } from './pages/home';
+import HomePage from './pages/home';
 import InputPage from './pages/input';
 import RadioPage from './pages/radio';
 import RootPage from './pages/root';
