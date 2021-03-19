@@ -20,6 +20,7 @@
     font-family: inherit;
     &:focus {
       box-shadow: 0px 0px 0px 1px var(--primary-theme-color);
+      border-color: var(--primary-theme-color);
     }
     &::placeholder {
       color: var(--neutral-1);
