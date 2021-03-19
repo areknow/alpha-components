@@ -27,19 +27,24 @@ export const Input = memo((props: InputProps) => {
     inputRef.current.dispatchEvent(event);
   };
 
+  const classes = [
+    styles.inputContainer,
+    value && props.clear ? styles.clearActive : null,
+  ].join(' ');
+
   return (
-    <div className={styles.inputContainer}>
+    <div className={classes}>
       <input
-        ref={inputRef}
-        value={value}
-        required={props.required}
         type="text"
+        value={value}
+        ref={inputRef}
+        required={props.required}
         placeholder={props.placeHolder}
         autoComplete={props.autoComplete}
         onChange={handleChange}
       />
       {props.clear && value && (
-        <span className={styles.clear} onClick={handleClear}></span>
+        <button className={styles.clear} onClick={handleClear}></button>
       )}
     </div>
   );
