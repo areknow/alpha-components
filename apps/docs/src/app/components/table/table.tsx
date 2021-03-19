@@ -3,7 +3,7 @@ import styles from './table.module.scss';
 
 interface Row {
   prop: string;
-  value?: string;
+  type?: string;
   default?: string;
   required: boolean;
   return?: string;
@@ -21,7 +21,7 @@ export const Table = ({ rows, event }: TableProps) => {
         <thead>
           <tr>
             <th>Property</th>
-            {!event && <th>Value</th>}
+            {!event && <th>Type</th>}
             {!event && <th>Default</th>}
             {event && <th>Return</th>}
             <th>Required</th>
@@ -31,7 +31,7 @@ export const Table = ({ rows, event }: TableProps) => {
           {rows.map((row, key) => (
             <tr key={key}>
               <td>{row.prop}</td>
-              {!event && <td>{row.value}</td>}
+              {!event && <td>{row.type}</td>}
               {!event && <td>{row.default}</td>}
               {event && <td>{row.return}</td>}
               <td>{JSON.stringify(row.required)}</td>

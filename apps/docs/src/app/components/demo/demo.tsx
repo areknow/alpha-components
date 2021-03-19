@@ -6,15 +6,15 @@ import styles from './demo.module.scss';
 const COPY_TIMEOUT = 2000;
 
 interface DemoProps {
-  children: ReactNode;
+  children?: ReactNode;
   code?: string;
 }
 
-export const Demo = memo(({ children }: DemoProps) => {
+export const Demo = memo((props: DemoProps) => {
   const [show, toggleShow] = useState(false);
   const [copied, toggleCopied] = useState(false);
   const classes = [styles.demo, show ? styles.show : null].join(' ');
-  const code = reactElementToJSXString(children, { showFunctions: true });
+  const code = reactElementToJSXString(props.children, { showFunctions: true });
 
   const copyCode = () => {
     navigator.clipboard.writeText(code);
@@ -26,9 +26,9 @@ export const Demo = memo(({ children }: DemoProps) => {
 
   return (
     <div className={classes}>
-      <div className={styles.preview}>{children}</div>
+      <div className={styles.preview}>{props.children}</div>
       <div className={styles.source}>
-        <Code language="language-tsx">{code}</Code>
+        <Code language="language-tsx">{props.code ? props.code : code}</Code>
       </div>
       <div className={styles.actions}>
         <button onClick={() => toggleShow(!show)}>

@@ -43,6 +43,24 @@ export const ROUTES = [
     label: 'Radio',
     sideMenu: true,
     component: <RadioPage />,
+    children: [
+      {
+        label: 'Label',
+        location: '/radio#label',
+      },
+      {
+        label: 'Selected',
+        location: '/radio#selected',
+      },
+      {
+        label: 'Group',
+        location: '/radio#group',
+      },
+      {
+        label: 'Event',
+        location: '/radio#event',
+      },
+    ],
   },
   {
     location: '/checkbox',

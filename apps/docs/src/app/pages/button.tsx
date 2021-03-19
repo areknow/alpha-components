@@ -28,6 +28,7 @@ export const ButtonPage = () => {
           <Button>I like to be clicked</Button>
         </Demo>
       </Panel>
+
       <Panel id="types">
         <h2>Types</h2>
         <p>
@@ -41,7 +42,7 @@ export const ButtonPage = () => {
           rows={[
             {
               prop: 'type',
-              value: `"primary" | "secondary"`,
+              type: `"primary" | "secondary"`,
               default: 'primary',
               required: false,
             },
@@ -54,6 +55,7 @@ export const ButtonPage = () => {
           </>
         </Demo>
       </Panel>
+
       <Panel id="sizes">
         <h2>Sizes</h2>
         <p>
@@ -67,7 +69,7 @@ export const ButtonPage = () => {
           rows={[
             {
               prop: 'size',
-              value: `"small" | "medium" | "large"`,
+              type: `"small" | "medium" | "large"`,
               default: 'medium',
               required: false,
             },
@@ -81,6 +83,7 @@ export const ButtonPage = () => {
           </>
         </Demo>
       </Panel>
+
       <Panel id="disabled">
         <h2>Disabled</h2>
         <p>
@@ -93,7 +96,7 @@ export const ButtonPage = () => {
           rows={[
             {
               prop: 'disabled',
-              value: `true | false`,
+              type: `true | false`,
               default: 'false',
               required: false,
             },
@@ -103,6 +106,7 @@ export const ButtonPage = () => {
           <Button disabled>Disabled button</Button>
         </Demo>
       </Panel>
+
       <Panel id="event">
         <h2>Event</h2>
         <p>
@@ -116,7 +120,7 @@ export const ButtonPage = () => {
           rows={[
             {
               prop: 'onClick',
-              return: `MouseEventHandler<HTMLButtonElement>`,
+              return: 'MouseEventHandler<HTMLButtonElement>',
               required: false,
             },
           ]}

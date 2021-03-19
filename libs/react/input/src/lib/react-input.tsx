@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './react-input.module.scss';
 import { setNativeValue } from './set-native-value';
 
@@ -11,7 +11,7 @@ export interface InputProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = memo((props: InputProps) => {
+export const Input = (props: InputProps) => {
   const [value, setValue] = useState(props.value || '');
   const inputRef = React.createRef<HTMLInputElement>();
 
@@ -48,6 +48,6 @@ export const Input = memo((props: InputProps) => {
       )}
     </div>
   );
-});
+};
 
 export default Input;
