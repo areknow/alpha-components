@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { MENU } from '../../navigation';
 import styles from './side-menu.module.scss';
@@ -12,6 +12,15 @@ const scrollWithOffset = (element: HTMLElement) => {
 };
 
 export const SideMenu = () => {
+  const { pathname } = useLocation();
+
+  const secondaryMenuClasses = (menuItemLocation: string) => {
+    return [
+      styles.secondaryLevel,
+      pathname === menuItemLocation ? styles.menuOpen : null,
+    ].join(' ');
+  };
+
   return (
     <div className={styles.sideMenu}>
       <ul className={styles.primaryLevel}>
@@ -21,7 +30,7 @@ export const SideMenu = () => {
               {item.label}
             </NavLink>
             {item.children && (
-              <ul className={styles.secondaryLevel}>
+              <ul className={secondaryMenuClasses(item.location)}>
                 {item.children.map((child, key) => (
                   <li key={key}>
                     <NavHashLink

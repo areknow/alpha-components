@@ -25,15 +25,24 @@
     }
   }
   ul.secondaryLevel {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.2s ease-out;
+    opacity: 0;
     li {
       position: relative;
-      color: #818181;
+      color: var(--neutral-3);
       a {
         padding: 10px 62px;
       }
       &:hover {
         color: inherit;
       }
+    }
+    &.menuOpen {
+      display: block;
+      max-height: 300px;
+      opacity: 1;
     }
   }
 }
