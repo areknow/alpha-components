@@ -14,19 +14,17 @@
     margin-bottom: 20px;
   }
   p {
-    opacity: 0.6;
     margin-bottom: 20px;
     line-height: 28px;
+    color: var(--neutral-2);
   }
   hr {
     margin-bottom: 30px;
-    border-color: rgba(128, 128, 128, 0.2);
-    border-style: solid;
+    border: none;
+    height: 1px;
+    background: var(--neutral-1);
   }
   code {
     font-weight: bold;
-  }
-  .introCode {
-    outline: 1px solid red;
   }
 }
