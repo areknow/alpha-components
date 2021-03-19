@@ -1,5 +1,6 @@
 .inputContainer {
   max-width: 640px;
+  position: relative;
   input {
     font-family: inherit;
     box-sizing: border-box;
@@ -23,6 +24,43 @@
     }
     &::placeholder {
       color: var(--neutral-1);
+    }
+  }
+  .clear {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    background: var(--neutral-1);
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background: white;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &:before {
+      width: 2px;
+      height: 60%;
+    }
+    &:after {
+      height: 2px;
+      width: 60%;
     }
   }
 }

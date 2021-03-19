@@ -5,7 +5,14 @@ import styles from './input-demo.module.scss';
 export const InputDemo = () => {
   return (
     <div className={styles.demo}>
-      <Input placeHolder="test" value="test" />
+      <Input placeHolder="placeholder" />
+      <br />
+      <Input
+        placeHolder="test"
+        value="test"
+        clear
+        onChange={(x) => console.log(x)}
+      />
     </div>
   );
 };
