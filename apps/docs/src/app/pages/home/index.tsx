@@ -38,7 +38,7 @@ export const HomePage = () => {
             <h2>Usage</h2>
             <p>
               Alpha components work without any additional setup, and don't
-              pollute the global scope.
+              pollute the global scope. <a href="/button">See more</a>.
             </p>
             <Code language="language-tsx">{USAGE_CODE}</Code>
           </section>
