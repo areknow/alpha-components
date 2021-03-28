@@ -67,6 +67,20 @@ export const ROUTES = [
     label: 'Checkbox',
     sideMenu: true,
     component: <CheckboxPage />,
+    children: [
+      {
+        label: 'Label',
+        location: '/checkbox#label',
+      },
+      {
+        label: 'Value',
+        location: '/checkbox#value',
+      },
+      {
+        label: 'Checked',
+        location: '/checkbox#checked',
+      },
+    ],
   },
   {
     location: '/select',

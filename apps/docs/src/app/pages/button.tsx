@@ -126,13 +126,7 @@ export const ButtonPage = () => {
           ]}
         ></Table>
         <Demo>
-          <Button
-            onClick={() => {
-              setCount(count + 1);
-            }}
-          >
-            clicked: {count}
-          </Button>
+          <Button onClick={() => setCount(count + 1)}>clicked: {count}</Button>
         </Demo>
       </Panel>
     </Page>

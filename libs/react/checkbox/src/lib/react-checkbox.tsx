@@ -3,7 +3,7 @@ import styles from './react-checkbox.module.scss';
 
 interface CheckboxProps {
   label: string;
-  value: string;
+  value: string | ReadonlyArray<string> | number;
   checked?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }

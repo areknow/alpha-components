@@ -17,7 +17,8 @@ $radius: 10px;
     border-radius: 0 0 $radius $radius;
     overflow: hidden;
     code {
-      white-space: pre-wrap;
+      overflow: auto;
+      white-space: pre;
       width: 100%;
       display: block;
       padding: 20px !important;

@@ -145,7 +145,7 @@ export const RadioPage = () => {
           rows={[
             {
               prop: 'onChange',
-              return: `ChangeEvent<HTMLInputElement>`,
+              return: 'ChangeEvent<HTMLInputElement>',
               required: false,
             },
           ]}
