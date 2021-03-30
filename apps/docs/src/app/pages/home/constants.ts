@@ -4,7 +4,7 @@ $ yarn add @miniml/alpha-components-react`;
 export const FONT_CODE = `@import url('https://indestructibletype.com/fonts/Jost.css');
 
 body {
-  font-family: "Jost";
+  font-family: 'Jost', sans-serif;
 }`;
 
 export const USAGE_CODE = `import { Root } from '@miniml/alpha-components-react/root';

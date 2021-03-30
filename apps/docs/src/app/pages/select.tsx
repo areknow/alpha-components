@@ -1,8 +1,11 @@
 import { Select } from '@alpha-components/react/select';
 import React from 'react';
+import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
 import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
+
+const IMPORT_CODE = `import { Select } from '@miniml/alpha-components-react/select';`;
 
 const OPTIONS = [
   {
@@ -38,6 +41,7 @@ export const SelectPage = () => {
           Use the select for presenting options when your list is limited in
           length.
         </p>
+        <Code language="language-bash">{IMPORT_CODE}</Code>
         <Demo>
           <Select options={OPTIONS} name="fruit" label="Fruit" />
         </Demo>

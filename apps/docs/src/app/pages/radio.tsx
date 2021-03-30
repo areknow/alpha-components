@@ -1,9 +1,12 @@
 import { Radio } from '@alpha-components/react/radio';
 import React from 'react';
+import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
 import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
 import Table from '../components/table/table';
+
+const IMPORT_CODE = `import { Radio } from '@miniml/alpha-components-react/radio';`;
 
 export const RadioPage = () => {
   return (
@@ -29,6 +32,7 @@ export const RadioPage = () => {
           Radio buttons should have the most commonly used option selected by
           default.
         </p>
+        <Code language="language-bash">{IMPORT_CODE}</Code>
         <Demo>
           <>
             <div>

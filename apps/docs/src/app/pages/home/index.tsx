@@ -21,7 +21,7 @@ export const HomePage = () => {
             <h2>Installation</h2>
             <p>
               Install the alpha components via npm. We take care of injecting
-              the needed CSS rules.
+              the needed styles.
             </p>
             <Code language="language-bash">{INSTALL_CODE}</Code>
           </section>

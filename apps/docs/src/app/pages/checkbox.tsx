@@ -1,9 +1,12 @@
 import { Checkbox } from '@alpha-components/react/checkbox';
 import React from 'react';
+import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
 import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
 import Table from '../components/table/table';
+
+const IMPORT_CODE = `import { Checkbox } from '@miniml/alpha-components-react/checkbox';`;
 
 export const CheckboxPage = () => {
   return (
@@ -21,6 +24,7 @@ export const CheckboxPage = () => {
           styling.
         </p>
         <p>Checkboxes can be used to turn an option on or off.</p>
+        <Code language="language-bash">{IMPORT_CODE}</Code>
         <Demo>
           <>
             <div>

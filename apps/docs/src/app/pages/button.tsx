@@ -1,9 +1,12 @@
 import { Button } from '@alpha-components/react/button';
 import React, { useState } from 'react';
+import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
 import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
 import Table from '../components/table/table';
+
+const IMPORT_CODE = `import { Button } from '@miniml/alpha-components-react/button';`;
 
 export const ButtonPage = () => {
   const [count, setCount] = useState(0);
@@ -24,6 +27,7 @@ export const ButtonPage = () => {
           The button width is based on the text it holds. While being as short
           as possible, the text should clearly describe a button's action.
         </p>
+        <Code language="language-bash">{IMPORT_CODE}</Code>
         <Demo>
           <Button>I like to be clicked</Button>
         </Demo>

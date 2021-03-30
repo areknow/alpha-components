@@ -1,6 +1,6 @@
 import React, { memo, ReactNode, useState } from 'react';
 import reactElementToJSXString from 'react-element-to-jsx-string';
-import Code from '../code/code';
+import Prism from '../prism/prism';
 import styles from './demo.module.scss';
 
 const COPY_TIMEOUT = 2000;
@@ -28,7 +28,7 @@ export const Demo = memo((props: DemoProps) => {
     <div className={classes}>
       <div className={styles.preview}>{props.children}</div>
       <div className={styles.source}>
-        <Code language="language-tsx">{props.code ? props.code : code}</Code>
+        <Prism language="language-tsx">{props.code ? props.code : code}</Prism>
       </div>
       <div className={styles.actions}>
         <button onClick={() => toggleShow(!show)}>
