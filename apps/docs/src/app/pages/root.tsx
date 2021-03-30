@@ -36,15 +36,16 @@ export const RootPage = () => {
         <h2>Theme</h2>
         <p>
           The Root component has a <code>theme</code> property which will
-          dynamically switch between the four pre created color themes. Any
-          Alpha component within the Root will react to theme changes. Currently
-          only values from the Theme enum are supported.
+          dynamically switch the components style between the four pre created
+          color themes. Any Alpha component within the document will react to
+          theme changes. Currently only values from the Theme enum are
+          supported.
         </p>
         <Table
           rows={[
             {
               prop: 'theme',
-              type: 'Theme',
+              type: `MAGNETAR | RESSONANCE | EVENT_HORIZON | NEUTRINO`,
               default: 'undefined',
               required: false,
             },
@@ -56,13 +57,13 @@ export const RootPage = () => {
         </Demo>
       </Panel>
 
-      <Panel id="darkMode">
+      <Panel id="dark-mode">
         <h2>Dark mode</h2>
         <p>
           The Root component has a <code>darkMode</code> property which will
-          dynamically switch between dark and light color schemes. If no value
-          is provided, the Root component will instead react to the system color
-          scheme value. See the documentation on{' '}
+          dynamically switch the components style between dark and light color
+          schemes. If no value is provided, the document will instead react to
+          the system color scheme value. See the documentation on{' '}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
             target="_blank"
@@ -82,9 +83,7 @@ export const RootPage = () => {
             },
           ]}
         />
-        <Demo code={'<Root darkMode={true}>I am root!</Root>'}>
-          I am dark root!
-        </Demo>
+        <Demo code={'<Root darkMode={true}>I am root!</Root>'}>I am root!</Demo>
       </Panel>
     </Page>
   );
