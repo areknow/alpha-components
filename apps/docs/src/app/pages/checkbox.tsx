@@ -58,7 +58,7 @@ export const CheckboxPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <Checkbox label="I have a nice label" value="label" checked />
         </Demo>
@@ -79,7 +79,7 @@ export const CheckboxPage = () => {
               required: true,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <div>
@@ -107,7 +107,7 @@ export const CheckboxPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <div>
@@ -137,7 +137,7 @@ export const CheckboxPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <div>

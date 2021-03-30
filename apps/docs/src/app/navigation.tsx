@@ -87,6 +87,32 @@ export const ROUTES = [
     label: 'Select',
     sideMenu: true,
     component: <SelectPage />,
+    children: [
+      {
+        label: 'Name',
+        location: '/select#name',
+      },
+      {
+        label: 'Label',
+        location: '/select#label',
+      },
+      {
+        label: 'Options',
+        location: '/select#options',
+      },
+      {
+        label: 'Auto complete',
+        location: '/select#auto-complete',
+      },
+      {
+        label: 'Default value',
+        location: '/select#default-value',
+      },
+      {
+        label: 'Event',
+        location: '/select#event',
+      },
+    ],
   },
   {
     location: '/input',

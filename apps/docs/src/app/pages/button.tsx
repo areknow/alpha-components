@@ -51,7 +51,7 @@ export const ButtonPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <Button>Primary button</Button>
@@ -78,7 +78,7 @@ export const ButtonPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <Button size="small">Small button</Button>
@@ -105,7 +105,7 @@ export const ButtonPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <Button disabled>Disabled button</Button>
         </Demo>
@@ -128,7 +128,7 @@ export const ButtonPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <Button onClick={() => setCount(count + 1)}>clicked: {count}</Button>
         </Demo>

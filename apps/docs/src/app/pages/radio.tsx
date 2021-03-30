@@ -60,7 +60,7 @@ export const RadioPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <Radio label="This is my label!" selected />
         </Demo>
@@ -83,7 +83,7 @@ export const RadioPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <div>
@@ -112,7 +112,7 @@ export const RadioPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <section>
@@ -153,7 +153,7 @@ export const RadioPage = () => {
               required: false,
             },
           ]}
-        ></Table>
+        />
         <Demo>
           <>
             <div>

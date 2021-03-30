@@ -19,12 +19,12 @@ export const Select = (props: SelectProps) => {
   const [active, setActive] = useState(false);
   const _defaultValue = props.defaultValue || 'N/A';
 
+  const classes = `${styles.select} ${
+    active || props.defaultValue ? styles.active : undefined
+  }`;
+
   return (
-    <div
-      className={`${styles.select} ${
-        active || props.defaultValue ? styles.active : undefined
-      }`}
-    >
+    <div className={classes}>
       <select
         className={styles.select}
         defaultValue={_defaultValue}
