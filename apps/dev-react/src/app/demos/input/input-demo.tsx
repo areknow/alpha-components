@@ -5,10 +5,10 @@ import styles from './input-demo.module.scss';
 export const InputDemo = () => {
   return (
     <div className={styles.demo}>
-      <Input placeHolder="placeholder" />
+      <Input placeholder="placeholder" />
       <br />
       <Input
-        placeHolder="test"
+        placeholder="test"
         value="test"
         clear
         onChange={(x) => console.log(x)}

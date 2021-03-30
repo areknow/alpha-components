@@ -33,6 +33,10 @@ export const ROUTES = [
         location: '/button#disabled',
       },
       {
+        label: 'Submit',
+        location: '/button#submit',
+      },
+      {
         label: 'Event',
         location: '/button#event',
       },
@@ -119,6 +123,32 @@ export const ROUTES = [
     label: 'Input',
     sideMenu: true,
     component: <InputPage />,
+    children: [
+      {
+        label: 'Placeholder',
+        location: '/input#placeholder',
+      },
+      {
+        label: 'Value',
+        location: '/input#value',
+      },
+      {
+        label: 'Auto complete',
+        location: '/input#auto-complete',
+      },
+      {
+        label: 'Required',
+        location: '/input#required',
+      },
+      {
+        label: 'Clear',
+        location: '/input#clear',
+      },
+      {
+        label: 'Event',
+        location: '/input#event',
+      },
+    ],
   },
   {
     location: '/textarea',

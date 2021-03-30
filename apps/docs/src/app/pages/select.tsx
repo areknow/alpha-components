@@ -164,9 +164,10 @@ export const SelectPage = () => {
       <Panel id="auto-complete">
         <h2>Auto complete</h2>
         <p>
-          The Select component has a <code>options</code> property which renders
-          the list of options within the dropdown. The options property accepts
-          an array of <code>SelectOptions</code>. See The{' '}
+          The Select component has a <code>autoComplete</code> which mirrors the
+          native input autocomplete attribute. The property allows developers to
+          specify what permission the user agent has to provide automated
+          assistance in filling out form field values. See The{' '}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
             target="_blank"

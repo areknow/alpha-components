@@ -3,7 +3,7 @@ import styles from './react-input.module.scss';
 import { setNativeValue } from './set-native-value';
 
 export interface InputProps {
-  placeHolder?: string;
+  placeholder?: string;
   autoComplete?: string;
   required?: boolean;
   value?: string;
@@ -39,7 +39,7 @@ export const Input = (props: InputProps) => {
         value={value}
         ref={inputRef}
         required={props.required}
-        placeholder={props.placeHolder}
+        placeholder={props.placeholder}
         autoComplete={props.autoComplete}
         onChange={handleChange}
       />
