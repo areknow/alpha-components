@@ -1,9 +1,9 @@
-import { Root } from '@alpha-components/react/root';
 import React from 'react';
 import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
 import Page from '../components/page/page';
 import Panel from '../components/panel/panel';
+import Table from '../components/table/table';
 
 const IMPORT_CODE = `import { Root } from '@miniml/alpha-components-react/root';`;
 
@@ -29,8 +29,61 @@ export const RootPage = () => {
           <code>index.tsx</code> or <code>_app.tsx</code> for example.
         </p>
         <Code language="language-bash">{IMPORT_CODE}</Code>
-        <Demo>
-          <Root>I am root!</Root>
+        <Demo code={'<Root>I am root!</Root>'}>I am root!</Demo>
+      </Panel>
+
+      <Panel id="theme">
+        <h2>Theme</h2>
+        <p>
+          The Root component has a <code>theme</code> property which will
+          dynamically switch between the four pre created color themes. Any
+          Alpha component within the Root will react to theme changes. Currently
+          only values from the Theme enum are supported.
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'theme',
+              type: 'Theme',
+              default: 'undefined',
+              required: false,
+            },
+          ]}
+        />
+
+        <Demo code={'<Root theme={Theme.NEUTRINO}>I am root!</Root>'}>
+          I am root!
+        </Demo>
+      </Panel>
+
+      <Panel id="darkMode">
+        <h2>Dark mode</h2>
+        <p>
+          The Root component has a <code>darkMode</code> property which will
+          dynamically switch between dark and light color schemes. If no value
+          is provided, the Root component will instead react to the system color
+          scheme value. See the documentation on{' '}
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+            target="_blank"
+            rel="noreferrer"
+          >
+            prefers-color-scheme
+          </a>{' '}
+          to learn more.
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'darkMode',
+              type: 'boolean',
+              default: 'undefined',
+              required: false,
+            },
+          ]}
+        />
+        <Demo code={'<Root darkMode={true}>I am root!</Root>'}>
+          I am dark root!
         </Demo>
       </Panel>
     </Page>

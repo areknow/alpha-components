@@ -187,5 +187,15 @@ export const ROUTES = [
     label: 'Root',
     sideMenu: true,
     component: <RootPage />,
+    children: [
+      {
+        label: 'Theme',
+        location: '/root#theme',
+      },
+      {
+        label: 'Dark mode',
+        location: '/root#dark-mode',
+      },
+    ],
   },
 ];

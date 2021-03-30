@@ -14,7 +14,9 @@ export const Demo = memo((props: DemoProps) => {
   const [show, toggleShow] = useState(false);
   const [copied, toggleCopied] = useState(false);
   const classes = [styles.demo, show ? styles.show : null].join(' ');
-  const code = reactElementToJSXString(props.children, { showFunctions: true });
+  const code = !props.code
+    ? reactElementToJSXString(props.children, { showFunctions: true })
+    : '';
 
   const copyCode = () => {
     navigator.clipboard.writeText(code);
