@@ -3,7 +3,7 @@ import styles from './react-textarea.module.scss';
 
 export interface TextareaProps {
   rows?: number;
-  placeHolder?: string;
+  placeholder?: string;
   autoComplete?: string;
   required?: boolean;
   value?: string;
@@ -17,7 +17,7 @@ export const Textarea = (props: TextareaProps) => {
         rows={props.rows}
         defaultValue={props.value}
         required={props.required}
-        placeholder={props.placeHolder}
+        placeholder={props.placeholder}
         autoComplete={props.autoComplete}
         onChange={props.onChange}
       ></textarea>

@@ -133,12 +133,12 @@ export const ROUTES = [
         location: '/input#value',
       },
       {
-        label: 'Auto complete',
-        location: '/input#auto-complete',
-      },
-      {
         label: 'Required',
         location: '/input#required',
+      },
+      {
+        label: 'Auto complete',
+        location: '/input#auto-complete',
       },
       {
         label: 'Clear',
@@ -155,6 +155,32 @@ export const ROUTES = [
     label: 'Textarea',
     sideMenu: true,
     component: <TextareaPage />,
+    children: [
+      {
+        label: 'Placeholder',
+        location: '/textarea#placeholder',
+      },
+      {
+        label: 'Value',
+        location: '/textarea#value',
+      },
+      {
+        label: 'Required',
+        location: '/textarea#required',
+      },
+      {
+        label: 'Auto complete',
+        location: '/textarea#auto-complete',
+      },
+      {
+        label: 'Rows',
+        location: '/textarea#rows',
+      },
+      {
+        label: 'Event',
+        location: '/textarea#event',
+      },
+    ],
   },
   {
     location: '/root',

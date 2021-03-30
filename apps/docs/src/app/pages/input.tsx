@@ -72,6 +72,31 @@ export const InputPage = () => {
         </Demo>
       </Panel>
 
+      <Panel id="required">
+        <h2>Required</h2>
+        <p>
+          The Input component has a <code>required</code> property. If set to
+          true, A value is required for its form to be submittable.
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'required',
+              type: 'boolean',
+              default: 'undefined',
+              required: false,
+            },
+          ]}
+        />
+        <Demo>
+          <form action="/">
+            <Input placeholder="I am required." required />
+            <br />
+            <Button submit>Submit</Button>
+          </form>
+        </Demo>
+      </Panel>
+
       <Panel id="auto-complete">
         <h2>Auto complete</h2>
         <p>
@@ -100,31 +125,6 @@ export const InputPage = () => {
         />
         <Demo>
           <Input placeholder="Enter your name" autoComplete="name" />
-        </Demo>
-      </Panel>
-
-      <Panel id="required">
-        <h2>Required</h2>
-        <p>
-          The Input component has a <code>required</code> property. If set to
-          true, A value is required for its form to be submittable.
-        </p>
-        <Table
-          rows={[
-            {
-              prop: 'required',
-              type: 'boolean',
-              default: 'undefined',
-              required: false,
-            },
-          ]}
-        />
-        <Demo>
-          <form action="/">
-            <Input placeholder="I am required." required />
-            <br />
-            <Button submit>Submit</Button>
-          </form>
         </Demo>
       </Panel>
 

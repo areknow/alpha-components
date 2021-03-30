@@ -5,7 +5,7 @@ import styles from './textarea-demo.module.scss';
 export const TextareaDemo = () => {
   return (
     <div className={styles.demo}>
-      <Textarea placeHolder="test" value="test" />
+      <Textarea placeholder="test" value="test" />
     </div>
   );
 };
