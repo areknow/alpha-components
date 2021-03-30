@@ -7,6 +7,7 @@ export interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   children: ReactNode;
+  submit?: boolean;
   onClick?: NativeButtonProps['onClick'];
 }
 
@@ -21,7 +22,7 @@ export const Button = (props: ButtonProps) => {
     <button
       className={classes}
       onClick={props.onClick}
-      type="button"
+      type={props.submit ? 'submit' : 'button'}
       disabled={props.disabled}
     >
       {props.children}

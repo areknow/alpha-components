@@ -100,7 +100,7 @@ export const ButtonPage = () => {
           rows={[
             {
               prop: 'disabled',
-              type: `true | false`,
+              type: 'boolean',
               default: 'false',
               required: false,
             },
@@ -108,6 +108,31 @@ export const ButtonPage = () => {
         />
         <Demo>
           <Button disabled>Disabled button</Button>
+        </Demo>
+      </Panel>
+
+      <Panel id="submit">
+        <h2>Submit</h2>
+        <p>
+          The Button component has a <code>submit</code> property that allows it
+          to interact with forms. If set to true, the native button type
+          attribute will be set to "submit". If not used, it will be set to
+          "button".
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'submit',
+              type: 'boolean',
+              default: 'false',
+              required: false,
+            },
+          ]}
+        />
+        <Demo>
+          <form action="/">
+            <Button submit>I submit forms.</Button>
+          </form>
         </Demo>
       </Panel>
 
