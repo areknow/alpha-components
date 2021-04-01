@@ -579,14 +579,13 @@
           }
         },
         "build": {
-          "executor": "@nrwl/node:package",
+          "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/core/colors",
             "tsConfig": "libs/core/colors/tsconfig.lib.json",
-            "packageJson": "libs/core/colors/package.json",
-            "main": "libs/core/colors/src/index.ts",
-            "assets": ["libs/core/colors/*.md"]
+            "project": "libs/core/colors/package.json",
+            "entryFile": "libs/core/colors/src/index.ts"
           }
         }
       }
@@ -611,14 +610,13 @@
           }
         },
         "build": {
-          "executor": "@nrwl/node:package",
+          "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/core/types",
             "tsConfig": "libs/core/types/tsconfig.lib.json",
-            "packageJson": "libs/core/types/package.json",
-            "main": "libs/core/types/src/index.ts",
-            "assets": ["libs/core/types/*.md"]
+            "project": "libs/core/types/package.json",
+            "entryFile": "libs/core/types/src/index.ts"
           }
         }
       }
