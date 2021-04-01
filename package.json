@@ -27,9 +27,10 @@
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "build-all": "nx run-many --target=build --all",
     "pre-publish": "node tools/pre-publish",
+    "pub-core": "npm publish ./publish/core --access public",
     "pub-react": "npm publish ./publish/react --access public",
     "pub-angular": "npm publish ./publish/angular --access public",
-    "pub-all": "npm run pub-react && npm run pub-angular",
+    "pub-all": "npm run pub-core && npm run pub-react && npm run pub-angular",
     "pub": "npm run build-all && npm run pre-publish && npm run pub-all"
   },
   "private": true,
