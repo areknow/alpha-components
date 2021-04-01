@@ -1,4 +1,4 @@
-import { Textarea } from '@alpha-components/react/textarea';
+import { Textarea } from '@miniml/alpha-components-react/textarea';
 import React from 'react';
 import styles from './textarea-demo.module.scss';
 

@@ -1,4 +1,4 @@
-import { Select } from '@alpha-components/react/select';
+import { Select } from '@miniml/alpha-components-react/select';
 import React from 'react';
 import Code from '../components/code/code';
 import Demo from '../components/demo/demo';

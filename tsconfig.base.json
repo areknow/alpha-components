@@ -15,18 +15,30 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@alpha-components/angular/button": ["libs/angular/button/src/index.ts"],
-      "@alpha-components/react/button": ["libs/react/button/src/index.ts"],
-      "@alpha-components/react/select": ["libs/react/select/src/index.ts"],
-      "@alpha-components/react/radio": ["libs/react/radio/src/index.ts"],
-      "@alpha-components/react/checkbox": ["libs/react/checkbox/src/index.ts"],
-      "@alpha-components/react/input": ["libs/react/input/src/index.ts"],
-      "@alpha-components/react/textarea": ["libs/react/textarea/src/index.ts"],
-      "@alpha-components/react/root": ["libs/react/root/src/index.ts"],
-      "@alpha-components/workspace/colors": [
+      "@miniml/alpha-components-angular/button": [
+        "libs/angular/button/src/index.ts"
+      ],
+      "@miniml/alpha-components-react/button": [
+        "libs/react/button/src/index.ts"
+      ],
+      "@miniml/alpha-components-react/select": [
+        "libs/react/select/src/index.ts"
+      ],
+      "@miniml/alpha-components-react/radio": ["libs/react/radio/src/index.ts"],
+      "@miniml/alpha-components-react/checkbox": [
+        "libs/react/checkbox/src/index.ts"
+      ],
+      "@miniml/alpha-components-react/input": ["libs/react/input/src/index.ts"],
+      "@miniml/alpha-components-react/textarea": [
+        "libs/react/textarea/src/index.ts"
+      ],
+      "@miniml/alpha-components-react/root": ["libs/react/root/src/index.ts"],
+      "@miniml/alpha-components-workspace/colors": [
         "libs/workspace/colors/src/index.ts"
       ],
-      "@alpha-components/workspace/types": ["libs/workspace/types/src/index.ts"]
+      "@miniml/alpha-components-workspace/types": [
+        "libs/workspace/types/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

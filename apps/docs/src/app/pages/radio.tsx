@@ -1,4 +1,4 @@
-import { Radio } from '@alpha-components/react/radio';
+import { Radio } from '@miniml/alpha-components-react/radio';
 import React from 'react';
 import Code from '../components/code/code';
 import Demo from '../components/demo/demo';

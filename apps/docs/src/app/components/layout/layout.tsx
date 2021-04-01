@@ -1,4 +1,4 @@
-import { Root } from '@alpha-components/react/root';
+import { Root } from '@miniml/alpha-components-react/root';
 import React, { ReactNode } from 'react';
 import { useThemeContext } from '../../context';
 import Nav from '../nav/nav';

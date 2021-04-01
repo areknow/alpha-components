@@ -1,4 +1,4 @@
-import { Button } from '@alpha-components/react/button';
+import { Button } from '@miniml/alpha-components-react/button';
 import React, { useState } from 'react';
 import styles from './button-demo.module.scss';
 

@@ -1,4 +1,4 @@
-import { Button } from '@alpha-components/react/button';
+import { Button } from '@miniml/alpha-components-react/button';
 import React, { useState } from 'react';
 import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
@@ -33,8 +33,8 @@ export const ButtonPage = () => {
         </Demo>
       </Panel>
 
-      <Panel id="types">
-        <h2>Types</h2>
+      <Panel id="type">
+        <h2>Type</h2>
         <p>
           The Button component has two differently designed types to help the
           user distinguish between varying levels of importance based on the
@@ -60,8 +60,8 @@ export const ButtonPage = () => {
         </Demo>
       </Panel>
 
-      <Panel id="sizes">
-        <h2>Sizes</h2>
+      <Panel id="size">
+        <h2>Size</h2>
         <p>
           The Button component has three different sizes which can help
           illustrate various emphasis levels in your interface; these sizes are{' '}

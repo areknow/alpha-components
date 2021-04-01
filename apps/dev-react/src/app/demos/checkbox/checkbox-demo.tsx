@@ -1,4 +1,4 @@
-import { Checkbox } from '@alpha-components/react/checkbox';
+import { Checkbox } from '@miniml/alpha-components-react/checkbox';
 import React from 'react';
 import styles from './checkbox-demo.module.scss';
 

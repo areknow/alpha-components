@@ -1,4 +1,4 @@
-import { Input } from '@alpha-components/react/input';
+import { Input } from '@miniml/alpha-components-react/input';
 import React from 'react';
 import styles from './input-demo.module.scss';
 

@@ -21,12 +21,12 @@ export const ROUTES = [
     component: <ButtonPage />,
     children: [
       {
-        label: 'Types',
-        location: '/button#types',
+        label: 'Type',
+        location: '/button#type',
       },
       {
         label: 'Sizes',
-        location: '/button#sizes',
+        location: '/button#size',
       },
       {
         label: 'Disabled',

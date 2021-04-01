@@ -1,4 +1,4 @@
-import { Select } from '@alpha-components/react/select';
+import { Select } from '@miniml/alpha-components-react/select';
 import React from 'react';
 import styles from './select-demo.module.scss';
 

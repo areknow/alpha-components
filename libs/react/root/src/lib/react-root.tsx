@@ -2,8 +2,8 @@ import {
   COLORS,
   DARK_SCHEME,
   LIGHT_SCHEME,
-} from '@alpha-components/workspace/colors';
-import { Theme } from '@alpha-components/workspace/types';
+} from '@miniml/alpha-components-workspace/colors';
+import { Theme } from '@miniml/alpha-components-workspace/types';
 import React, { ReactNode } from 'react';
 import { createGlobalStyle, css } from 'styled-components';
 import { hexToHsl, hexToRgb } from './hex-helpers';

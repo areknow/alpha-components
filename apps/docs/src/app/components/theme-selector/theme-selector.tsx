@@ -1,4 +1,4 @@
-import { Theme } from '@alpha-components/workspace/types';
+import { Theme } from '@miniml/alpha-components-workspace/types';
 import React from 'react';
 import { useThemeContext } from '../../context';
 import styles from './theme-selector.module.scss';

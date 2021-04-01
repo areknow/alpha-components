@@ -1,5 +1,5 @@
-import { Button } from '@alpha-components/react/button';
-import { Input } from '@alpha-components/react/input';
+import { Button } from '@miniml/alpha-components-react/button';
+import { Input } from '@miniml/alpha-components-react/input';
 import React from 'react';
 import Code from '../components/code/code';
 import Demo from '../components/demo/demo';
