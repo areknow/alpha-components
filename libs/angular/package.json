@@ -1,0 +1,9 @@
+{
+  "name": "@miniml/alpha-components-angular",
+  "version": "0.0.1",
+  "author": "Arnaud Crowther",
+  "license": "ISC",
+  "dependencies": {
+    "@miniml/alpha-components-core": "0.0.1"
+  }
+}

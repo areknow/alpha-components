@@ -1,16 +1,32 @@
 const fs = require('fs-extra');
 
-// either delete the old files, or do all the dirs and packages from templates...
+const publishDirectory = 'publish';
+const libsDirectory = 'libs';
+const distDirectory = 'dist';
+const packages = ['angular', 'react', 'core'];
 
-function copy(type) {
-  const source = `dist/libs/${type}`;
-  const destination = `publish/${type}`;
-
-  fs.copy(source, destination, function (err) {
-    if (err) return console.error(err);
-  });
+// Delete existing publish directory
+if (fs.existsSync(publishDirectory)) {
+  fs.rmdirSync(publishDirectory, { recursive: true });
 }
 
-copy('angular');
-copy('react');
-copy('core');
+// Make publish directory
+fs.mkdirSync(publishDirectory);
+
+// Move artifacts
+const artifactsSource = `${distDirectory}/${libsDirectory}`;
+const artifactsDestination = `${publishDirectory}`;
+fs.copy(artifactsSource, artifactsDestination, function () {
+  for (const package of packages) {
+    copyPackageJson(package);
+  }
+});
+
+// Copy package json
+const copyPackageJson = (package) => {
+  const fileName = 'package.json';
+  fs.copyFile(
+    `${libsDirectory}/${package}/${fileName}`,
+    `${publishDirectory}/${package}/${fileName}`
+  );
+};
