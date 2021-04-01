@@ -22,14 +22,11 @@
               },
               {
                 "sourceTag": "target:angular",
-                "onlyDependOnLibsWithTags": [
-                  "target:angular",
-                  "target:workspace"
-                ]
+                "onlyDependOnLibsWithTags": ["target:angular", "target:core"]
               },
               {
                 "sourceTag": "target:react",
-                "onlyDependOnLibsWithTags": ["target:react", "target:workspace"]
+                "onlyDependOnLibsWithTags": ["target:react", "target:core"]
               }
             ]
           }

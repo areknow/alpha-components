@@ -1,6 +1,6 @@
+import { Theme } from '@miniml/alpha-components-core/types';
 import { Root } from '@miniml/alpha-components-react/root';
 import { Select } from '@miniml/alpha-components-react/select';
-import { Theme } from '@miniml/alpha-components-workspace/types';
 import React, { useState } from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import styles from './app.module.scss';

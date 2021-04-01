@@ -1,4 +1,4 @@
-import { Scheme } from '@miniml/alpha-components-workspace/types';
+import { Scheme } from '@miniml/alpha-components-core/types';
 import { changeFavicon } from './icon';
 
 export const toggleScheme = (darkMode: boolean) => {

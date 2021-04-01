@@ -33,12 +33,8 @@
         "libs/react/textarea/src/index.ts"
       ],
       "@miniml/alpha-components-react/root": ["libs/react/root/src/index.ts"],
-      "@miniml/alpha-components-workspace/colors": [
-        "libs/workspace/colors/src/index.ts"
-      ],
-      "@miniml/alpha-components-workspace/types": [
-        "libs/workspace/types/src/index.ts"
-      ]
+      "@miniml/alpha-components-core/colors": ["libs/core/colors/src/index.ts"],
+      "@miniml/alpha-components-core/types": ["libs/core/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

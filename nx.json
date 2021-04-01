@@ -27,7 +27,7 @@
     "react-input": { "tags": ["type:ui", "target:react"] },
     "react-textarea": { "tags": ["type:ui", "target:react"] },
     "react-root": { "tags": ["type:ui", "target:react"] },
-    "workspace-colors": { "tags": ["type:util", "target:workspace"] },
-    "workspace-types": { "tags": ["type:util", "target:workspace"] }
+    "core-colors": { "tags": ["type:util", "target:core"] },
+    "core-types": { "tags": ["type:util", "target:core"] }
   }
 }

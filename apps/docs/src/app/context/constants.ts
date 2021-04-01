@@ -1,4 +1,4 @@
-import { Theme } from '@miniml/alpha-components-workspace/types';
+import { Theme } from '@miniml/alpha-components-core/types';
 import { ThemeContextModel } from '.';
 
 export const DEFAULT_STATE: ThemeContextModel = {

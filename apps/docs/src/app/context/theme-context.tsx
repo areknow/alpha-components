@@ -1,4 +1,4 @@
-import { Theme } from '@miniml/alpha-components-workspace/types';
+import { Theme } from '@miniml/alpha-components-core/types';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
 import { DEFAULT_STATE } from './constants';

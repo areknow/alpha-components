@@ -1,4 +1,4 @@
-import { Theme } from '@miniml/alpha-components-workspace/types';
+import { Theme } from '@miniml/alpha-components-core/types';
 
 export const THEME_OPTIONS = [
   {
