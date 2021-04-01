@@ -43,3 +43,5 @@ Thumbs.db
 !publish/angular/package.json
 /publish/react/*
 !publish/react/package.json
+/publish/core/*
+!publish/core/package.json

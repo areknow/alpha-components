@@ -11,3 +11,4 @@ function copy(type) {
 
 copy('angular');
 copy('react');
+copy('core');
