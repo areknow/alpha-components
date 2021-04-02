@@ -1,4 +1,4 @@
-name: 'ci: build'
+name: 'ci: lint'
 
 on:
   push:
@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: 14.x
       - run: npm ci
-      - run: npm run build-all
+      - run: npm run lint-all
