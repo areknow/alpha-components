@@ -15,7 +15,7 @@
 
 ## Getting started
 
-### 🐎 Installation
+### 📦 Installation
 
 Install the alpha components via npm. We take care of injecting the needed styles.
 
