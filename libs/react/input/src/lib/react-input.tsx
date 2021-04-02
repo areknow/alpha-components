@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './react-input.module.scss';
 import { setNativeValue } from './set-native-value';
+import { StyledAlphaInput, StyledButton, StyledInput } from './styles';
 
 export interface InputProps {
   placeholder?: string;
@@ -33,8 +34,8 @@ export const Input = (props: InputProps) => {
   ].join(' ');
 
   return (
-    <div className={classes}>
-      <input
+    <StyledAlphaInput>
+      <StyledInput
         type="text"
         value={value}
         ref={inputRef}
@@ -44,9 +45,9 @@ export const Input = (props: InputProps) => {
         onChange={handleChange}
       />
       {props.clear && value && (
-        <button className={styles.clear} onClick={handleClear}></button>
+        <StyledButton onClick={handleClear}></StyledButton>
       )}
-    </div>
+    </StyledAlphaInput>
   );
 };
 
