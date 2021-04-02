@@ -29,7 +29,7 @@ export const App = () => {
               label="Theme"
               defaultValue={THEMES[0].value}
               onChange={(event) => {
-                setTheme(Theme[event.target.value]);
+                setTheme(event.target.value as Theme);
               }}
             ></Select>
             <Select

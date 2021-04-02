@@ -1,15 +1,15 @@
 import {
+  ACTIVE_LIGHTNESS,
   COLORS,
   DARK_SCHEME,
+  hexToHsl,
+  hexToRgb,
+  HOVER_LIGHTNESS,
   LIGHT_SCHEME,
 } from '@miniml/alpha-components-core/colors';
 import { Theme } from '@miniml/alpha-components-core/types';
 import React, { ReactNode } from 'react';
 import { createGlobalStyle, css } from 'styled-components';
-import { hexToHsl, hexToRgb } from './hex-helpers';
-
-const HOVER_LIGHTNESS = 0.8;
-const ACTIVE_LIGHTNESS = 0.6;
 
 export interface RootProps {
   theme?: Theme;
