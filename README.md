@@ -19,7 +19,7 @@
 
 Install the alpha components via npm. We take care of injecting the needed styles.
 
-```shell
+```zsh
 $ npm install --save @miniml/alpha-components-react
 $ yarn add @miniml/alpha-components-react
 ```
