@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './react-radio.module.scss';
+import { StyledDiv, StyledInput, StyledLabel, StyledSpan } from './styles';
 
 type RadioValue = string | string[] | number | number[];
 interface RadioProps {
@@ -14,23 +14,19 @@ interface RadioProps {
 }
 
 export const Radio = (props: RadioProps) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    props.onChange(event, props.value);
-  };
-
-  const classes = ['alpha-radio', styles.radioContainer].join(' ');
-
   return (
-    <label className={classes}>
-      <input
+    <StyledLabel>
+      <StyledInput
         type="radio"
         name={props.group}
-        onChange={handleChange}
+        onChange={(event) => {
+          props.onChange(event, props.value);
+        }}
         defaultChecked={props.selected}
       />
-      <span className={styles.radio}></span>
-      <div className={styles.label}>{props.label}</div>
-    </label>
+      <StyledSpan></StyledSpan>
+      <StyledDiv>{props.label}</StyledDiv>
+    </StyledLabel>
   );
 };
 
