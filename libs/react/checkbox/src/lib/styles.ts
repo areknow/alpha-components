@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const defaultTheme = 'magnetar';
 
-export const StyledCheckbox = styled.label`
+export const StyledLabel = styled.label`
   display: inline-flex;
   align-items: baseline;
   position: relative;
