@@ -14,7 +14,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "alpha-components",
+            "prefix": "alpha",
             "style": "camelCase"
           }
         ],
@@ -22,7 +22,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "alpha-components",
+            "prefix": "alpha",
             "style": "kebab-case"
           }
         ]

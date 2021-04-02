@@ -5,6 +5,8 @@ import { ReactComponent as Title } from '../../../assets/title.svg';
 import { ThemeSelector } from '../theme-selector/theme-selector';
 import styles from './nav.module.scss';
 
+const SCROLL_OFFSET = 90;
+
 export const Nav = () => {
   const [scrolledNav, toggleScrolledNav] = useState(false);
   const [expandNav, toggleExpandNav] = useState(false);
@@ -17,7 +19,7 @@ export const Nav = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      toggleScrolledNav(window.scrollY > 90);
+      toggleScrolledNav(window.scrollY > SCROLL_OFFSET);
     };
     window.addEventListener('scroll', onScroll, true);
     return () => window.removeEventListener('scroll', onScroll, true);

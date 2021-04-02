@@ -30,6 +30,7 @@ describe('Root', () => {
 
   it('should use darkMode if matchMedia returns true for "prefers-colors-dark"', () => {
     const darkMode = true;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (global as any).matchMedia = jest.fn(() => ({
       matches: true,
       ...matchMediaMock,
@@ -41,6 +42,7 @@ describe('Root', () => {
 
   it('should not use darkMode if matchMedia returns false for "prefers-colors-dark"', () => {
     const darkMode = false;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (global as any).matchMedia = jest.fn(() => ({
       matches: false,
       ...matchMediaMock,
