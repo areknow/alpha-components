@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDiv, StyledInput, StyledLabel, StyledSpan } from './styles';
+import { StyledAlphaRadio, StyledDiv, StyledInput, StyledSpan } from './styles';
 
 type RadioValue = string | string[] | number | number[];
 interface RadioProps {
@@ -15,7 +15,7 @@ interface RadioProps {
 
 export const Radio = (props: RadioProps) => {
   return (
-    <StyledLabel>
+    <StyledAlphaRadio>
       <StyledInput
         type="radio"
         name={props.group}
@@ -26,7 +26,7 @@ export const Radio = (props: RadioProps) => {
       />
       <StyledSpan></StyledSpan>
       <StyledDiv>{props.label}</StyledDiv>
-    </StyledLabel>
+    </StyledAlphaRadio>
   );
 };
 

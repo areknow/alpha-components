@@ -1,5 +1,10 @@
 import React from 'react';
-import { StyledDiv, StyledInput, StyledLabel, StyledSpan } from './styles';
+import {
+  StyledAlphaCheckbox,
+  StyledDiv,
+  StyledInput,
+  StyledSpan,
+} from './styles';
 
 interface CheckboxProps {
   label: string;
@@ -10,7 +15,7 @@ interface CheckboxProps {
 
 export const Checkbox = (props: CheckboxProps) => {
   return (
-    <StyledLabel>
+    <StyledAlphaCheckbox>
       <StyledInput
         type="checkbox"
         value={props.value}
@@ -19,7 +24,7 @@ export const Checkbox = (props: CheckboxProps) => {
       />
       <StyledSpan></StyledSpan>
       <StyledDiv>{props.label}</StyledDiv>
-    </StyledLabel>
+    </StyledAlphaCheckbox>
   );
 };
 

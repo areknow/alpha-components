@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const defaultTheme = 'magnetar';
 
-export const StyledLabel = styled.label`
+export const StyledAlphaRadio = styled.label`
   display: inline-flex;
   align-items: center;
   position: relative;
