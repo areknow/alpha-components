@@ -12,3 +12,43 @@
 ![build workflow](https://github.com/areknow/alpha-components/actions/workflows/build.yml/badge.svg)
 
 </div>
+
+## Getting started
+
+### 🐎 Installation
+
+Install the alpha components via npm. We take care of injecting the needed styles.
+
+```bash
+$ npm install --save @miniml/alpha-components-react
+$ yarn add @miniml/alpha-components-react
+```
+
+### 📝 Font
+
+Use whatever font makes you happy. We think [Jost](https://indestructibletype.com/Jost.html) looks very nice with these components.
+
+```css
+@import url('https://indestructibletype.com/fonts/Jost.css');
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+```
+
+### 👩‍💻 Usage
+
+Alpha components work without any additional setup, and don't pollute the global scope. [See more](https://alphacomponents.dev/button).
+
+```jsx
+import { Root } from '@miniml/alpha-components-react/root';
+import { Button } from '@miniml/alpha-components-react/button';
+
+function App() {
+  return (
+    <Root>
+      <Button type="primary">I think we click</Button>
+    </Root>
+  );
+}
+```
