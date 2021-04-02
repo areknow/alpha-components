@@ -19,14 +19,21 @@ const artifactsDestination = `${publishDirectory}`;
 fs.copy(artifactsSource, artifactsDestination, function () {
   for (const package of packages) {
     copyPackageJson(package);
+    copyReadme(package);
   }
 });
 
-// Copy package json
+// Copy individual package.json
 const copyPackageJson = (package) => {
   const fileName = 'package.json';
   fs.copyFile(
     `${libsDirectory}/${package}/${fileName}`,
     `${publishDirectory}/${package}/${fileName}`
   );
+};
+
+// Copy project readme.md
+const copyReadme = (package) => {
+  const fileName = 'README.md';
+  fs.copyFile(`${fileName}`, `${publishDirectory}/${package}/${fileName}`);
 };
