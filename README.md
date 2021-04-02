@@ -52,3 +52,7 @@ function App() {
   );
 }
 ```
+
+## Demo
+
+Want to play around with the components without setting up a local app? Take a look at a [CodeSandbox](https://codesandbox.io/s/staging-https-8jy4q?file=/src/App.js) thats ready to go with some Alpha Components.
