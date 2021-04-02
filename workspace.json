@@ -570,14 +570,6 @@
             "lintFilePatterns": ["libs/core/colors/**/*.ts"]
           }
         },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/colors"],
-          "options": {
-            "jestConfig": "libs/core/colors/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
         "build": {
           "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
@@ -599,14 +591,6 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/core/types/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/types"],
-          "options": {
-            "jestConfig": "libs/core/types/jest.config.js",
-            "passWithNoTests": true
           }
         },
         "build": {
