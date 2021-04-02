@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './react-checkbox.module.scss';
+import { StyledCheckbox, StyledDiv, StyledInput, StyledSpan } from './styles';
 
 interface CheckboxProps {
   label: string;
@@ -10,16 +10,16 @@ interface CheckboxProps {
 
 export const Checkbox = (props: CheckboxProps) => {
   return (
-    <label className={styles.checkboxContainer}>
-      <input
+    <StyledCheckbox>
+      <StyledInput
         type="checkbox"
         value={props.value}
         onChange={props.onChange}
         defaultChecked={props.checked}
       />
-      <span className={styles.checkbox}></span>
-      <div className={styles.label}>{props.label}</div>
-    </label>
+      <StyledSpan></StyledSpan>
+      <StyledDiv>{props.label}</StyledDiv>
+    </StyledCheckbox>
   );
 };
 
