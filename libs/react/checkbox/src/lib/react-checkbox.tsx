@@ -15,7 +15,7 @@ interface CheckboxProps {
 
 export const Checkbox = (props: CheckboxProps) => {
   return (
-    <StyledAlphaCheckbox>
+    <StyledAlphaCheckbox className="alpha-checkbox">
       <StyledInput
         type="checkbox"
         value={props.value}

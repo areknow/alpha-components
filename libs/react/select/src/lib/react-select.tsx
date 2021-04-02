@@ -20,7 +20,10 @@ export const Select = (props: SelectProps) => {
   const _defaultValue = props.defaultValue || 'N/A';
 
   return (
-    <StyledAlphaSelect active={active || props.defaultValue !== undefined}>
+    <StyledAlphaSelect
+      active={active || props.defaultValue !== undefined}
+      className="alpha-select"
+    >
       <select
         defaultValue={_defaultValue}
         autoComplete={props.autoComplete}

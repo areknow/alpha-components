@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const defaultTheme = 'magnetar';
 
-export const StyledAlphaInput = styled.div`
+export const StyledAlphaTextarea = styled.div`
   max-width: 640px;
 `;
 

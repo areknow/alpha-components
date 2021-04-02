@@ -14,6 +14,7 @@ export interface ButtonProps {
 export const Button = (props: ButtonProps) => {
   return (
     <StyledAlphaButton
+      className="alpha-button"
       onClick={props.onClick}
       variant={props.variant || 'primary'}
       size={props.size || 'medium'}

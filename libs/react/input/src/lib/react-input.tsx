@@ -28,7 +28,7 @@ export const Input = (props: InputProps) => {
   };
 
   return (
-    <StyledAlphaInput>
+    <StyledAlphaInput className="alpha-input">
       <StyledInput
         type="text"
         value={value}

@@ -15,7 +15,7 @@ interface RadioProps {
 
 export const Radio = (props: RadioProps) => {
   return (
-    <StyledAlphaRadio>
+    <StyledAlphaRadio className="alpha-radio">
       <StyledInput
         type="radio"
         name={props.group}
