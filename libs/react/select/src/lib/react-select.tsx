@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import styles from './react-select.module.scss';
+import { StyledAlphaSelect } from './styles';
 
 interface SelectOption {
   value: string | number;
   label: string;
 }
 
-interface SelectProps {
+export interface SelectProps {
   options: SelectOption[];
   autoComplete?: string;
   defaultValue?: string;
@@ -19,14 +19,9 @@ export const Select = (props: SelectProps) => {
   const [active, setActive] = useState(false);
   const _defaultValue = props.defaultValue || 'N/A';
 
-  const classes = `${styles.select} ${
-    active || props.defaultValue ? styles.active : undefined
-  }`;
-
   return (
-    <div className={classes}>
+    <StyledAlphaSelect active={active || props.defaultValue !== undefined}>
       <select
-        className={styles.select}
         defaultValue={_defaultValue}
         autoComplete={props.autoComplete}
         name={props.name}
@@ -44,7 +39,7 @@ export const Select = (props: SelectProps) => {
           </option>
         ))}
       </select>
-    </div>
+    </StyledAlphaSelect>
   );
 };
 
