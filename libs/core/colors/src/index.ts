@@ -1,2 +1,2 @@
-export * from './colors';
-export * from './helpers';
+export * from './lib/colors';
+export * from './lib/helpers';
