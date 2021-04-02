@@ -15,22 +15,22 @@ export const ButtonDemo = () => {
       </div>
       <div className="primary">
         <p>Types</p>
-        <Button type="primary">Primary</Button>
-        <Button type="secondary">Secondary</Button>
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
       </div>
       <div className="secondary">
         <p>Disabled</p>
-        <Button type="primary" disabled>
+        <Button variant="primary" disabled>
           Primary
         </Button>
-        <Button type="secondary" disabled>
+        <Button variant="secondary" disabled>
           Secondary
         </Button>
       </div>
       <div className="callBack">
         <p>Callback</p>
         <Button
-          type="primary"
+          variant="primary"
           onClick={() => {
             setValue(value + 1);
           }}

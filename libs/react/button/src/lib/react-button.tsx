@@ -1,9 +1,17 @@
 import React, { AllHTMLAttributes, ReactNode } from 'react';
-import styles from './react-button.module.scss';
+import styled from 'styled-components';
+import {
+  DISABLED_STYLE,
+  LARGE_STYLE,
+  MEDIUM_STYLE,
+  PRIMARY_STYLE,
+  SECONDARY_STYLE,
+  SMALL_STYLE,
+} from './styles';
 
 type NativeButtonProps = AllHTMLAttributes<HTMLButtonElement>;
 export interface ButtonProps {
-  type?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   children: ReactNode;
@@ -11,22 +19,26 @@ export interface ButtonProps {
   onClick?: NativeButtonProps['onClick'];
 }
 
-export const Button = (props: ButtonProps) => {
-  const classes = [
-    styles.button,
-    props.type ? styles[props.type] : styles.primary,
-    props.size ? styles[props.size] : styles.medium,
-  ].join(' ');
+const StyledButton = styled.button<ButtonProps>`
+  ${PRIMARY_STYLE}
+  ${({ variant }) => variant === 'secondary' && SECONDARY_STYLE}
+  ${({ size }) => size === 'small' && SMALL_STYLE}
+  ${({ size }) => size === 'medium' && MEDIUM_STYLE}
+  ${({ size }) => size === 'large' && LARGE_STYLE}
+  ${({ disabled }) => disabled && DISABLED_STYLE}
+`;
 
+export const Button = (props: ButtonProps) => {
   return (
-    <button
-      className={classes}
+    <StyledButton
       onClick={props.onClick}
+      variant={props.variant || 'primary'}
+      size={props.size || 'medium'}
       type={props.submit ? 'submit' : 'button'}
       disabled={props.disabled}
     >
       {props.children}
-    </button>
+    </StyledButton>
   );
 };
 

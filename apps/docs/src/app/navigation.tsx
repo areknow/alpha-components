@@ -21,8 +21,8 @@ export const ROUTES = [
     component: <ButtonPage />,
     children: [
       {
-        label: 'Type',
-        location: '/button#type',
+        label: 'Variant',
+        location: '/button#variant',
       },
       {
         label: 'Sizes',

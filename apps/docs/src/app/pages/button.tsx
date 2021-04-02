@@ -33,8 +33,8 @@ export const ButtonPage = () => {
         </Demo>
       </Panel>
 
-      <Panel id="type">
-        <h2>Type</h2>
+      <Panel id="variant">
+        <h2>Variant</h2>
         <p>
           The Button component has two differently designed types to help the
           user distinguish between varying levels of importance based on the
@@ -55,7 +55,7 @@ export const ButtonPage = () => {
         <Demo>
           <>
             <Button>Primary button</Button>
-            <Button type="secondary">Secondary button</Button>
+            <Button variant="secondary">Secondary button</Button>
           </>
         </Demo>
       </Panel>
