@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './react-input.module.scss';
 import { setNativeValue } from './set-native-value';
 import { StyledAlphaInput, StyledButton, StyledInput } from './styles';
 
@@ -27,11 +26,6 @@ export const Input = (props: InputProps) => {
     const event = new Event('input', { bubbles: true });
     inputRef.current.dispatchEvent(event);
   };
-
-  const classes = [
-    styles.inputContainer,
-    value && props.clear ? styles.clearActive : null,
-  ].join(' ');
 
   return (
     <StyledAlphaInput>
