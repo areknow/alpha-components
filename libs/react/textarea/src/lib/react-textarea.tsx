@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './react-textarea.module.scss';
+import { StyledAlphaInput, StyledTextarea } from './styles';
 
 export interface TextareaProps {
   rows?: number;
@@ -12,16 +12,16 @@ export interface TextareaProps {
 
 export const Textarea = (props: TextareaProps) => {
   return (
-    <div className={styles.textareaContainer}>
-      <textarea
+    <StyledAlphaInput>
+      <StyledTextarea
         rows={props.rows}
         defaultValue={props.value}
         required={props.required}
         placeholder={props.placeholder}
         autoComplete={props.autoComplete}
         onChange={props.onChange}
-      ></textarea>
-    </div>
+      />
+    </StyledAlphaInput>
   );
 };
 
