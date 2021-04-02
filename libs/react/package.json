@@ -1,9 +1,14 @@
 {
   "name": "@miniml/alpha-components-react",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "author": "Arnaud Crowther",
   "license": "ISC",
   "dependencies": {
-    "@miniml/alpha-components-core": "0.0.1"
+    "@miniml/alpha-components-core": "0.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }
