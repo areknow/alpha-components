@@ -5,11 +5,12 @@ import {
   HOVER_LIGHTNESS,
   LIGHT_SCHEME,
 } from '@miniml/alpha-components-core/colors';
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
+import { ButtonProps } from './react-button';
 
 const defaultTheme = 'magnetar';
 
-export const PRIMARY_STYLE = css`
+const PRIMARY_STYLE = css`
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--primary-theme-color, ${COLORS[defaultTheme]});
@@ -89,4 +90,13 @@ export const DISABLED_STYLE = css`
   border-color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
   pointer-events: none;
   color: var(--white, ${LIGHT_SCHEME['--white']});
+`;
+
+export const StyledAlphaButton = styled.button<ButtonProps>`
+  ${PRIMARY_STYLE}
+  ${({ variant }) => variant === 'secondary' && SECONDARY_STYLE}
+  ${({ size }) => size === 'small' && SMALL_STYLE}
+  ${({ size }) => size === 'medium' && MEDIUM_STYLE}
+  ${({ size }) => size === 'large' && LARGE_STYLE}
+  ${({ disabled }) => disabled && DISABLED_STYLE}
 `;
