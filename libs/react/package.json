@@ -4,7 +4,7 @@
   "author": "Arnaud Crowther",
   "license": "ISC",
   "dependencies": {
-    "@miniml/alpha-components-core": "^0.0.2",
+    "@miniml/alpha-components-core": "^0.0.3",
     "styled-components": "^5.2.1"
   },
   "peerDependencies": {

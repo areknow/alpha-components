@@ -1,6 +1,9 @@
 {
   "name": "@miniml/alpha-components-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Arnaud Crowther",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "color-convert": "^2.0.1"
+  }
 }
