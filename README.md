@@ -10,6 +10,8 @@
 ![lint workflow](https://github.com/areknow/alpha-components/actions/workflows/lint.yml/badge.svg)
 ![test workflow](https://github.com/areknow/alpha-components/actions/workflows/test.yml/badge.svg)
 ![build workflow](https://github.com/areknow/alpha-components/actions/workflows/build.yml/badge.svg)
+![npm](https://img.shields.io/npm/dw/@miniml/alpha-components-react)
+![npm](https://img.shields.io/npm/v/@miniml/alpha-components-react)
 
 </div>
 
