@@ -57,10 +57,10 @@ export const Root = ({ theme, darkMode, children }: RootProps) => {
   const _theme = theme || 'magnetar';
 
   return (
-    <>
+    <div className="alpha-root" data-theme={theme} data-darkmode={darkMode}>
       <GlobalStyles darkMode={darkMode} theme={_theme} />
       {children}
-    </>
+    </div>
   );
 };
 
