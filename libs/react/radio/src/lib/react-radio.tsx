@@ -20,7 +20,7 @@ export const Radio = (props: RadioProps) => {
         type="radio"
         name={props.group}
         onChange={(event) => {
-          props.onChange(event, props.value);
+          props.onChange && props.onChange(event, props.value);
         }}
         defaultChecked={props.selected}
       />

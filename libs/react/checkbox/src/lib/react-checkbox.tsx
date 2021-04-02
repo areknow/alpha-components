@@ -19,7 +19,9 @@ export const Checkbox = (props: CheckboxProps) => {
       <StyledInput
         type="checkbox"
         value={props.value}
-        onChange={props.onChange}
+        onChange={(event) => {
+          props.onChange && props.onChange(event);
+        }}
         defaultChecked={props.checked}
       />
       <StyledSpan></StyledSpan>
