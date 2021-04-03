@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ant.design">
-    <img src="https://alphacomponents.dev/assets/logo-150.png">
+    <img src="https://alphacomponents.dev/assets/logo-150.svg">
   </a>
 </p>
 
