@@ -1,1 +1,0 @@
-nx g @nrwl/react:lib input --directory=react --tags=type:component,target:react --publishable --importPath="@miniml/alpha-components-react/input"
