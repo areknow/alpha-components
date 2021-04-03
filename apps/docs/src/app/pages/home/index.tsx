@@ -12,9 +12,12 @@ export const HomePage = () => {
         <Panel>
           <h1>Alpha Components</h1>
           <p>
-            React components for faster and easier web development. Quickly
-            bootstrap your application with free components that are nice to
-            look at, easy to use, and guaranteed to make people stick around.
+            <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+              React
+            </a>{' '}
+            components for faster and easier web development. Quickly bootstrap
+            your application with free components that are nice to look at, easy
+            to use, and guaranteed to make users and developers happy.
           </p>
           <hr />
           <section>
