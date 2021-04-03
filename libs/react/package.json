@@ -1,6 +1,6 @@
 {
   "name": "@miniml/alpha-components-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Arnaud Crowther",
   "license": "ISC",
   "dependencies": {
