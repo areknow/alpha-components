@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://ant.design">
+  <a href="https://alphacomponents.dev">
     <img src="https://alphacomponents.dev/assets/logo-150.svg">
   </a>
 </p>
