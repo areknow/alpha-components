@@ -1,6 +1,10 @@
-<div align="center">
+<p align="center">
+  <a href="https://ant.design">
+    <img src="https://alphacomponents.dev/assets/logo-150.png">
+  </a>
+</p>
 
-[![alt](.github/assets/logo-150.svg)](https://alphacomponents.dev)
+<div align="center">
 
 <h1 align="center">Alpha Components</h1>
 
