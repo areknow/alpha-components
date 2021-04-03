@@ -1,6 +1,6 @@
 <div align="center">
 
-[![alt](git/logo-150.svg)](https://alphacomponents.dev)
+[![alt](.github/assets/logo-150.svg)](https://alphacomponents.dev)
 
 <h1 align="center">Alpha Components</h1>
 
