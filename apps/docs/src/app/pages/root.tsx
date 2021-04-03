@@ -47,7 +47,7 @@ export const RootPage = () => {
           rows={[
             {
               prop: 'theme',
-              type: `MAGNETAR | RESSONANCE | EVENT_HORIZON | NEUTRINO`,
+              type: `'magnetar' | 'ressonance' | 'eventHorizon' | 'neutrino'`,
               default: 'undefined',
               required: false,
             },
