@@ -19,15 +19,15 @@
     "docs": { "tags": ["type:app", "target:react"] },
     "dev-react": { "tags": ["type:app", "target:react"] },
     "dev-angular": { "tags": ["type:app", "target:angular"] },
+    "core-colors": { "tags": ["type:util", "target:core"] },
+    "core-types": { "tags": ["type:util", "target:core"] },
     "react-button": { "tags": ["type:ui", "target:react"] },
-    "angular-button": { "tags": ["type:ui", "target:angular"] },
     "react-select": { "tags": ["type:ui", "target:react"] },
     "react-radio": { "tags": ["type:ui", "target:react"] },
     "react-checkbox": { "tags": ["type:ui", "target:react"] },
     "react-input": { "tags": ["type:ui", "target:react"] },
     "react-textarea": { "tags": ["type:ui", "target:react"] },
     "react-root": { "tags": ["type:ui", "target:react"] },
-    "core-colors": { "tags": ["type:util", "target:core"] },
-    "core-types": { "tags": ["type:util", "target:core"] }
+    "angular-button": { "tags": ["type:ui", "target:angular"] }
   }
 }

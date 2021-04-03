@@ -235,6 +235,52 @@
         }
       }
     },
+    "core-colors": {
+      "root": "libs/core/colors",
+      "sourceRoot": "libs/core/colors/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/colors/**/*.ts"]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/core/colors",
+            "tsConfig": "libs/core/colors/tsconfig.lib.json",
+            "project": "libs/core/colors/package.json",
+            "entryFile": "libs/core/colors/src/index.ts"
+          }
+        }
+      }
+    },
+    "core-types": {
+      "root": "libs/core/types",
+      "sourceRoot": "libs/core/types/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/types/**/*.ts"]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/core/types",
+            "tsConfig": "libs/core/types/tsconfig.lib.json",
+            "project": "libs/core/types/package.json",
+            "entryFile": "libs/core/types/src/index.ts"
+          }
+        }
+      }
+    },
     "react-button": {
       "root": "libs/react/button",
       "sourceRoot": "libs/react/button/src",
@@ -271,43 +317,6 @@
           "outputs": ["coverage/libs/react/button"],
           "options": {
             "jestConfig": "libs/react/button/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "angular-button": {
-      "projectType": "library",
-      "root": "libs/angular/button",
-      "sourceRoot": "libs/angular/button/src",
-      "prefix": "alpha-components",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/angular/button/tsconfig.lib.json",
-            "project": "libs/angular/button/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/angular/button/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/angular/button/src/**/*.ts",
-              "libs/angular/button/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/angular/button"],
-          "options": {
-            "jestConfig": "libs/angular/button/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -559,48 +568,39 @@
         }
       }
     },
-    "core-colors": {
-      "root": "libs/core/colors",
-      "sourceRoot": "libs/core/colors/src",
+    "angular-button": {
       "projectType": "library",
+      "root": "libs/angular/button",
+      "sourceRoot": "libs/angular/button/src",
+      "prefix": "alpha-components",
       "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/angular/button/tsconfig.lib.json",
+            "project": "libs/angular/button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/angular/button/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/core/colors/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/angular/button/src/**/*.ts",
+              "libs/angular/button/src/**/*.html"
+            ]
           }
         },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/angular/button"],
           "options": {
-            "outputPath": "dist/libs/core/colors",
-            "tsConfig": "libs/core/colors/tsconfig.lib.json",
-            "project": "libs/core/colors/package.json",
-            "entryFile": "libs/core/colors/src/index.ts"
-          }
-        }
-      }
-    },
-    "core-types": {
-      "root": "libs/core/types",
-      "sourceRoot": "libs/core/types/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/core/types/**/*.ts"]
-          }
-        },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/core/types",
-            "tsConfig": "libs/core/types/tsconfig.lib.json",
-            "project": "libs/core/types/package.json",
-            "entryFile": "libs/core/types/src/index.ts"
+            "jestConfig": "libs/angular/button/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
@@ -639,5 +639,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "dev-react"
+  "defaultProject": "docs"
 }
