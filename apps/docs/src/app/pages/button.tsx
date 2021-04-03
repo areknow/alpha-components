@@ -27,7 +27,9 @@ export const ButtonPage = () => {
           The button width is based on the text it holds. While being as short
           as possible, the text should clearly describe a button's action.
         </p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo>
           <Button>I like to be clicked</Button>
         </Demo>

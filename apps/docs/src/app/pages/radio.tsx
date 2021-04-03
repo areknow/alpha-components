@@ -32,7 +32,9 @@ export const RadioPage = () => {
           Radio buttons should have the most commonly used option selected by
           default.
         </p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo>
           <>
             <div>

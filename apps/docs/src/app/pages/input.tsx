@@ -24,7 +24,9 @@ export const InputPage = () => {
           native <code>{'<input type="text">'}</code> element, enhanced with
           styling and added functionality.
         </p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo>
           <Input placeholder="Enter text here..." />
         </Demo>

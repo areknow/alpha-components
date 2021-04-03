@@ -8,4 +8,15 @@
     border-radius: 10px !important;
     background: var(--code-background-color) !important;
   }
+  .subtext {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    padding: 10px;
+    &.visible {
+      opacity: 0.4;
+    }
+  }
 }

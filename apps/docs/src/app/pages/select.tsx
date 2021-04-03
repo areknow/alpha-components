@@ -27,7 +27,9 @@ export const SelectPage = () => {
           Use the select for presenting options when your list is limited in
           length.
         </p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo>
           <Select
             options={[

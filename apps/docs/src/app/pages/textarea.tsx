@@ -23,7 +23,9 @@ export const TextareaPage = () => {
           The <code>{'<Textarea/>'}</code> provides the same functionality as a
           native <code>{'<textarea>'}</code> element, enhanced with styling.
         </p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo>
           <Textarea placeholder="Enter many lines here..." />
         </Demo>

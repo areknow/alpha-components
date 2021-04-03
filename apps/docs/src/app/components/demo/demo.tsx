@@ -1,9 +1,8 @@
 import React, { memo, ReactNode, useState } from 'react';
 import reactElementToJSXString from 'react-element-to-jsx-string';
+import { copyWithTimeout } from '../../helpers';
 import Prism from '../prism/prism';
 import styles from './demo.module.scss';
-
-const COPY_TIMEOUT = 2000;
 
 interface DemoProps {
   children?: ReactNode;
@@ -18,14 +17,6 @@ export const Demo = memo((props: DemoProps) => {
     ? reactElementToJSXString(props.children, { showFunctions: true })
     : '';
 
-  const copyCode = () => {
-    navigator.clipboard.writeText(code);
-    toggleCopied(true);
-    setTimeout(() => {
-      toggleCopied(false);
-    }, COPY_TIMEOUT);
-  };
-
   return (
     <div className={classes}>
       <div className={styles.preview}>{props.children}</div>
@@ -37,7 +28,10 @@ export const Demo = memo((props: DemoProps) => {
           {show ? 'hide' : 'show'} code
         </button>
         {show && (
-          <button disabled={copied} onClick={() => copyCode()}>
+          <button
+            disabled={copied}
+            onClick={() => copyWithTimeout(code, toggleCopied)}
+          >
             {copied ? 'copied' : 'copy'}
           </button>
         )}

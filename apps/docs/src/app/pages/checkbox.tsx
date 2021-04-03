@@ -24,7 +24,9 @@ export const CheckboxPage = () => {
           styling.
         </p>
         <p>Checkboxes can be used to turn an option on or off.</p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo>
           <>
             <div>

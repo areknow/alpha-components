@@ -28,7 +28,9 @@ export const RootPage = () => {
           component at the main entry point of the application. This can be your{' '}
           <code>index.tsx</code> or <code>_app.tsx</code> for example.
         </p>
-        <Code language="language-bash">{IMPORT_CODE}</Code>
+        <Code language="language-bash" copy>
+          {IMPORT_CODE}
+        </Code>
         <Demo code={'<Root>I am root!</Root>'}>I am root!</Demo>
       </Panel>
 
