@@ -21,12 +21,20 @@
                 "onlyDependOnLibsWithTags": ["type:ui", "type:util"]
               },
               {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
                 "sourceTag": "target:angular",
                 "onlyDependOnLibsWithTags": ["target:angular", "target:core"]
               },
               {
                 "sourceTag": "target:react",
                 "onlyDependOnLibsWithTags": ["target:react", "target:core"]
+              },
+              {
+                "sourceTag": "target:core",
+                "onlyDependOnLibsWithTags": ["target:core"]
               }
             ]
           }
