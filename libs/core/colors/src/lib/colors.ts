@@ -8,9 +8,9 @@ export const COLORS = {
 export const LIGHT_SCHEME = {
   '--white': '#fff',
   '--neutral-0': '#fff',
-  '--neutral-1': '#989a9b',
-  '--neutral-2': '#626364',
-  '--neutral-3': '#30333c',
+  '--neutral-1': '#A6A6A6',
+  '--neutral-2': '#737373',
+  '--neutral-3': '#3d3d3d',
   '--primary-text-color': '#000000',
   '--primary-background-color': '#f7f7f7',
 };
@@ -18,9 +18,9 @@ export const LIGHT_SCHEME = {
 export const DARK_SCHEME = {
   '--white': '#fff',
   '--neutral-0': '#000',
-  '--neutral-1': '#30333c',
-  '--neutral-2': '#626364',
-  '--neutral-3': '#989a9b',
+  '--neutral-1': '#3d3d3d',
+  '--neutral-2': '#737373',
+  '--neutral-3': '#A6A6A6',
   '--primary-text-color': '#ffffff',
   '--primary-background-color': '#0d0d0d',
 };
