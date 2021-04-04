@@ -2,8 +2,10 @@
   padding: 40px 140px 60px 60px;
   border-radius: 35px;
   background-color: var(--panel-color);
-  margin-bottom: 20px;
   font-size: 18px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
   h1 {
     margin-bottom: 20px;
   }
