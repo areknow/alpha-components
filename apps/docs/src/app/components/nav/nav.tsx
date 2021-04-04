@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../../assets/logo-white.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
+import { MOBILE_BREAK_POINT } from '../../constants';
 import { useWindowSize } from '../../hooks';
 import { ThemeSelector } from '../theme-selector/theme-selector';
 import styles from './nav.module.scss';
@@ -22,7 +23,10 @@ export const Nav = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      const offset = width > 900 ? SCROLL_OFFSET_DESKTOP : SCROLL_OFFSET_MOBILE;
+      const offset =
+        width > MOBILE_BREAK_POINT
+          ? SCROLL_OFFSET_DESKTOP
+          : SCROLL_OFFSET_MOBILE;
       toggleScrolledNav(window.scrollY > offset);
     };
     window.addEventListener('scroll', onScroll, true);
