@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useWindowSize } from '.';
 import { MOBILE_BREAK_POINT } from '../constants';
+import { useWindowSize } from './use-window-size';
 
 const scrollOffsetDesktop = 90;
 const scrollOffsetMobile = 20;

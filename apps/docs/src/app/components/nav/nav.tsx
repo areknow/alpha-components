@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../../assets/logo-white.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
-import { useScrolledNavListener } from '../../hooks';
+import { useScrolledNavListener } from '../../hooks/use-scrolled-nav-listener';
 import { ThemeSelector } from '../theme-selector/theme-selector';
 import styles from './nav.module.scss';
 

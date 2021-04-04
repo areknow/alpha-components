@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { MOBILE_BREAK_POINT } from '../../constants';
-import { useWindowSize } from '../../hooks';
+import { useWindowSize } from '../../hooks/use-window-size';
 import { ROUTES } from '../../navigation';
 import styles from './side-menu.module.scss';
 
