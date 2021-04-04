@@ -1,7 +1,7 @@
 import { Theme } from '@miniml/alpha-components-core/types';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'use-color-scheme';
-import { DEFAULT_STATE } from './constants';
+import { DEFAULT_THEME_STATE } from './constants';
 import { toggleScheme } from './scheme';
 
 export interface ThemeContextModel {
@@ -15,7 +15,7 @@ type ThemeContextType = {
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
-  themeContext: DEFAULT_STATE,
+  themeContext: DEFAULT_THEME_STATE,
   updateThemeContext: () => null,
 });
 
@@ -24,7 +24,7 @@ export const useThemeContext = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const { scheme } = useColorScheme();
   const [themeContext, setThemeContext] = useState<ThemeContextModel>({
-    ...DEFAULT_STATE,
+    ...DEFAULT_THEME_STATE,
     darkScheme: scheme === 'dark',
   });
 

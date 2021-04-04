@@ -3,6 +3,9 @@
   .page {
     display: flex;
     margin-top: 20px;
+    .sideMenuToggle {
+      display: none;
+    }
     .sideMenuColumn {
       width: 250px;
       flex-shrink: 0;
@@ -23,5 +26,92 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    padding: 0;
+    .page {
+      display: block;
+      .sideMenuToggle {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding: 0 20px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        div,
+        div:before,
+        div:after {
+          width: 20px;
+          height: 2px;
+          background: var(--primary-text-color);
+        }
+        div {
+          margin: 10px 0;
+          position: relative;
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+          }
+          &:before {
+            top: -6px;
+          }
+          &:after {
+            bottom: -6px;
+          }
+        }
+      }
+      .sideMenuColumn {
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        .sideMenuContainer {
+          position: absolute;
+          right: -260px;
+          transition: right 0.3s ease;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          > div {
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+          }
+        }
+        &.open {
+          background-color: rgba(0, 0, 0, 0.4);
+          display: block;
+          pointer-events: all;
+          .sideMenuContainer {
+            right: -50px;
+          }
+        }
+      }
+      .contentColumn {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 100px;
+        .children {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .schemeToggleContainer {
+    display: none;
   }
 }

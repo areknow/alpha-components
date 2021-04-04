@@ -1,5 +1,5 @@
 import { Root } from '@miniml/alpha-components-react/root';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { useThemeContext } from '../../context';
 import Nav from '../nav/nav';
 import { SchemeToggle } from '../scheme-toggle/scheme-toggle';
@@ -8,6 +8,11 @@ import styles from './layout.module.scss';
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   const { themeContext } = useThemeContext();
+  const [sideMenuOpen, toggleSideMenu] = useState(false);
+  const sideMenuColumnClasses = [
+    styles.sideMenuColumn,
+    sideMenuOpen ? styles.open : null,
+  ].join(' ');
 
   return (
     <Root theme={themeContext.activeTheme} darkMode={themeContext.darkScheme}>
@@ -17,7 +22,16 @@ export const Layout = ({ children }: { children: ReactNode }) => {
           <SchemeToggle />
         </div>
         <div className={styles.page}>
-          <div className={styles.sideMenuColumn}>
+          <div
+            className={styles.sideMenuToggle}
+            onClick={() => toggleSideMenu(!sideMenuOpen)}
+          >
+            <div />
+          </div>
+          <div
+            onClick={() => toggleSideMenu(!sideMenuOpen)}
+            className={sideMenuColumnClasses}
+          >
             <div className={styles.sideMenuContainer}>
               <SideMenu />
             </div>

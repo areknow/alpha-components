@@ -31,3 +31,13 @@
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 900px) {
+  .panel {
+    padding: 20px;
+    border-radius: 0;
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}

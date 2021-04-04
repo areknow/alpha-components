@@ -24,3 +24,17 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .table {
+    width: 100%;
+    overflow: auto;
+    td {
+      font-size: 12px;
+      white-space: pre;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

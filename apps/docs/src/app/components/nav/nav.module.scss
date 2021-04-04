@@ -90,3 +90,62 @@ nav {
     }
   }
 }
+
+@media (max-width: 900px) {
+  nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .content {
+      display: block;
+      border-radius: 0;
+      padding: 0;
+      height: auto;
+      .brand {
+        padding: 10px 20px;
+      }
+      .links {
+        background: rgba(0, 0, 0, 0.03);
+        padding: 0 20px;
+        > ul {
+          > li {
+            font-size: 14px;
+            padding: 10px 0;
+            &:not(:last-child) {
+              margin-right: 40px;
+            }
+            .themeSelectorContainer {
+              top: 36px;
+            }
+          }
+        }
+      }
+    }
+    &.scrolled {
+      top: 0;
+      position: fixed;
+      .content {
+        width: 100%;
+        .brand .title {
+          display: block;
+        }
+      }
+    }
+    &.expanded {
+      top: 0;
+      right: unset;
+      position: fixed;
+      .content {
+        width: 100%;
+        padding: unset;
+        .brand {
+          display: flex;
+        }
+        .links {
+          display: none;
+        }
+      }
+    }
+  }
+}

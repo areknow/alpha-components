@@ -55,3 +55,16 @@ $radius: 10px;
     }
   }
 }
+
+@media (max-width: 900px) {
+  .demo {
+    .preview {
+      padding: 30px 20px;
+    }
+    .source {
+      code {
+        font-size: 12px;
+      }
+    }
+  }
+}

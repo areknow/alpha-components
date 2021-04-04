@@ -62,3 +62,11 @@
     box-shadow: 0 0 70px 30px rgba(var(--primary-theme-color-rgb), 0.1);
   }
 }
+
+@media (max-width: 900px) {
+  .sideMenu {
+    ul {
+      font-size: 20px;
+    }
+  }
+}

@@ -55,3 +55,18 @@ a {
   color: var(--primary-theme-color);
   text-decoration: none;
 }
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
