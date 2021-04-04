@@ -1,37 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../../assets/logo-white.svg';
 import { ReactComponent as Title } from '../../../assets/title.svg';
-import { MOBILE_BREAK_POINT } from '../../constants';
-import { useWindowSize } from '../../hooks';
+import { useScrolledNavListener } from '../../hooks';
 import { ThemeSelector } from '../theme-selector/theme-selector';
 import styles from './nav.module.scss';
 
-const SCROLL_OFFSET_DESKTOP = 90;
-const SCROLL_OFFSET_MOBILE = 20;
-
 export const Nav = () => {
-  const [scrolledNav, toggleScrolledNav] = useState(false);
+  const scrolledNav = useScrolledNavListener();
   const [expandNav, toggleExpandNav] = useState(false);
   const [themeSelector, toggleThemeSelector] = useState(false);
-  const { width } = useWindowSize();
 
   const navClasses = [
     scrolledNav ? styles.scrolled : null,
     scrolledNav && expandNav ? styles.expanded : null,
   ].join(' ');
-
-  useEffect(() => {
-    const onScroll = () => {
-      const offset =
-        width > MOBILE_BREAK_POINT
-          ? SCROLL_OFFSET_DESKTOP
-          : SCROLL_OFFSET_MOBILE;
-      toggleScrolledNav(window.scrollY > offset);
-    };
-    window.addEventListener('scroll', onScroll, true);
-    return () => window.removeEventListener('scroll', onScroll, true);
-  }, [width]);
 
   return (
     <nav

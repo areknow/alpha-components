@@ -16,3 +16,16 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .schemeToggle {
+    padding: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
