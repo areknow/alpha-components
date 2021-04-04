@@ -5,7 +5,7 @@ const defaultTheme = 'magnetar';
 
 export const StyledAlphaCheckbox = styled.label`
   display: inline-flex;
-  align-items: baseline;
+  align-items: flex-start;
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
@@ -40,8 +40,10 @@ export const StyledSpan = styled.span`
   background-color: transparent;
   border: 2px solid var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
   border-radius: 2px;
-  margin-right: 46px;
+  margin-right: 32px;
+  margin-top: 5px;
   position: relative;
+  flex-shrink: 0;
   &:before,
   &:after {
     content: '';
