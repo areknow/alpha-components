@@ -5,7 +5,7 @@ const defaultTheme = 'magnetar';
 
 const ACTIVE_STYLE = css`
   select {
-    color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+    color: var(--primary-text-color, ${LIGHT_SCHEME['--primary-text-color']});
   }
 `;
 
@@ -18,7 +18,7 @@ const SELECT_STYLE = css`
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.15px;
-    color: var(--neutral-1, ${LIGHT_SCHEME['--neutral-1']});
+    color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
     padding: 16px;
     border-radius: 4px;
     border: 1px solid var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
