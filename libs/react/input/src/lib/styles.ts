@@ -11,11 +11,11 @@ export const StyledInput = styled.input`
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.15px;
-  color: var(--primary-text-color, ${LIGHT_SCHEME['--primary-text-color']});
+  color: var(--primary-text-color, ${LIGHT_SCHEME.primaryTextColor});
   padding: 16px;
   border-radius: 4px;
-  border: 1px solid var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
-  background-color: var(--neutral-0, ${LIGHT_SCHEME['--neutral-0']});
+  border: 1px solid var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
+  background-color: var(--grayscale-level0, ${LIGHT_SCHEME.grayscaleLevel0});
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -27,7 +27,7 @@ export const StyledInput = styled.input`
     border-color: var(--primary-theme-color, ${COLORS[defaultTheme]});
   }
   &::placeholder {
-    color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+    color: var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
   }
 `;
 
@@ -39,20 +39,23 @@ export const StyledButton = styled.button`
   bottom: 0;
   margin: auto;
   display: block;
-  background: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+  background: var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
   width: 14px;
   height: 14px;
   border-radius: 10px;
   transform: rotate(45deg);
   cursor: pointer;
   &:hover {
-    background: var(--neutral-3, ${LIGHT_SCHEME['--neutral-3']});
+    background: var(--grayscale-level3, ${LIGHT_SCHEME.grayscaleLevel3});
   }
   &:before,
   &:after {
     content: '';
     position: absolute;
-    background: var(--primary-background-color);
+    background: var(
+      --primary-background-color,
+      ${LIGHT_SCHEME.primaryBackgroundColor}
+    );
     top: 0;
     right: 0;
     left: 0;

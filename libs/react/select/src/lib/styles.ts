@@ -5,7 +5,7 @@ const defaultTheme = 'magnetar';
 
 const ACTIVE_STYLE = css`
   select {
-    color: var(--primary-text-color, ${LIGHT_SCHEME['--primary-text-color']});
+    color: var(--primary-text-color, ${LIGHT_SCHEME.primaryTextColor});
   }
 `;
 
@@ -18,11 +18,11 @@ const SELECT_STYLE = css`
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.15px;
-    color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+    color: var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
     padding: 16px;
     border-radius: 4px;
-    border: 1px solid var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
-    background-color: var(--neutral-0, ${LIGHT_SCHEME['--neutral-0']});
+    border: 1px solid var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
+    background-color: var(--grayscale-level0, ${LIGHT_SCHEME.grayscaleLevel0});
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -47,7 +47,7 @@ const SELECT_STYLE = css`
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid
-      var(--primary-text-color, ${LIGHT_SCHEME['--primary-text-color']});
+      var(--primary-text-color, ${LIGHT_SCHEME.primaryTextColor});
   }
 `;
 

@@ -1,4 +1,8 @@
-import { COLORS, LIGHT_SCHEME } from '@miniml/alpha-components-core/colors';
+import {
+  COLORS,
+  LIGHT_SCHEME,
+  WHITE,
+} from '@miniml/alpha-components-core/colors';
 import styled from 'styled-components';
 
 const defaultTheme = 'magnetar';
@@ -22,7 +26,7 @@ export const StyledInput = styled.input`
   left: 0;
   cursor: pointer;
   &:checked ~ div {
-    color: var(--primary-text-color, ${LIGHT_SCHEME['--primary-text-color']});
+    color: var(--primary-text-color, ${LIGHT_SCHEME.primaryTextColor});
   }
   &:checked ~ span {
     border-color: var(--primary-theme-color, ${COLORS[defaultTheme]});
@@ -38,7 +42,7 @@ export const StyledSpan = styled.span`
   height: 18px;
   width: 18px;
   background-color: transparent;
-  border: 2px solid var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+  border: 2px solid var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
   border-radius: 2px;
   margin-right: 32px;
   margin-top: 5px;
@@ -66,7 +70,7 @@ export const StyledSpan = styled.span`
     margin: auto;
     width: 10px;
     height: 5px;
-    border: solid 2px var(--white, ${LIGHT_SCHEME['--white']});
+    border: solid 2px var(--white, ${WHITE});
     border-right: none;
     border-top: none;
     transform: translate(3px, 4px) rotate(-45deg);
@@ -77,6 +81,6 @@ export const StyledDiv = styled.div`
   line-height: 1.36;
   letter-spacing: 0.21px;
   font-size: 22px;
-  color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+  color: var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
   max-width: 640px;
 `;

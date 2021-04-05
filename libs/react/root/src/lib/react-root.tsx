@@ -6,6 +6,7 @@ import {
   hexToRgb,
   HOVER_LIGHTNESS,
   LIGHT_SCHEME,
+  WHITE,
 } from '@miniml/alpha-components-core/colors';
 import { Theme } from '@miniml/alpha-components-core/types';
 import React, { ReactNode } from 'react';
@@ -21,15 +22,17 @@ export interface RootProps {
   children: ReactNode;
 }
 
-const customProps = () => {
-  return Object.entries(COLORS).map(([property, hex]) => ({
-    [`--${property}`]: hex,
-  }));
+const customProps = (props: { [key: string]: string }) => {
+  return Object.entries(props).map(
+    ([property, hex]: [property: string, hex: string]) => ({
+      [`--${property}`]: hex,
+    })
+  );
 };
 
 const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
   :root {
-    --white: #fff;
+    --white: ${WHITE};
     --primary-theme-color: ${({ theme }) => COLORS[theme]};
     --primary-theme-color-rgb: ${({ theme }) => hexToRgb(COLORS[theme])};
     --primary-theme-hover-color: ${({ theme }) =>
@@ -39,15 +42,15 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
     ${({ darkMode }) =>
       darkMode === undefined
         ? css`
-            ${LIGHT_SCHEME}
+            ${customProps(LIGHT_SCHEME)}
             @media (prefers-color-scheme: dark) {
-              ${DARK_SCHEME}
+              ${customProps(DARK_SCHEME)}
             }
           `
         : darkMode
-        ? DARK_SCHEME
-        : !darkMode && LIGHT_SCHEME}
-    ${customProps()}
+        ? customProps(DARK_SCHEME)
+        : !darkMode && customProps(LIGHT_SCHEME)}
+    ${customProps(COLORS)}
     min-height: 100vh;
     font-family: inherit;
   }

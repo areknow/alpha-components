@@ -22,7 +22,7 @@ export const StyledInput = styled.input`
   left: 0;
   cursor: pointer;
   &:checked ~ div {
-    color: var(--primary-text-color, ${LIGHT_SCHEME['--primary-text-color']});
+    color: var(--primary-text-color, ${LIGHT_SCHEME.primaryTextColor});
   }
   &:checked ~ span {
     border-color: var(--primary-theme-color, ${COLORS[defaultTheme]});
@@ -37,7 +37,7 @@ export const StyledSpan = styled.span`
   height: 24px;
   width: 24px;
   background-color: transparent;
-  border: 2px solid var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+  border: 2px solid var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
   border-radius: 50%;
   margin-right: 32px;
   margin-top: 3px;
@@ -62,5 +62,5 @@ export const StyledDiv = styled.div`
   line-height: 1.36;
   letter-spacing: 0.21px;
   max-width: 640px;
-  color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+  color: var(--grayscale-level2, ${LIGHT_SCHEME.grayscaleLevel2});
 `;

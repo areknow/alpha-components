@@ -4,6 +4,7 @@ import {
   hexToHsl,
   HOVER_LIGHTNESS,
   LIGHT_SCHEME,
+  WHITE,
 } from '@miniml/alpha-components-core/colors';
 import styled, { css } from 'styled-components';
 import { ButtonProps } from './react-button';
@@ -16,7 +17,7 @@ const PRIMARY_STYLE = css`
   background-color: var(--primary-theme-color, ${COLORS[defaultTheme]});
   border: 2px solid var(--primary-theme-color, ${COLORS[defaultTheme]});
   font-weight: 600;
-  color: var(--white, ${LIGHT_SCHEME['--white']});
+  color: var(--white, ${WHITE});
   text-decoration: none;
   display: inline-block;
   letter-spacing: normal;
@@ -86,10 +87,10 @@ export const LARGE_STYLE = css`
 
 export const DISABLED_STYLE = css`
   opacity: 0.3;
-  background-color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
-  border-color: var(--neutral-2, ${LIGHT_SCHEME['--neutral-2']});
+  background-color: var(--grayscale--level2, ${LIGHT_SCHEME.grayscaleLevel2});
+  border-color: var(--grayscale--level2, ${LIGHT_SCHEME.grayscaleLevel2});
   pointer-events: none;
-  color: var(--white, ${LIGHT_SCHEME['--white']});
+  color: var(--white, ${WHITE});
 `;
 
 export const StyledAlphaButton = styled.button<ButtonProps>`

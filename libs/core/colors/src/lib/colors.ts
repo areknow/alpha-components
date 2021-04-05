@@ -6,24 +6,24 @@ export const COLORS = {
 };
 
 export const LIGHT_SCHEME = {
-  '--white': '#fff',
-  '--neutral-0': '#fff',
-  '--neutral-1': '#A6A6A6',
-  '--neutral-2': '#737373',
-  '--neutral-3': '#3d3d3d',
-  '--primary-text-color': '#000000',
-  '--primary-background-color': '#f7f7f7',
+  grayscaleLevel0: '#ffffff',
+  grayscaleLevel1: '#A6A6A6',
+  grayscaleLevel2: '#737373',
+  grayscaleLevel3: '#3d3d3d',
+  primaryTextColor: '#000000',
+  primaryBackgroundColor: '#f7f7f7',
 };
 
 export const DARK_SCHEME = {
-  '--white': '#fff',
-  '--neutral-0': '#000',
-  '--neutral-1': '#3d3d3d',
-  '--neutral-2': '#737373',
-  '--neutral-3': '#A6A6A6',
-  '--primary-text-color': '#ffffff',
-  '--primary-background-color': '#0d0d0d',
+  grayscaleLevel0: '#000000',
+  grayscaleLevel1: '#3d3d3d',
+  grayscaleLevel2: '#737373',
+  grayscaleLevel3: '#A6A6A6',
+  primaryTextColor: '#ffffff',
+  primaryBackgroundColor: '#0d0d0d',
 };
+
+export const WHITE = '#ffffff';
 
 export const HOVER_LIGHTNESS = 0.8;
 export const ACTIVE_LIGHTNESS = 0.6;
