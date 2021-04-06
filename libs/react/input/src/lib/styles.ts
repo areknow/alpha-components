@@ -4,6 +4,17 @@ import { InputProps } from './react-input';
 
 const defaultTheme = 'magnetar';
 
+const CLEAR_ENABLED_STYLE = css`
+  input {
+    padding-right: 42px;
+  }
+`;
+
+const INLINE_ENABLED_STYLE = css`
+  display: inline-flex;
+  flex-grow: 1;
+`;
+
 export const StyledInput = styled.input`
   font-family: inherit;
   box-sizing: border-box;
@@ -72,14 +83,9 @@ export const StyledButton = styled.button`
   }
 `;
 
-const CLEAR_ENABLED_STYLE = css`
-  input {
-    padding-right: 42px;
-  }
-`;
-
 export const StyledAlphaInput = styled.div<InputProps>`
   max-width: 640px;
   position: relative;
   ${({ clear }) => clear && CLEAR_ENABLED_STYLE}
+  ${({ inline }) => inline && INLINE_ENABLED_STYLE}
 `;

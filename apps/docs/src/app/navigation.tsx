@@ -145,6 +145,10 @@ export const ROUTES = [
         location: '/input#clear',
       },
       {
+        label: 'Inline',
+        location: '/input#inline',
+      },
+      {
         label: 'Event',
         location: '/input#event',
       },

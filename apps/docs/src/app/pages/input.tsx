@@ -158,6 +158,30 @@ export const InputPage = () => {
         </Demo>
       </Panel>
 
+      <Panel id="inline">
+        <h2>Inline</h2>
+        <p>
+          The Input component has an optional <code>inline</code> property which
+          will allow for inline-flex styling when set to true.
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'inline',
+              type: 'boolean',
+              default: 'false',
+              required: false,
+            },
+          ]}
+        />
+        <Demo>
+          <div style={{ display: 'flex', flexGrow: 1 }}>
+            <Input inline placeholder="First name" />
+            <Input inline placeholder="Last name" />
+          </div>
+        </Demo>
+      </Panel>
+
       <Panel id="event">
         <h2>Event</h2>
         <p>

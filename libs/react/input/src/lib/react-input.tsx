@@ -8,6 +8,7 @@ export interface InputProps {
   required?: boolean;
   value?: string;
   clear?: boolean;
+  inline?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -28,7 +29,11 @@ export const Input = (props: InputProps) => {
   };
 
   return (
-    <StyledAlphaInput className="alpha-input">
+    <StyledAlphaInput
+      className="alpha-input"
+      inline={props.inline}
+      clear={props.clear}
+    >
       <StyledInput
         type="text"
         value={value}
