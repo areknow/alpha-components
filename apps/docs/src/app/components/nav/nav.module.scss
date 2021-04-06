@@ -104,6 +104,18 @@ nav {
       height: auto;
       .brand {
         padding: 10px 20px;
+        height: 55px;
+        .logo {
+          display: flex;
+          align-items: center;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        div:not(:first-child) {
+          margin-left: 15px;
+        }
       }
       .links {
         background: rgba(0, 0, 0, 0.03);
