@@ -3,10 +3,15 @@ import styled, { css } from 'styled-components';
 
 const defaultTheme = 'magnetar';
 
-const ACTIVE_STYLE = css`
+const ACTIVE_ENABLED_STYLE = css`
   select {
     color: var(--primary-text-color, ${LIGHT_SCHEME.primaryTextColor});
   }
+`;
+
+const INLINE_ENABLED_STYLE = css`
+  display: inline-flex;
+  flex-grow: 1;
 `;
 
 const SELECT_STYLE = css`
@@ -51,7 +56,11 @@ const SELECT_STYLE = css`
   }
 `;
 
-export const StyledAlphaSelect = styled.div<{ active: boolean }>`
+export const StyledAlphaSelect = styled.div<{
+  active: boolean;
+  inline: boolean;
+}>`
   ${SELECT_STYLE}
-  ${({ active }) => active && ACTIVE_STYLE}
+  ${({ active }) => active && ACTIVE_ENABLED_STYLE}
+  ${({ inline }) => inline && INLINE_ENABLED_STYLE}
 `;

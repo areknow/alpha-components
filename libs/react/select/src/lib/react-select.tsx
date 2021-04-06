@@ -12,6 +12,7 @@ export interface SelectProps {
   defaultValue?: string;
   name: string;
   label: string;
+  inline?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
@@ -23,6 +24,7 @@ export const Select = (props: SelectProps) => {
     <StyledAlphaSelect
       active={active || props.defaultValue !== undefined}
       className="alpha-select"
+      inline={props.inline}
     >
       <select
         defaultValue={_defaultValue}

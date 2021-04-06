@@ -244,6 +244,50 @@ export const SelectPage = () => {
         </Demo>
       </Panel>
 
+      <Panel id="inline">
+        <h2>Inline</h2>
+        <p>
+          The Select component has an optional <code>inline</code> property
+          which will allow for inline-flex styling when set to true.
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'inline',
+              type: 'boolean',
+              default: 'false',
+              required: false,
+            },
+          ]}
+        />
+        <Demo>
+          <div style={{ display: 'flex', flexGrow: 1 }}>
+            <Select
+              options={[
+                {
+                  value: 'january',
+                  label: 'January',
+                },
+              ]}
+              inline
+              name="month"
+              label="Month"
+            />
+            <Select
+              options={[
+                {
+                  value: 'monday',
+                  label: 'Monday',
+                },
+              ]}
+              inline
+              name="day"
+              label="Day"
+            />
+          </div>
+        </Demo>
+      </Panel>
+
       <Panel id="event">
         <h2>Event</h2>
         <p>

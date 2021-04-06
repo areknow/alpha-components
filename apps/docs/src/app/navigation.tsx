@@ -113,6 +113,10 @@ export const ROUTES = [
         location: '/select#default-value',
       },
       {
+        label: 'Inline',
+        location: '/select#inline',
+      },
+      {
         label: 'Event',
         location: '/select#event',
       },
