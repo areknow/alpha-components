@@ -62,3 +62,9 @@ function App() {
 ## Demo
 
 Want to play around with the components without setting up a local app? Take a look at a [CodeSandbox](https://codesandbox.io/s/alpha-components-8jy4q) thats ready to go with some Alpha Components.
+
+## Source code
+
+[Documentation webapp](https://github.com/areknow/alpha-components/tree/master/apps/docs/src)
+
+[React components](https://github.com/areknow/alpha-components/tree/master/libs/react)
