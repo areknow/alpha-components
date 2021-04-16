@@ -65,6 +65,6 @@ Want to play around with the components without setting up a local app? Take a l
 
 ## Source code
 
-[Documentation webapp](https://github.com/areknow/alpha-components/tree/master/apps/docs/src)
+[Documentation homepage](https://github.com/areknow/alpha-components/tree/master/apps/docs/src)
 
 [React components](https://github.com/areknow/alpha-components/tree/master/libs/react)
