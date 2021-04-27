@@ -2,9 +2,16 @@ import React, { AllHTMLAttributes, ReactNode } from 'react';
 import { StyledAlphaButton } from './styles';
 
 type NativeButtonProps = AllHTMLAttributes<HTMLButtonElement>;
+
+export const variantTypeOptions = ['primary', 'secondary'] as const;
+export type VariantType = typeof variantTypeOptions[number];
+
+export const sizeTypeOptions = ['small', 'medium', 'large'] as const;
+export type SizeType = typeof sizeTypeOptions[number];
+
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
+  variant?: VariantType;
+  size?: SizeType;
   disabled?: boolean;
   children: ReactNode;
   submit?: boolean;
