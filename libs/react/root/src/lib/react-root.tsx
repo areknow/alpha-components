@@ -15,6 +15,11 @@ import { createGlobalStyle, css } from 'styled-components';
 export interface RootProps {
   theme?: Theme;
   /**
+   * Custom theme will override the selected theme value.
+   * Value must be a valid color hexadecimal format.
+   */
+  customTheme?: string;
+  /**
    * By default the components will react to system color preference change.
    * If user chooses to use darkMode, system color scheme will be ignored.
    */
@@ -30,15 +35,14 @@ const customProps = (props: { [key: string]: string }) => {
   );
 };
 
-const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
+const GlobalStyles = createGlobalStyle<{ darkMode: boolean; hex: string }>`
   :root {
     --white: ${WHITE};
-    --primary-theme-color: ${({ theme }) => COLORS[theme]};
-    --primary-theme-color-rgb: ${({ theme }) => hexToRgb(COLORS[theme])};
-    --primary-theme-hover-color: ${({ theme }) =>
-      hexToHsl(COLORS[theme], HOVER_LIGHTNESS)};
-    --primary-theme-active-color: ${({ theme }) =>
-      hexToHsl(COLORS[theme], ACTIVE_LIGHTNESS)};
+    --primary-theme-color: ${({ hex }) => hex};
+    --primary-theme-color-rgb: ${({ hex }) => hexToRgb(hex)};
+    --primary-theme-hover-color: ${({ hex }) => hexToHsl(hex, HOVER_LIGHTNESS)};
+    --primary-theme-active-color: ${({ hex }) =>
+      hexToHsl(hex, ACTIVE_LIGHTNESS)};
     ${({ darkMode }) =>
       darkMode === undefined
         ? css`
@@ -56,12 +60,19 @@ const GlobalStyles = createGlobalStyle<{ darkMode: boolean; theme: string }>`
   }
 `;
 
-export const Root = ({ theme, darkMode, children }: RootProps) => {
-  const _theme = theme || 'magnetar';
+export const Root = ({ theme, customTheme, darkMode, children }: RootProps) => {
+  let hex: string;
+  if (customTheme) {
+    hex = customTheme;
+  } else if (theme) {
+    hex = COLORS[theme];
+  } else if (!theme || !customTheme) {
+    hex = COLORS['magnetar'];
+  }
 
   return (
     <div className="alpha-root" data-theme={theme} data-darkmode={darkMode}>
-      <GlobalStyles darkMode={darkMode} theme={_theme} />
+      <GlobalStyles darkMode={darkMode} hex={hex} />
       {children}
     </div>
   );

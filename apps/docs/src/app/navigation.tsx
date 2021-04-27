@@ -201,6 +201,10 @@ export const ROUTES = [
         location: '/root#theme',
       },
       {
+        label: 'Custom theme',
+        location: '/root#custom-theme',
+      },
+      {
         label: 'Dark mode',
         location: '/root#dark-mode',
       },

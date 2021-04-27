@@ -59,6 +59,29 @@ export const RootPage = () => {
         </Demo>
       </Panel>
 
+      <Panel id="custom-theme">
+        <h2>Theme</h2>
+        <p>
+          The Root component has a <code>customTheme</code> property which will
+          overwrite any selected theme value. The property accepts a hexadecimal
+          color value with leading octothorpe i.e. '#fff'
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'customTheme',
+              type: 'string',
+              default: 'undefined',
+              required: false,
+            },
+          ]}
+        />
+
+        <Demo code={'<Root customTheme="#fff">I am root!</Root>'}>
+          I am root!
+        </Demo>
+      </Panel>
+
       <Panel id="dark-mode">
         <h2>Dark mode</h2>
         <p>
