@@ -9,6 +9,8 @@ export interface InputProps {
   value?: string;
   clear?: boolean;
   inline?: boolean;
+  type?: 'text' | 'tel' | 'email';
+  pattern?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -35,7 +37,8 @@ export const Input = (props: InputProps) => {
       clear={props.clear}
     >
       <StyledInput
-        type="text"
+        type={props.type ? props.type : 'text'}
+        pattern={props.pattern}
         value={value}
         ref={inputRef}
         required={props.required}
