@@ -68,3 +68,5 @@ Want to play around with the components without setting up a local app? Take a l
 [Documentation homepage](https://github.com/areknow/alpha-components/tree/master/apps/docs/src)
 
 [React components](https://github.com/areknow/alpha-components/tree/master/libs/react)
+
+See the components used in a [production application](https://github.com/areknow/covid-heroes)
