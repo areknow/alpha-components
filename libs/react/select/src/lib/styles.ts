@@ -16,7 +16,6 @@ const INLINE_ENABLED_STYLE = css`
 
 const SELECT_STYLE = css`
   position: relative;
-  max-width: 640px;
   box-sizing: border-box;
   select {
     width: 100%;

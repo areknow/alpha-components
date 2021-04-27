@@ -84,7 +84,6 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledAlphaInput = styled.div<InputProps>`
-  max-width: 640px;
   position: relative;
   ${({ clear }) => clear && CLEAR_ENABLED_STYLE}
   ${({ inline }) => inline && INLINE_ENABLED_STYLE}

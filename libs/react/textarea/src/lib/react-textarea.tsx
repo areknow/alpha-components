@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledAlphaTextarea, StyledTextarea } from './styles';
+import { StyledAlphaTextarea } from './styles';
 
 export interface TextareaProps {
   rows?: number;
@@ -12,16 +12,15 @@ export interface TextareaProps {
 
 export const Textarea = (props: TextareaProps) => {
   return (
-    <StyledAlphaTextarea className="alpha-textarea">
-      <StyledTextarea
-        rows={props.rows}
-        defaultValue={props.value}
-        required={props.required}
-        placeholder={props.placeholder}
-        autoComplete={props.autoComplete}
-        onChange={props.onChange}
-      />
-    </StyledAlphaTextarea>
+    <StyledAlphaTextarea
+      className="alpha-textarea"
+      rows={props.rows}
+      defaultValue={props.value}
+      required={props.required}
+      placeholder={props.placeholder}
+      autoComplete={props.autoComplete}
+      onChange={props.onChange}
+    />
   );
 };
 
