@@ -113,6 +113,33 @@ export const ButtonPage = () => {
         </Demo>
       </Panel>
 
+      <Panel id="monochrome">
+        <h2>Monochrome</h2>
+        <p>
+          The Button component has a <code>{'monochrome'}</code> property which
+          will change its styling and remove any color theme that is globally
+          available from the root.
+        </p>
+        <Table
+          rows={[
+            {
+              prop: 'monochrome',
+              type: 'boolean',
+              default: 'false',
+              required: false,
+            },
+          ]}
+        />
+        <Demo>
+          <>
+            <Button monochrome>Monochrome button</Button>
+            <Button monochrome variant="secondary">
+              Monochrome button
+            </Button>
+          </>
+        </Demo>
+      </Panel>
+
       <Panel id="submit">
         <h2>Submit</h2>
         <p>

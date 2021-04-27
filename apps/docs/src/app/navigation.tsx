@@ -33,6 +33,10 @@ export const ROUTES = [
         location: '/button#disabled',
       },
       {
+        label: 'Monochrome',
+        location: '/button#monochrome',
+      },
+      {
         label: 'Submit',
         location: '/button#submit',
       },

@@ -15,6 +15,7 @@ export interface ButtonProps {
   disabled?: boolean;
   children: ReactNode;
   submit?: boolean;
+  monochrome?: boolean;
   onClick?: NativeButtonProps['onClick'];
 }
 
@@ -27,6 +28,7 @@ export const Button = (props: ButtonProps) => {
       size={props.size || 'medium'}
       type={props.submit ? 'submit' : 'button'}
       disabled={props.disabled}
+      monochrome={props.monochrome}
     >
       {props.children}
     </StyledAlphaButton>

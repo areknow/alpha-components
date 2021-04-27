@@ -24,6 +24,9 @@ export const DARK_SCHEME = {
 };
 
 export const WHITE = '#ffffff';
+export const BLACK = '#000000';
 
 export const HOVER_LIGHTNESS = 0.8;
 export const ACTIVE_LIGHTNESS = 0.6;
+export const HOVER_MONOCHROME_LIGHTNESS = 0.95;
+export const ACTIVE_MONOCHROME_LIGHTNESS = 0.9;
