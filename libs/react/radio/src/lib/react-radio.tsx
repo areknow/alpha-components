@@ -22,7 +22,7 @@ export const Radio = (props: RadioProps) => {
         onChange={(event) => {
           props.onChange && props.onChange(event, props.value);
         }}
-        defaultChecked={props.selected}
+        checked={props.selected}
       />
       <StyledSpan></StyledSpan>
       <StyledDiv>{props.label}</StyledDiv>
